@@ -69,11 +69,9 @@
                     <ul class="primary-menu nav nav-pills">
                         <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Инфо</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Портфолио</a></li>
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#educations">Услуги</a></li>
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Резюме</a></li>
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Блог</a></li>
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">Мои контакты</a></li>
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Услуги</a></li>
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Портфолио</a></li>
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Мои контакты</a></li>
                     </ul>
                     <!-- End Mainmanu Nav -->
                 </nav>
@@ -110,56 +108,41 @@
         <div class="menu-top">
             <div class="menu-header">
                 <a class="logo" href="#">
-                    <img src="assets/images/logo/logo.png" alt="Personal Portfolio">
+                    <img class="mobile-logo"  src="{{asset('./logo/logo-coder.svg')}}" alt="logo">
                 </a>
                 <div class="close-button">
                     <button class="close-menu-activation close"><i data-feather="x"></i></button>
                 </div>
             </div>
-            <p class="discription">Lorem ipsum dolor sit amet consect adipisicing elit repellendus.
+            <p class="discription">Разработка мобильных и веб приложений, ботов и mini apps.
             </p>
         </div>
         <div class="content">
             <ul class="primary-menu nav nav-pills onepagenav">
-                <li class="nav-item current"><a class="nav-link smoth-animation" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Experience</a></li>
-                <li class="nav-item"><a class="nav-link smoth-animation" href="#educations">Education</a></li>
-                <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
-                <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">Blog</a></li>
-                <li class="nav-item"><a class="nav-link smoth-animation" href="#footer">Footer</a></li>
+                <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Инфо</a>
+                </li>
+                <li class="nav-item"><a class="nav-link smoth-animation" href="#experiences">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Портфолио</a></li>
+                <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Мои контакты</a></li>
             </ul>
             <!-- social sharea area -->
             <div class="social-share-style-1 mt--40">
-                <span class="title">find with me</span>
+                <span class="title">Для связи со мной</span>
                 <ul class="social-share d-flex liststyle">
-                    <li class="facebook"><a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                 stroke-linejoin="round" class="feather feather-facebook">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
+                    <li class="instagram"><a href="https://t.me/coderok_official">
+                            <i data-feather="send"></i>
                         </a>
                     </li>
-                    <li class="instagram"><a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                 stroke-linejoin="round" class="feather feather-instagram">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
+                    <li class="linkedin"><a href="https://wa.me/79992213383?text=CODEROK.RU%20%7C%20%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20">
+                            <i data-feather="message-circle"></i>
                         </a>
                     </li>
-                    <li class="linkedin"><a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                 stroke-linejoin="round" class="feather feather-linkedin">
-                                <path
-                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
+                    <li class="linkedin"><a href="tel:+79992213383">
+                            <i data-feather="phone-call"></i>
+                        </a>
+                    </li>
+                    <li class="linkedin"><a href="mailto:info@coderok.ru">
+                            <i data-feather="mail"></i>
                         </a>
                     </li>
                 </ul>
@@ -187,23 +170,22 @@
                                                 <i data-feather="user"></i>
                                             </div>
                                             <h2 class="title">
-                                                Hi, I’m <span>InBio</span>
+                                                Привет, меня зовут <span>Андрей</span>
                                             </h2>
-                                            <p class="disc">Web designer and developer working for envato.com in Paris,
-                                                France.</p>
+                                            <p class="disc">Разработчик мобильных и web приложений с креативным мышлением и высокими стандартами к качеству работы.</p>
                                         </div>
                                         <div class="user-info-footer">
                                             <div class="info">
-                                                <i data-feather="file"></i>
-                                                <span>Web designer & developer</span>
+                                                <i data-feather="code"></i>
+                                                <span>Web developer</span>
                                             </div>
                                             <div class="info">
-                                                <i data-feather="mail"></i>
-                                                <span>john.slady@gmail.com</span>
+                                                <i data-feather="smartphone"></i>
+                                                <span>Mobile app developer</span>
                                             </div>
                                             <div class="info">
-                                                <i data-feather="map-pin"></i>
-                                                <span>Paris fan</span>
+                                                <i data-feather="pen-tool"></i>
+                                                <span>Web designer</span>
                                             </div>
                                         </div>
                                     </div>
@@ -211,10 +193,10 @@
 
                                 <div class="col-xl-12 col-lg-12 col-12">
                                     <div class="user-info-bottom">
-                                        <span>Download my curriculum vitae: </span>
+                                        <span>Посмотрите мое резюме или сразу свяжитесь со мной: </span>
                                         <div class="button-wrapper d-flex">
-                                            <a class="rn-btn mr--30" href="#contacts"><span>DOWNLOAD CV</span></a>
-                                            <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
+                                            <a class="rn-btn mr--30" href="{{asset('assets/images/contact/Любиченко Андрей.pdf')}}" target="_blank"><span>СКАЧАТЬ РЕЗЮМЕ</span></a>
+                                            <a class="rn-btn" href="https://t.me/coderok_official" target="_blank"><span>НАПИСАТЬ МНЕ</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -243,8 +225,8 @@
                 <div class="col-lg-12">
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                          class="section-title text-center">
-                        <span class="subtitle">Over 10 years of experience</span>
-                        <h2 class="title">My Experience</h2>
+                        <span class="subtitle">Опыт более 13 лет</span>
+                        <h2 class="title">Мои услуги</h2>
                     </div>
                 </div>
             </div>
@@ -256,22 +238,22 @@
                          class="experience-style-two">
                         <div class="experience-left">
                             <div class="experience-image">
-                                <img src="assets/images/portfolio/portfolio-01.jpg" alt="Personal Portfolio">
+                                <img src="{{asset('assets/images/portfolio/web_img.svg')}}" alt="web image">
                             </div>
                             <div class="experience-center">
-                                <span class="date">2015-Present</span>
+                                <span class="date">Web development</span>
                                 <h4 class="experience-title">
-                                    Rainbow - Themes.
+                                    Разработка веб приложений
                                 </h4>
                                 <h6 class="subtitle">
-                                    Co-Founder, Web Designer & Developer
+                                    Сайт любой сложности и направленности
                                 </h6>
-                                <p class="disc">Reinvetning the way you create websites</p>
+                                <p class="disc">От лендинга до сложных CRM систем</p>
                             </div>
                         </div>
                         <div class="experience-right">
                             <div class="experience-footer">
-                                <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
+                                <a class="rn-btn" href="https://t.me/coderok_official" target="_blank"><span>ЗАКАЗАТЬ</span></a>
                             </div>
                         </div>
                     </div>
@@ -282,22 +264,22 @@
                          class="experience-style-two">
                         <div class="experience-left">
                             <div class="experience-image">
-                                <img src="assets/images/portfolio/portfolio-02.jpg" alt="Personal Portfolio">
+                                <img src="{{asset('assets/images/portfolio/mobile_img.svg')}}" alt="mobile image">
                             </div>
                             <div class="experience-center">
-                                <span class="date">2015-Present</span>
+                                <span class="date">Mobile App development</span>
                                 <h4 class="experience-title">
-                                    App Development.
+                                    Разработка мобильных приложений
                                 </h4>
                                 <h6 class="subtitle">
-                                    Co-Founder, Web Designer & Developer
+                                    Под Android, iOS, Windows и MacOS
                                 </h6>
-                                <p class="disc">Reinvetning the way you create websites</p>
+                                <p class="disc">От дизайна до выпуска готового приложения</p>
                             </div>
                         </div>
                         <div class="experience-right">
                             <div class="experience-footer">
-                                <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
+                                <a class="rn-btn" href="https://t.me/coderok_official" target="_blank"><span>ЗАКАЗАТЬ</span></a>
                             </div>
                         </div>
                     </div>
@@ -308,22 +290,22 @@
                          class="experience-style-two">
                         <div class="experience-left">
                             <div class="experience-image">
-                                <img src="assets/images/portfolio/portfolio-03.jpg" alt="Personal Portfolio">
+                                <img src="{{asset('assets/images/portfolio/bot_img.svg')}}" alt="bot image">
                             </div>
                             <div class="experience-center">
-                                <span class="date">2015-Present</span>
+                                <span class="date">Web apps</span>
                                 <h4 class="experience-title">
-                                    Application Management.
+                                    Разработка чат ботов
                                 </h4>
                                 <h6 class="subtitle">
-                                    Co-Founder, Web Designer & Developer
+                                    И Mini Apps для Telegram и VK
                                 </h6>
-                                <p class="disc">Reinvetning the way you create websites</p>
+                                <p class="disc">От простых ботов до приложений Ecommerce</p>
                             </div>
                         </div>
                         <div class="experience-right">
                             <div class="experience-footer">
-                                <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
+                                <a class="rn-btn" href="https://t.me/coderok_official" target="_blank"><span>ЗАКАЗАТЬ</span></a>
                             </div>
                         </div>
                     </div>
@@ -335,896 +317,15 @@
     </div>
     <!-- End Experience area -->
 
-    <!-- Start education section -->
-    <div id="educations" class="rn-education-area rn-section-gap section-separator">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                         class="section-title text-center">
-                        <span class="subtitle">Phd, Master and Bachelo</span>
-                        <h2 class="title">Education</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt--10">
-                <div class="col-12 mt_experience">
-                    <!-- single skills -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                         class="experience-style-two">
-                        <div class="experience-left">
-                            <div class="experience-image">
-                                <img src="assets/images/portfolio/portfolio-04.jpg" alt="Personal Portfolio">
-                            </div>
-                            <div class="experience-center">
-                                <span class="date">2015-Present</span>
-                                <h4 class="experience-title">
-                                    Software Develop.
-                                </h4>
-                                <h6 class="subtitle">
-                                    Co-Founder, Web Designer & Developer
-                                </h6>
-                                <p class="disc">Reinvetning the way you create websites</p>
-                            </div>
-                        </div>
-                        <div class="experience-right">
-                            <div class="experience-footer">
-                                <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single skills -->
-
-                    <!-- single skills -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
-                         class="experience-style-two">
-                        <div class="experience-left">
-                            <div class="experience-image">
-                                <img src="assets/images/portfolio/portfolio-05.jpg" alt="Personal Portfolio">
-                            </div>
-                            <div class="experience-center">
-                                <span class="date">2015-Present</span>
-                                <h4 class="experience-title">
-                                    Web Design.
-                                </h4>
-                                <h6 class="subtitle">
-                                    Co-Founder, Web Designer & Developer
-                                </h6>
-                                <p class="disc">Reinvetning the way you create websites</p>
-                            </div>
-                        </div>
-                        <div class="experience-right">
-                            <div class="experience-footer">
-                                <a class="rn-btn" href="#contacts"><span>CONTACT ME</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single skills -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End education section -->
-
-    <!-- Start Resume Area -->
-    <div class="rn-resume-area rn-section-gap section-separator" id="resume">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                         class="section-title text-center">
-                        <span class="subtitle">7+ Years of Experience</span>
-                        <h2 class="title">My Resume</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt--45">
-                <div class="col-lg-12">
-                    <ul data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                        class="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="education-tab" data-bs-toggle="tab" href="#education"
-                               role="tab" aria-controls="education" aria-selected="true">education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " id="professional-tab" data-bs-toggle="tab" href="#professional"
-                               role="tab" aria-controls="professional" aria-selected="false">professional
-                                Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="experience-tab" data-bs-toggle="tab" href="#experience" role="tab"
-                               aria-controls="experience" aria-selected="false">experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="interview-tab" data-bs-toggle="tab" href="#interview" role="tab"
-                               aria-controls="interview" aria-selected="false">interview</a>
-                        </li>
-                    </ul>
-
-                    <!-- Start Tab Content Wrapper  -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
-                         class="rn-nav-content tab-content" id="myTabContents">
-
-                        <!-- Start Single Tab  -->
-                        <div class="tab-pane show active fade single-tab-area" id="education" role="tabpanel"
-                             aria-labelledby="education-tab">
-                            <div class="personal-experience-inner mt--40">
-                                <div class="row">
-                                    <!-- Start Skill List Area  -->
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="content">
-                                            <span class="subtitle">2007 - 2010</span>
-                                            <h4 class="maintitle">Education Quality</h4>
-                                            <div class="experience-list">
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Personal Portfolio April Fools</h4>
-                                                                <span>University of DVI (1997 - 2001)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.30/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">The education should be very interactual.
-                                                            Ut tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4> Examples Of Personal Portfolio</h4>
-                                                                <span>College of Studies (2000 - 2002)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.50/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Maecenas finibus nec sem ut
-                                                            imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Tips For Personal Portfolio</h4>
-                                                                <span>University of Studies (1997 - 2001)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.80/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description"> If you are going to use a passage. Ut
-                                                            tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Skill List Area  -->
-
-                                    <!-- Start Skill List Area 2nd  -->
-                                    <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                                        <div class="content">
-                                            <span class="subtitle">2007 - 2010</span>
-                                            <h4 class="maintitle">Job Experience</h4>
-                                            <div class="experience-list">
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Diploma in Web Development</h4>
-                                                                <span>BSE In CSE (2004 - 2008)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.70/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Contrary to popular belief. Ut tincidunt
-                                                            est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>The Personal Portfolio Mystery</h4>
-                                                                <span>Job at Rainbow-Themes (2008 - 2016)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.95/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Generate Lorem Ipsum which looks. Ut
-                                                            tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Diploma in Computer Science</h4>
-                                                                <span>Works at Plugin Development (2016 - 2020)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>5.00/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Maecenas finibus nec sem ut
-                                                            imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Skill List Area  -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Tab  -->
-
-                        <!-- Start Single Tab  -->
-                        <div class="tab-pane fade " id="professional" role="tabpanel"
-                             aria-labelledby="professional-tab">
-                            <div class="personal-experience-inner mt--40">
-                                <div class="row row--40">
-
-                                    <!-- Start Single Progressbar  -->
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="progress-wrapper">
-                                            <div class="content">
-                                                <span class="subtitle">Features</span>
-                                                <h4 class="maintitle">Design Skill</h4>
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">PHOTOSHOT</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.5s" data-wow-delay=".3s"
-                                                             role="progressbar" style="width: 100%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">100%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">FIGMA</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.6s" data-wow-delay=".4s"
-                                                             role="progressbar" style="width: 95%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">95%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">ADOBE XD</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.7s" data-wow-delay=".5s"
-                                                             role="progressbar" style="width: 60%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">60%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">ADOBE ILLUSTRATOR</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.8s" data-wow-delay=".6s"
-                                                             role="progressbar" style="width: 70%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">70%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">DESIGN</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.9s" data-wow-delay=".7s"
-                                                             role="progressbar" style="width: 90%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">90%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Progressbar  -->
-
-                                    <!-- Start Single Progressbar  -->
-                                    <div class="col-lg-6 col-md-6 col-12 mt_sm--60">
-                                        <div class="progress-wrapper">
-                                            <div class="content">
-                                                <span class="subtitle">Features</span>
-                                                <h4 class="maintitle">Development Skill</h4>
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">HTML</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.5s" data-wow-delay=".3s"
-                                                             role="progressbar" style="width: 85%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">85%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">CSS</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.6s" data-wow-delay=".4s"
-                                                             role="progressbar" style="width: 80%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">80%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">JAVASCRIPT</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.7s" data-wow-delay=".5s"
-                                                             role="progressbar" style="width: 90%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">90%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">SOFTWARE</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.8s" data-wow-delay=".6s"
-                                                             role="progressbar" style="width: 75%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">75%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                                <!-- Start Single Progress Charts -->
-                                                <div class="progress-charts">
-                                                    <h6 class="heading heading-h6">PLUGIN</h6>
-                                                    <div class="progress">
-                                                        <div class="progress-bar wow fadeInLeft"
-                                                             data-wow-duration="0.9s" data-wow-delay=".7s"
-                                                             role="progressbar" style="width: 70%" aria-valuenow="85"
-                                                             aria-valuemin="0" aria-valuemax="100"><span
-                                                                class="percent-label">70%</span></div>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Progress Charts -->
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Progressbar  -->
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Tab  -->
-
-                        <!-- Start Single Tab  -->
-                        <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
-                            <div class="personal-experience-inner mt--40">
-                                <div class="row">
-                                    <!-- Start Skill List Area  -->
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="content">
-                                            <span class="subtitle">2007 - 2010</span>
-                                            <h4 class="maintitle">Education Quality</h4>
-                                            <div class="experience-list">
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Personal Portfolio April Fools</h4>
-                                                                <span>University of DVI (1997 - 2001)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.30/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">The education should be very interactual.
-                                                            Ut tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4> Examples Of Personal Portfolio</h4>
-                                                                <span>College of Studies (2000 - 2002)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.50/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Maecenas finibus nec sem ut
-                                                            imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Tips For Personal Portfolio</h4>
-                                                                <span>University of Studies (1997 - 2001)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.80/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description"> If you are going to use a passage. Ut
-                                                            tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Skill List Area  -->
-
-                                    <!-- Start Skill List Area 2nd  -->
-                                    <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                                        <div class="content">
-                                            <span class="subtitle">2007 - 2010</span>
-                                            <h4 class="maintitle">Job Experience</h4>
-                                            <div class="experience-list">
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Diploma in Web Development</h4>
-                                                                <span>BSE In CSE (2004 - 2008)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.70/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Contrary to popular belief. Ut tincidunt
-                                                            est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>The Personal Portfolio Mystery</h4>
-                                                                <span>Job at Rainbow-Themes (2008 - 2016)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.95/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Generate Lorem Ipsum which looks. Ut
-                                                            tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Diploma in Computer Science</h4>
-                                                                <span>Works at Plugin Development (2016 - 2020)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>5.00/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Maecenas finibus nec sem ut
-                                                            imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Skill List Area  -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Tab  -->
-
-                        <!-- Start Single Tab  -->
-                        <div class="tab-pane fade" id="interview" role="tabpanel" aria-labelledby="interview-tab">
-                            <div class="personal-experience-inner mt--40">
-                                <div class="row">
-                                    <!-- Start Skill List Area  -->
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="content">
-                                            <span class="subtitle">2007 - 2010</span>
-                                            <h4 class="maintitle">Education Quality</h4>
-                                            <div class="experience-list">
-
-                                                <!-- Start Single List  -->
-                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"
-                                                     data-aos-once="true" class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Personal Portfolio April Fools</h4>
-                                                                <span>University of DVI (1997 - 2001)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.30/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">The education should be very interactual.
-                                                            Ut tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500"
-                                                     data-aos-once="true" class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4> Examples Of Personal Portfolio</h4>
-                                                                <span>College of Studies (2000 - 2002)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.50/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Maecenas finibus nec sem ut
-                                                            imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="700"
-                                                     data-aos-once="true" class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Tips For Personal Portfolio</h4>
-                                                                <span>University of Studies (1997 - 2001)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.80/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description"> If you are going to use a passage. Ut
-                                                            tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Skill List Area  -->
-
-                                    <!-- Start Skill List Area 2nd  -->
-                                    <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                                        <div class="content">
-                                            <span class="subtitle">2007 - 2010</span>
-                                            <h4 class="maintitle">Job Experience</h4>
-                                            <div class="experience-list">
-
-                                                <!-- Start Single List  -->
-                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500"
-                                                     data-aos-once="true" class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Diploma in Web Development</h4>
-                                                                <span>BSE In CSE (2004 - 2008)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.70/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Contrary to popular belief. Ut tincidunt
-                                                            est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="700"
-                                                     data-aos-once="true" class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>The Personal Portfolio Mystery</h4>
-                                                                <span>Job at Rainbow-Themes (2008 - 2016)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>4.95/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Generate Lorem Ipsum which looks. Ut
-                                                            tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                                <!-- Start Single List  -->
-                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="900"
-                                                     data-aos-once="true" class="resume-single-list">
-                                                    <div class="inner">
-                                                        <div class="heading">
-                                                            <div class="title">
-                                                                <h4>Diploma in Computer Science</h4>
-                                                                <span>Works at Plugin Development (2016 - 2020)</span>
-                                                            </div>
-                                                            <div class="date-of-time">
-                                                                <span>5.00/5</span>
-                                                            </div>
-                                                        </div>
-                                                        <p class="description">Maecenas finibus nec sem ut
-                                                            imperdiet. Ut tincidunt est ac dolor aliquam sodales.
-                                                            Phasellus sed mauris hendrerit, laoreet sem in, lobortis
-                                                            mauris hendrerit ante.</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single List  -->
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Skill List Area  -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Tab  -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Resume Area -->
-
-    <!-- Start Portfolio Area -->
-    <div id="portfolio" class="rn-portfolio-area portfolio-style-three rn-section-gap section-separator">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                         class="section-title text-center">
-                        <span class="subtitle">Visit my portfolio and keep your feedback</span>
-                        <h2 class="title">My Portfolio</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt--25 mt_md--5 mt_sm--5">
-                <div class="col-lg-12">
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
-                         class="portfolio-wrapper portfolio-slick-activation slick-arrow-style-one rn-slick-dot-style">
-
-                        <!-- Start Single Portfolio  -->
-                        <div class="rn-portfolio-slick">
-                            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                <div class="inner">
-                                    <div class="thumbnail">
-                                        <a href="javascript:void(0)">
-                                            <img src="assets/images/portfolio/portfolio-06.jpg"
-                                                 alt="Personal Portfolio Images">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="category-info">
-                                            <div class="category-list">
-                                                <a href="javascript:void(0)">PHOTOSHOP</a>
-                                            </div>
-                                            <div class="meta">
-                                                    <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                        650</span>
-                                            </div>
-                                        </div>
-                                        <h4 class="title"><a href="javascript:void(0)">The services provide for design<i
-                                                    class="feather-arrow-up-right"></i></a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Portfolio  -->
-
-                        <!-- Start Single Portfolio  -->
-                        <div class="rn-portfolio-slick">
-                            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                <div class="inner">
-                                    <div class="thumbnail">
-                                        <a href="javascript:void(0)">
-                                            <img src="assets/images/portfolio/portfolio-05.jpg"
-                                                 alt="Personal Portfolio Images">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="category-info">
-                                            <div class="category-list">
-                                                <a href="javascript:void(0)">Figma</a>
-                                            </div>
-                                            <div class="meta">
-                                                    <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                        650</span>
-                                            </div>
-                                        </div>
-                                        <h4 class="title"><a href="javascript:void(0)">Mobile app landing design &
-                                                Services<i
-                                                    class="feather-arrow-up-right"></i></a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Portfolio  -->
-
-                        <!-- Start Single Portfolio  -->
-                        <div class="rn-portfolio-slick">
-                            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                <div class="inner">
-                                    <div class="thumbnail">
-                                        <a href="javascript:void(0)">
-                                            <img src="assets/images/portfolio/portfolio-04.jpg"
-                                                 alt="Personal Portfolio Images">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="category-info">
-                                            <div class="category-list">
-                                                <a href="javascript:void(0)">Laravel</a>
-                                            </div>
-                                            <div class="meta">
-                                                    <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                        650</span>
-                                            </div>
-                                        </div>
-                                        <h4 class="title"><a href="javascript:void(0)">Web app Responsive design &
-                                                Services<i
-                                                    class="feather-arrow-up-right"></i></a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Portfolio  -->
-
-                        <!-- Start Single Portfolio  -->
-                        <div class="rn-portfolio-slick">
-                            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-                                <div class="inner">
-                                    <div class="thumbnail">
-                                        <a href="javascript:void(0)">
-                                            <img src="assets/images/portfolio/portfolio-03.jpg"
-                                                 alt="Personal Portfolio Images">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="category-info">
-                                            <div class="category-list">
-                                                <a href="javascript:void(0)">Figma</a>
-                                            </div>
-                                            <div class="meta">
-                                                    <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                                        650</span>
-                                            </div>
-                                        </div>
-                                        <h4 class="title"><a href="javascript:void(0)">PHP with app landing design &
-                                                Services<i
-                                                    class="feather-arrow-up-right"></i></a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Portfolio  -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End portfolio Area -->
-
     <!-- Start News Area -->
-    <div class="rn-blog-area rn-section-gap section-separator" id="blog">
+    <div class="rn-blog-area rn-section-gap section-separator" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                          class="section-title text-center">
-                        <span class="subtitle">Visit my blog and keep your feedback</span>
-                        <h2 class="title">My Blog</h2>
+                        <span class="subtitle">Коммерческая разработка</span>
+                        <h2 class="title">Мои работы</h2>
                     </div>
                 </div>
             </div>
@@ -1233,23 +334,21 @@
                 <!-- Start Single blog -->
                 <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                      class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
-                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalCenters">
+                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalIvinsight">
                         <div class="inner">
                             <div class="thumbnail">
                                 <a href="javascript:void(0)">
-                                    <img src="assets/images/blog/blog-01.jpg" alt="Personal Portfolio Images">
+                                    <img src="{{asset('assets/images/portfolio/ivinsight.png')}}" alt="Personal Portfolio Images">
                                 </a>
                             </div>
                             <div class="content">
                                 <div class="category-info">
                                     <div class="category-list">
-                                        <a href="javascript:void(0)">Canada</a>
+                                        <a href="javascript:void(0)">Frontend, REST API, Backend, SEO</a>
                                     </div>
-                                    <div class="meta">
-                                        <span><i class="feather-clock"></i> 2 min read</span>
-                                    </div>
+
                                 </div>
-                                <h4 class="title"><a href="javascript:void(0)">T-shirt design is the part of design
+                                <h4 class="title"><a href="javascript:void(0)">Ivinsight - онлайн школа осознанного питания
                                         <i class="feather-arrow-up-right"></i></a></h4>
                             </div>
                         </div>
@@ -1260,23 +359,20 @@
                 <!-- Start Single blog -->
                 <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="150" data-aos-once="true"
                      class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
-                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalCenters">
+                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalMopup">
                         <div class="inner">
                             <div class="thumbnail">
                                 <a href="javascript:void(0)">
-                                    <img src="assets/images/blog/blog-02.jpg" alt="Personal Portfolio Images">
+                                    <img src="{{asset('assets/images/portfolio/mopup.png')}}" alt="Personal Portfolio Images">
                                 </a>
                             </div>
                             <div class="content">
                                 <div class="category-info">
                                     <div class="category-list">
-                                        <a href="javascript:void(0)">Development</a>
-                                    </div>
-                                    <div class="meta">
-                                        <span><i class="feather-clock"></i> 2 hour read</span>
+                                        <a href="javascript:void(0)">Frontend, API</a>
                                     </div>
                                 </div>
-                                <h4 class="title"><a href="javascript:void(0)">The services provide for design <i
+                                <h4 class="title"><a href="javascript:void(0)">Mop'up - сервис по заказу клининга на дом <i
                                             class="feather-arrow-up-right"></i></a></h4>
                             </div>
                         </div>
@@ -1287,24 +383,20 @@
                 <!-- Start Single blog -->
                 <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
                      class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
-                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalCenters">
+                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalSleep">
                         <div class="inner">
                             <div class="thumbnail">
                                 <a href="javascript:void(0)">
-                                    <img src="assets/images/blog/blog-03.jpg" alt="Personal Portfolio Images">
+                                    <img src="{{asset('assets/images/portfolio/sleep.png')}}" alt="Personal Portfolio Images">
                                 </a>
                             </div>
                             <div class="content">
                                 <div class="category-info">
                                     <div class="category-list">
-                                        <a href="javascript:void(0)">Application</a>
-                                    </div>
-                                    <div class="meta">
-                                        <span><i class="feather-clock"></i> 5 min read</span>
+                                        <a href="javascript:void(0)">Frontend</a>
                                     </div>
                                 </div>
-                                <h4 class="title"><a href="javascript:void(0)">Mobile app landing design & app
-                                        maintain<i class="feather-arrow-up-right"></i></a></h4>
+                                <h4 class="title"><a href="javascript:void(0)">SlipStream - крытый картинг в СПб<i class="feather-arrow-up-right"></i></a></h4>
                             </div>
                         </div>
                     </div>
@@ -1312,11 +404,179 @@
                 <!-- End Single blog -->
 
             </div>
+
+            <div class="row row--25 mt--30 mt_md--10 mt_sm--10">
+
+                <!-- Start Single blog -->
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                     class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalMopAdmin">
+                        <div class="inner">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="{{asset('assets/images/portfolio/mopup_admin.png')}}" alt="Personal Portfolio Images">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="category-info">
+                                    <div class="category-list">
+                                        <a href="javascript:void(0)">Frontend, Backend, REST API, mySQL</a>
+                                    </div>
+
+                                </div>
+                                <h4 class="title"><a href="javascript:void(0)">Система управления контентом и заказами для приложений и сайта
+                                        <i class="feather-arrow-up-right"></i></a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single blog -->
+
+                <!-- Start Single blog -->
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="150" data-aos-once="true"
+                     class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalMopBot">
+                        <div class="inner">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="{{asset('assets/images/portfolio/bot_mopup.png')}}" alt="Personal Portfolio Images">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="category-info">
+                                    <div class="category-list">
+                                        <a href="javascript:void(0)">Backend, REST API, TelegramAPI</a>
+                                    </div>
+                                </div>
+                                <h4 class="title"><a href="javascript:void(0)">Telegram бот для заказа клининговых услуг на дом.<i
+                                            class="feather-arrow-up-right"></i></a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single blog -->
+
+                <!-- Start Single blog -->
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+                     class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalMopPro">
+                        <div class="inner">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="{{asset('assets/images/portfolio/mop_cleaner.png')}}" alt="Personal Portfolio Images">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="category-info">
+                                    <div class="category-list">
+                                        <a href="javascript:void(0)">Android app</a>
+                                    </div>
+                                </div>
+                                <h4 class="title"><a href="javascript:void(0)">Приложение для исполнителей сервиса Mop'up<i class="feather-arrow-up-right"></i></a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single blog -->
+
+            </div>
+
+            <div class="row row--25 mt--30 mt_md--10 mt_sm--10">
+
+                <!-- Start Single blog -->
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                     class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalMopCli">
+                        <div class="inner">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="{{asset('assets/images/portfolio/mop_clients.png')}}" alt="Personal Portfolio Images">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="category-info">
+                                    <div class="category-list">
+                                        <a href="javascript:void(0)">Android & iOS app</a>
+                                    </div>
+
+                                </div>
+                                <h4 class="title"><a href="javascript:void(0)">Приложение для клиентов сервиса Mop'up
+                                        <i class="feather-arrow-up-right"></i></a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single blog -->
+
+                <!-- Start Single blog -->
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="150" data-aos-once="true"
+                     class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                        <div class="inner">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="{{asset('assets/images/portfolio/recipes.png')}}" alt="Personal Portfolio Images">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="category-info">
+                                    <div class="category-list">
+                                        <a href="javascript:void(0)">Android & iOS app</a>
+                                    </div>
+                                </div>
+                                <h4 class="title"><a href="javascript:void(0)">Приложение с рецептами для Ivinsight<i
+                                            class="feather-arrow-up-right"></i></a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single blog -->
+
+                <!-- Start Single blog -->
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+                     class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div class="rn-blog" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                        <div class="inner">
+                            <div class="thumbnail">
+                                <a href="javascript:void(0)">
+                                    <img src="{{asset('assets/images/portfolio/recipes_admin.png')}}" alt="Personal Portfolio Images">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <div class="category-info">
+                                    <div class="category-list">
+                                        <a href="javascript:void(0)">Frontend, Backend, REST API, mySQL</a>
+                                    </div>
+                                </div>
+                                <h4 class="title"><a href="javascript:void(0)">CMS для приложений и телеграм бота с рецептами Ivinsight<i class="feather-arrow-up-right"></i></a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single blog -->
+
+            </div>
+
+            <div class="row row--25 mt--30 mt_md--10 mt_sm--10">
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
+                    <div class="rn-service">
+                        <div class="inner text-center">
+                            <div class="icon">
+                                <i data-feather="lock"></i>
+                            </div>
+                            <div class="content">
+                                <h4 class="title"><a href="https://ru.wikipedia.org/wiki/Соглашение_о_неразглашении">И еще много работ с кем подписано NDA.</a></h4>
+                                <p class="description">А так же работ в которых мною были разработаны и внедрены отдельные компоненты.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- ENd Mews Area -->
     <!-- Modal Portfolio Body area Start -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="exampleModalIvinsight" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1330,7 +590,7 @@
                         <div class="col-lg-6">
                             <div class="portfolio-popup-thumbnail">
                                 <div class="image">
-                                    <img class="w-100" src="assets/images/portfolio/portfolio-04.jpg" alt="slide">
+                                    <img class="w-100" src="{{asset('assets/images/portfolio/ivinsight.png')}}" alt="slide">
                                 </div>
                             </div>
                         </div>
@@ -1338,19 +598,14 @@
                         <div class="col-lg-6">
                             <div class="text-content">
                                 <h3>
-                                    <span>Featured - Design</span> App Design Development.
+                                    <span>Frontend, Backend, REST API, SEO, mySQL, PWA</span> Ivinsight
                                 </h3>
-                                <p class="mb--30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-                                    distinctio assumenda explicabo veniam temporibus eligendi.</p>
-                                <p>Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit
-                                    rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!</p>
+                                <p class="mb--30">Сайт разработан на Laravel c применением Vue3 composition api.</p>
+                                <p>Были написаны интерактивные квизы и тесты для пользователей, а так же сложные калькуляторы и внедрено получение рецептов блюд из сторонней базы данных.</p>
                                 <div class="button-group mt--20">
-                                    <a href="#" class="rn-btn thumbs-icon">
-                                        <span>LIKE THIS</span>
-                                        <i data-feather="thumbs-up"></i>
-                                    </a>
-                                    <a href="#" class="rn-btn">
-                                        <span>VIEW PROJECT</span>
+
+                                    <a href="https://ivinsight.ru" target="_blank" class="rn-btn">
+                                        <span>ОТКРЫТЬ</span>
                                         <i data-feather="chevron-right"></i>
                                     </a>
                                 </div>
@@ -1365,110 +620,281 @@
         </div>
     </div>
     <!-- End Modal Portfolio area -->
-    <!-- Modal Blog Body area Start -->
-    <div class="modal fade" id="exampleModalCenters" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+    <!-- Modal Portfolio Body area Start -->
+    <div class="modal fade" id="exampleModalMopup" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-
                 <div class="modal-header">
                     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i data-feather="x"></i></span>
                     </button>
                 </div>
-
-                <!-- End of .modal-header -->
-
                 <div class="modal-body">
-                    <img src="assets/images/blog/blog-big-01.jpg" alt="news modal" class="img-fluid modal-feat-img">
-                    <div class="news-details">
-                        <span class="date">2 May, 2021</span>
-                        <h2 class="title">Digital Marketo to Their New Office.</h2>
-                        <p>Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
-                            facer
-                            possim assum.
-                            Typi non
-                            habent claritatem insitam; est usus legentis in iis qui facit eorum
-                            claritatem.
-                            Investigationes
-                            demonstraverunt
-                            lectores legere me lius quod ii legunt saepius. Claritas est etiam processus
-                            dynamicus, qui
-                            sequitur
-                            mutationem consuetudium lectorum.</p>
-                        <h4>Nobis eleifend option conguenes.</h4>
-                        <p>Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed
-                            posuere
-                            massa nunc quis
-                            dui.
-                            Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa
-                            nisi.
-                            Curabitur sit
-                            amet
-                            suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc
-                            imperdiet risus
-                            leo,
-                            in rutrum erat dignissim id.</p>
-                        <p>Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis.
-                            Class aptent
-                            taciti sociosqu
-                            ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae
-                            nisi
-                            tortor. Morbi
-                            leo
-                            nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit
-                            bibendum. Morbi
-                            nec
-                            efficitur ex.</p>
-                        <h4>Mauris tempor, orci id pellentesque.</h4>
-                        <p>Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla
-                            dapibus dignissim.
-                            Pellentesque
-                            quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem
-                            rhoncus dolor, a
-                            facilisis
-                            neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa
-                            tristique.
-                            Nullam in
-                            aliquam
-                            diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed
-                            efficitur
-                            sollicitudin
-                            auctor.
-                            Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum
-                            et.</p>
-                    </div>
+                    <div class="row align-items-center">
 
-                    <!-- Comment Section Area Start -->
-                    <div class="comment-inner">
-                        <h3 class="title mb--40 mt--50">Leave a Reply</h3>
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12 col-12">
-                                    <div class="rnform-group"><input type="text" placeholder="Name">
-                                    </div>
-                                    <div class="rnform-group"><input type="email" placeholder="Email">
-                                    </div>
-                                    <div class="rnform-group"><input type="text" placeholder="Website">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12 col-12">
-                                    <div class="rnform-group">
-                                        <textarea placeholder="Comment"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <a class="rn-btn" href="#"><span>SUBMIT NOW</span></a>
+                        <div class="col-lg-6">
+                            <div class="portfolio-popup-thumbnail">
+                                <div class="image">
+                                    <img class="w-100" src="{{asset('assets/images/portfolio/mopup.png')}}" alt="slide">
                                 </div>
                             </div>
-                        </form>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="text-content">
+                                <h3>
+                                    <span>Frontend, REST API, SEO, mySQL, PWA, Acquiring, Maps</span> Mopup
+                                </h3>
+                                <p class="mb--30">Сайт разработан на Laravel c применением Vue3 composition api.</p>
+                                <p>Сайт написан по предоставленному макету Figma. Основной задачей являлось разработка формы заказа услуги с интерактивным подсчетом итоговой суммы зависящей от выбранного пользователем города.</p>
+                                <div class="button-group mt--20">
+
+                                    <a href="https://mopup.ru" target="_blank" class="rn-btn">
+                                        <span>ОТКРЫТЬ</span>
+                                        <i data-feather="chevron-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- End of .text-content -->
+                        </div>
                     </div>
-                    <!-- Comment Section End -->
+                    <!-- End of .row Body-->
                 </div>
-                <!-- End of .modal-body -->
             </div>
         </div>
     </div>
-    <!-- End Modal Blog area -->
+    <!-- End Modal Portfolio area -->
+    <!-- Modal Portfolio Body area Start -->
+    <div class="modal fade" id="exampleModalSleep" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i data-feather="x"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6">
+                            <div class="portfolio-popup-thumbnail">
+                                <div class="image">
+                                    <img class="w-100" src="{{asset('assets/images/portfolio/sleep.png')}}" alt="slide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="text-content">
+                                <h3>
+                                    <span>Frontend, SEO, Maps</span> SlipStream
+                                </h3>
+                                <p class="mb--30">Сайт полностью разработан на Laravel </p>
+                                <p>Статичный сайт c интегрированной и стилизованной под общий дизайн картой Mapbox</p>
+                                <div class="button-group mt--20">
+
+                                    <a href="https://slipstream-karting.ru/" target="_blank" class="rn-btn">
+                                        <span>ОТКРЫТЬ</span>
+                                        <i data-feather="chevron-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- End of .text-content -->
+                        </div>
+                    </div>
+                    <!-- End of .row Body-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal Portfolio area -->
+    <!-- Modal Portfolio Body area Start -->
+    <div class="modal fade" id="exampleModalMopAdmin" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i data-feather="x"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6">
+                            <div class="portfolio-popup-thumbnail">
+                                <div class="image">
+                                    <img class="w-100" src="{{asset('assets/images/portfolio/mopup_admin.png')}}" alt="slide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="text-content">
+                                <h3>
+                                    <span>Frontend, Backend, REST API, mySQL, Acquiring, YandexMaps, Push</span> Админ панель Mopup
+                                </h3>
+                                <p class="mb--30">Админ панель на Laravel </p>
+                                <p>Админ панель для управления контентом на сайте, управления исполнителями и клиентами, push-уведомлениями и полная интеграция с мобильными приложениями (для исполнителей и клиентов) для управления заказами. Автоматические задачи/задачи по расписанию. Так же встроен интернет эквайринг для формирования ссылки на оплату и контроля статуса платежа. Данная админка находится в продакшене у клиента и носит конфиденциальный характер.</p>
+{{--                                <div class="button-group mt--20">--}}
+
+{{--                                    <a href="https://slipstream-karting.ru/" target="_blank" class="rn-btn">--}}
+{{--                                        <span>ОТКРЫТЬ</span>--}}
+{{--                                        <i data-feather="chevron-right"></i>--}}
+{{--                                    </a>--}}
+{{--                                </div>--}}
+
+                            </div>
+                            <!-- End of .text-content -->
+                        </div>
+                    </div>
+                    <!-- End of .row Body-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal Portfolio area -->
+    <!-- Modal Portfolio Body area Start -->
+    <div class="modal fade" id="exampleModalMopBot" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i data-feather="x"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6">
+                            <div class="portfolio-popup-thumbnail">
+                                <div class="image">
+                                    <img class="w-100" src="{{asset('assets/images/portfolio/bot_mopup.png')}}" alt="slide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="text-content">
+                                <h3>
+                                    <span>Backend, REST API, TelegramAPI, Webhook,</span> Telegram бот
+                                </h3>
+                                <p class="mb--30">Telegram бот с встроенным mini app </p>
+                                <p>Встроенное приложение позволяет прямо в боте воспользоваться формой заказа клининговых услуг на дом.</p>
+                                <div class="button-group mt--20">
+
+                                    <a href="https://t.me/Mopup_Cleaning_Bot" target="_blank" class="rn-btn">
+                                        <span>ОТКРЫТЬ</span>
+                                        <i data-feather="chevron-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- End of .text-content -->
+                        </div>
+                    </div>
+                    <!-- End of .row Body-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal Portfolio area -->
+    <!-- Modal Portfolio Body area Start -->
+    <div class="modal fade" id="exampleModalMopPro" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i data-feather="x"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6">
+                            <div class="portfolio-popup-thumbnail">
+                                <div class="image">
+                                    <img class="w-100" src="{{asset('assets/images/portfolio/mop_cleaner.png')}}" alt="slide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="text-content">
+                                <h3>
+                                    <span>Flutter, Dart, API, FireBase, OneSignal, MapBox</span> Mop'up cleaner PRO
+                                </h3>
+                                <p class="mb--30">Мобильное приложение для исполнителей сервиса Mop'up</p>
+                                <p>Приложение позволяет просматривать заказы на карте по адресу, принимать и отклонять их, контролировать статус заказа, а так же в приложение встроен чат в реальном времени с поддержкой куратора.</p>
+                                <div class="button-group mt--20">
+
+                                    <a href="https://play.google.com/store/apps/details?id=com.coderok.cleanerpro" target="_blank" class="rn-btn">
+                                        <span>GooglePlay</span>
+                                        <i data-feather="chevron-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- End of .text-content -->
+                        </div>
+                    </div>
+                    <!-- End of .row Body-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal Portfolio area -->
+    <!-- Modal Portfolio Body area Start -->
+    <div class="modal fade" id="exampleModalMopCli" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i data-feather="x"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-6">
+                            <div class="portfolio-popup-thumbnail">
+                                <div class="image">
+                                    <img class="w-100" src="{{asset('assets/images/portfolio/mop_clients.png')}}" alt="slide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="text-content">
+                                <h3>
+                                    <span>Flutter, Dart, API, FireBase, OneSignal, MapBox</span> Mop'up
+                                </h3>
+                                <p class="mb--30">Мобильное приложение для клиентов сервиса Mop'up</p>
+                                <p>Приложение для заказа клининговых услуг с возможностью просмотра текущего статуса заказа, пуш уведомлениями.</p>
+                                <div class="button-group mt--20">
+
+                                    <a href="https://play.google.com/store/apps/details?id=com.coderok.mopup.mopup_client" target="_blank" class="rn-btn">
+                                        <span>GooglePlay</span>
+                                        <i data-feather="chevron-right"></i>
+                                    </a>
+                                    <a href="#" class="rn-btn" disabled>
+                                        <span>AppStore</span>
+                                        <i data-feather="chevron-right"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- End of .text-content -->
+                        </div>
+                    </div>
+                    <!-- End of .row Body-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal Portfolio area -->
+
     <!-- Back to  top Start -->
     <div class="backto-top">
         <div>
@@ -1479,74 +905,69 @@
 </main>
 
 <!-- Rn footer area Start -->
-<div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop section-separator">
-    <div class="container pb--80 pb_sm--40 plr_sm--20">
+<div class="rn-contact-area rn-section-gap section-separator" id="contacts">
+    <div class="container">
         <div class="row">
-            <div class="col-xl-3 col-12 col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="logo-thumbnail">
-                    <a href="#"><img src="assets/images/logo/logo.png" alt="logo-image"></a>
-                </div>
-                <div class="social-icone-wrapper">
-                    <ul class="social-share d-flex liststyle">
-                        <li class="facebook"><a href="#"><i data-feather="linkedin"></i></a>
-                        </li>
-                        <li class="instagram"><a href="#"><i data-feather="instagram"></i></a>
-                        </li>
-                        <li class="linkedin"><a href="#"><i data-feather="twitter"></i></a>
-                        </li>
-                    </ul>
+            <div class="col-lg-12">
+                <div class="section-title text-center">
+                    <span class="subtitle">ПО ВОПРОСАМ СОТРУДНИЧЕСТВА И ПРЕДЛОЖЕНИЙ</span>
+                    <h2 class="title">Мои контакты</h2>
                 </div>
             </div>
-            <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="menu-wrapper">
-                    <div class="menu-title">
-                        <h6>product</h6>
+        </div>
+
+        <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
+            <div class="col-lg-5">
+                <div class="contact-about-area">
+                    <div class="thumbnail">
+                        <img src="{{asset('assets/images/about/contact.webp')}}" alt="contact-img">
                     </div>
-                    <ul class="menu-footer">
-                        <li><a href="#">Database</a></li>
-                        <li><a href="#">Authentication</a></li>
-                        <li><a href="#">Storage</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Pricing</a></li>
-                    </ul>
                 </div>
             </div>
-            <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="menu-wrapper">
-                    <div class="menu-title">
-                        <h6>Resources</h6>
+            <div data-aos-delay="600" class="col-lg-7 contact-input">
+                <div class="contact-about-area">
+                    <div class="title-area">
+                        <h4 class="title">Andrey Lyubichenko</h4>
+                        <span>/ Coderok</span>
                     </div>
-                    <ul class="menu-footer">
-                        <li><a href="#">Authentication</a></li>
-                        <li><a href="#">System Status</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">over right</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="menu-wrapper">
-                    <div class="menu-title">
-                        <h6>Developers</h6>
+                    <div class="description">
+                        <p>Я принимаю как разовые подряды, так и долгосрочные контракты в области разработки.
+                        </p>
+                        <span class="phone">Телефон: <a href="tel:+79992213383">+7(999)221-33-83</a></span>
+                        <span class="mail">Email: <a href="mailto:info@coderok.ru">info@coderok.ru</a></span>
                     </div>
-                    <ul class="menu-footer">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Authentication</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Open Source</a></li>
-                    </ul>
+                    <div class="social-area">
+                        <div class="social-icone">
+                            <a href="https://t.me/coderok_official"><i data-feather="send"></i></a>
+                            <a href="https://wa.me/79992213383?text=CODEROK.RU%20%7C%20%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20"><i data-feather="message-circle"></i></a>
+                            <a href="tel:+79992213383"><i data-feather="phone-call"></i></a>
+                            <a href="mailto:info@coderok.ru"><i data-feather="mail"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="copyright text-center ptb--40 section-separator">
-        <p class="description">© 2022. All rights reserved by <a target="_blank"
-                                                                 href="https://themeforest.net/user/rainbow-themes/portfolio">Rainbow-Themes.</a>
-        </p>
+</div>
+
+<!-- Start Footer Area -->
+<div class="rn-footer-area rn-section-gap section-separator">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer-area text-center">
+
+                    <div class="main-logo">
+                            <img class="main-logo" src="{{asset('logo/logo-coder.svg')}}" alt="logo">
+                    </div>
+
+                    <p class="description mt--30">© <span id="year"></span>. All rights reserved by <a target="_blank" href="#">Coderok || Andrey Lyubichenko.</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<!-- End Footer Area -->
 <!-- Rn footer area end -->
 <!-- JS ============================================ -->
 <script src="{{asset('assets/js/vendor/jquery.js')}}"></script>
@@ -1559,6 +980,10 @@
 <script src="{{asset('assets/js/vendor/aos.js')}}"></script>
 <script src="{{asset('assets/js/vendor/particles.js')}}"></script>
 <script src="{{asset('assets/js/vendor/jquery-one-page-nav.js')}}"></script>
+<script>
+    const currentYear = new Date().getFullYear();
+    document.getElementById('year').innerHTML = currentYear.toString();
+</script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const body = document.body;

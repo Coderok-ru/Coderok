@@ -6207,6 +6207,11 @@ img {
     height: 70px;
 }
 
+.mobile-logo {
+    height: 70px;
+    padding-left: 10px;
+}
+
 svg:not(:root) {
   overflow: hidden;
 }
