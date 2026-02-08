@@ -342,6 +342,31 @@
                         </div>
                     </div>
                     <!-- single skills -->
+                    <!-- NEW: LLM Integration -->
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="250" data-aos-once="true"
+                         class="experience-style-two">
+                        <div class="experience-left">
+                            <div class="experience-image">
+                                <img src="{{asset('assets/images/portfolio/llm_img.svg')}}" alt="llm integration">
+                            </div>
+                            <div class="experience-center">
+                                <span class="date">AI & LLM Integration</span>
+                                <h4 class="experience-title">
+                                    Внедрение LLM
+                                </h4>
+                                <h6 class="subtitle">
+                                    Интеграция ИИ в ваши продукты
+                                </h6>
+                                <p class="disc">Подключаем GPT, Claude, локальные модели к вашему ПО, автоматизируем процессы</p>
+                            </div>
+                        </div>
+                        <div class="experience-right">
+                            <div class="experience-footer">
+                                <a class="rn-btn" href="https://t.me/coderok_official" target="_blank"><span>ОБСУДИТЬ</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single skills -->
 
                     <!-- single skills -->
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
