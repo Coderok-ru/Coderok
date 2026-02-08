@@ -317,6 +317,31 @@
                         </div>
                     </div>
                     <!-- single skills -->
+                    <!-- NEW: Desktop Apps -->
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+                         class="experience-style-two">
+                        <div class="experience-left">
+                            <div class="experience-image">
+                                <img src="{{asset('assets/images/portfolio/desktop_img.svg')}}" alt="desktop image">
+                            </div>
+                            <div class="experience-center">
+                                <span class="date">Desktop App Development</span>
+                                <h4 class="experience-title">
+                                    Разработка десктопных приложений
+                                </h4>
+                                <h6 class="subtitle">
+                                    Под Windows и macOS
+                                </h6>
+                                <p class="disc">Нативные приложения с использованием Flutter, Electron, Swift, C#</p>
+                            </div>
+                        </div>
+                        <div class="experience-right">
+                            <div class="experience-footer">
+                                <a class="rn-btn" href="https://t.me/coderok_official" target="_blank"><span>ЗАКАЗАТЬ</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single skills -->
 
                     <!-- single skills -->
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
