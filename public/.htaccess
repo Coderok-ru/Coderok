@@ -1,4 +1,6 @@
 Options -MultiViews
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .txt .xml .html .htm .css .js .json
 RewriteEngine On
 
 # Serve sitemap.xml dynamically via PHP (always fresh date)
