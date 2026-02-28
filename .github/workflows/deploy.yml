@@ -40,16 +40,14 @@ jobs:
 
       - name: Deploy to Beget
         run: |
-          rsync -avz --delete \
+          rsync -avz \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='node_modules' \
             --exclude='vendor' \
-            --exclude='storage/logs/*' \
-            --exclude='storage/framework/cache/*' \
-            --exclude='storage/framework/sessions/*' \
-            --exclude='storage/framework/views/*' \
+            --exclude='storage' \
+            --exclude='bootstrap/cache' \
             --exclude='.env' \
             ./ ${{ secrets.BEGET_USER }}:${{ secrets.BEGET_PATH }}
 
