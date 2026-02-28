@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+# Serve sitemap.xml dynamically via PHP (always fresh date)
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+
+# SPA fallback — serve index.html for all non-file routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]

@@ -21,10 +21,10 @@ const scrollTo = (id: string) => {
 onMounted(() => $featherReplace())
 
 const navItems = [
-  { id: 'home', label: 'Инфо' },
+  { id: 'home', label: 'О студии' },
   { id: 'experiences', label: 'Услуги' },
   { id: 'portfolio', label: 'Портфолио' },
-  { id: 'contacts', label: 'Мои контакты' },
+  { id: 'contacts', label: 'Контакты' },
 ]
 </script>
 
@@ -65,19 +65,13 @@ const navItems = [
           </nav>
 
           <div class="header-right">
-            <label class="switch">
+            <label class="switch d-none d-xl-flex">
               <input type="checkbox" :checked="isLight" @change="toggle">
               <span class="slider round"></span>
             </label>
 
-            <div class="hamberger-menu d-block d-xl-none">
-              <i data-feather="menu" class="humberger-menu" @click="openMobileMenu"></i>
-            </div>
-
-            <div class="close-menu d-block">
-              <span class="closeTrigger" @click="closeMobileMenu">
-                <i data-feather="x"></i>
-              </span>
+            <div class="hamberger-menu d-block d-xl-none header-hamburger me-5" @click="openMobileMenu">
+              <i data-feather="menu" class="humberger-menu"></i>
             </div>
           </div>
         </div>
@@ -89,7 +83,26 @@ const navItems = [
     :is-open="mobileMenuOpen"
     :nav-items="navItems"
     :active="active"
+    :is-light="isLight"
     @close="closeMobileMenu"
     @navigate="scrollTo"
+    @toggle-theme="toggle"
   />
 </template>
+
+<style scoped>
+.header-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.header-hamburger :deep(svg) {
+  width: 36px;
+  height: 36px;
+  stroke: currentColor;
+}
+</style>

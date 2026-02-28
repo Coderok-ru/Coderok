@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { $featherReplace } = useNuxtApp()
+
 onMounted(() => $featherReplace())
 </script>
 
@@ -8,32 +9,34 @@ onMounted(() => $featherReplace())
     <div class="slide slider-style-3">
       <div class="container">
         <div class="row slider-wrapper">
-          <div class="order-2 order-xl-1 col-lg-12 col-xl-5 mt_lg--50 mt_md--50 mt_sm--50">
+          <div class="col-12">
             <div class="slider-info">
               <div class="row">
                 <div class="col-xl-12 col-lg-12 col-12">
                   <div class="user-info-top">
                     <div class="user-info-header">
                       <div class="user">
-                        <i data-feather="user"></i>
+                        <i data-feather="layers"></i>
                       </div>
                       <h2 class="title">
-                        Привет, меня зовут <span>Андрей</span>
+                        Coderok — <span>студия разработки</span>
                       </h2>
-                      <p class="disc">Разработчик мобильных и web приложений с креативным мышлением и высокими стандартами к качеству работы.</p>
+                      <p class="disc">
+                        Создаём мобильные приложения, веб-сервисы и CRM-платформы. Основатель и ведущий разработчик — Андрей Любиченко, 13+ лет в индустрии.
+                      </p>
                     </div>
                     <div class="user-info-footer">
                       <div class="info">
-                        <i data-feather="code"></i>
-                        <span>Web developer</span>
-                      </div>
-                      <div class="info">
                         <i data-feather="smartphone"></i>
-                        <span>Mobile app developer</span>
+                        <span>iOS & Android</span>
                       </div>
                       <div class="info">
-                        <i data-feather="pen-tool"></i>
-                        <span>Web designer</span>
+                        <i data-feather="globe"></i>
+                        <span>Web & Backend</span>
+                      </div>
+                      <div class="info">
+                        <i data-feather="cpu"></i>
+                        <span>AI & Automation</span>
                       </div>
                     </div>
                   </div>
@@ -41,29 +44,22 @@ onMounted(() => $featherReplace())
 
                 <div class="col-xl-12 col-lg-12 col-12">
                   <div class="user-info-bottom">
-                    <span>Посмотрите мое резюме или сразу свяжитесь со мной: </span>
+                    <span>Готовы к сотрудничеству — от идеи до продакшена:</span>
                     <div class="button-wrapper d-flex">
-                      <a
+                      <!-- <a
                         class="rn-btn mr--30"
-                        href="/assets/images/contact/Любиченко Андрей.pdf"
-                        target="_blank"
-                      ><span>СКАЧАТЬ РЕЗЮМЕ</span></a>
+                        role="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#resume-modal"
+                      ><span>РЕЗЮМЕ</span></a> -->
                       <a
                         class="rn-btn"
                         href="https://t.me/coderok_official"
                         target="_blank"
-                      ><span>НАПИСАТЬ МНЕ</span></a>
+                      ><span>ОБСУДИТЬ ПРОЕКТ</span></a>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="order-1 order-xl-2 col-lg-12 col-xl-7">
-            <div class="background-image-area">
-              <div class="thumbnail-image">
-                <img src="/img/banner-02.webp" alt="Personal Portfolio">
               </div>
             </div>
           </div>

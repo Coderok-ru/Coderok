@@ -9,8 +9,8 @@ onMounted(() => $featherReplace())
       <div class="row">
         <div class="col-lg-12">
           <div class="section-title text-center">
-            <span class="subtitle">ПО ВОПРОСАМ СОТРУДНИЧЕСТВА И ПРЕДЛОЖЕНИЙ</span>
-            <h2 class="title">Мои контакты</h2>
+            <span class="subtitle">ГОТОВЫ ОБСУДИТЬ ВАШ ПРОЕКТ</span>
+            <h2 class="title">Свяжитесь с нами</h2>
           </div>
         </div>
       </div>
@@ -26,18 +26,18 @@ onMounted(() => $featherReplace())
         <div data-aos-delay="600" class="col-lg-7 contact-input">
           <div class="contact-about-area">
             <div class="title-area">
-              <h4 class="title">Andrey Lyubichenko</h4>
-              <span>/ Coderok</span>
+              <h4 class="title">Андрей Любиченко</h4>
+              <span>/ Основатель Coderok</span>
             </div>
             <div class="description">
-              <p>Я принимаю как разовые подряды, так и долгосрочные контракты в области разработки.</p>
-              <span class="phone">Телефон: <a href="tel:+79992213383">+7(999)221-33-83</a></span>
+              <p>Берёмся как за короткие задачи, так и за долгосрочные проекты. Оцениваем задачу бесплатно — просто напишите.</p>
+              <span class="phone">Телефон: <a href="tel:+79992213383">+7 (999) 221-33-83</a></span>
               <span class="mail">Email: <a href="mailto:info@coderok.ru">info@coderok.ru</a></span>
             </div>
             <div class="social-area">
               <div class="social-icone">
                 <a href="https://t.me/coderok_official"><i data-feather="send"></i></a>
-                <a href="https://wa.me/79992213383?text=CODEROK.RU%20%7C%20%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20">
+                <a href="https://wa.me/79992213383?text=CODEROK.RU%20%7C%20Здравствуйте%20">
                   <i data-feather="message-circle"></i>
                 </a>
                 <a href="tel:+79992213383"><i data-feather="phone-call"></i></a>

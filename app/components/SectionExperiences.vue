@@ -2,48 +2,57 @@
 const services = [
   {
     image: '/assets/images/portfolio/web_img.svg',
-    date: 'Web development',
-    title: 'Разработка веб приложений',
-    subtitle: 'Сайт любой сложности и направленности',
-    disc: 'От лендинга до сложных CRM систем',
+    tag: 'Web & Frontend',
+    title: 'Веб-приложения и сайты',
+    subtitle: 'От лендинга до SaaS-платформы',
+    disc: 'Laravel, Vue 3, Nuxt, Tailwind, HTMX. Проектируем архитектуру, пишем чистый код, деплоим в продакшн.',
     btnLabel: 'ЗАКАЗАТЬ',
     delay: 100,
   },
   {
     image: '/assets/images/portfolio/mobile_img.svg',
-    date: 'Mobile App development',
-    title: 'Разработка мобильных приложений',
-    subtitle: 'Под Android, iOS, Windows и MacOS',
-    disc: 'От дизайна до выпуска готового приложения',
+    tag: 'Mobile Development',
+    title: 'Мобильные приложения',
+    subtitle: 'iOS, Android и кроссплатформа',
+    disc: 'Flutter + Dart. Дизайн, разработка, публикация в App Store, Google Play и RuStore. Push, карты, эквайринг.',
+    btnLabel: 'ЗАКАЗАТЬ',
+    delay: 150,
+  },
+  {
+    image: '/assets/images/portfolio/desctope_completed.svg',
+    tag: 'Desktop Apps',
+    title: 'Десктопные приложения',
+    subtitle: 'Windows и macOS',
+    disc: 'Flutter, Electron, Swift, C#. Нативная производительность и интеграция с системными API.',
     btnLabel: 'ЗАКАЗАТЬ',
     delay: 200,
   },
   {
     image: '/assets/images/portfolio/desktop_img.svg',
-    date: 'Desktop App Development',
-    title: 'Разработка десктопных приложений',
-    subtitle: 'Под Windows и macOS',
-    disc: 'Нативные приложения с использованием Flutter, Electron, Swift, C#',
-    btnLabel: 'ЗАКАЗАТЬ',
-    delay: 200,
-  },
-  {
-    image: '/assets/images/portfolio/llm_img.svg',
-    date: 'AI & LLM Integration',
-    title: 'Внедрение LLM',
-    subtitle: 'Интеграция ИИ в ваши продукты',
-    disc: 'Подключаем GPT, Claude, локальные модели к вашему ПО, автоматизируем процессы',
+    tag: 'AI & LLM Integration',
+    title: 'Интеграция искусственного интеллекта',
+    subtitle: 'Умные продукты на базе GPT, Claude, локальных моделей',
+    disc: 'Встраиваем LLM в ваши сервисы: чат-боты, автоматизация, RAG, генерация контента и классификация данных.',
     btnLabel: 'ОБСУДИТЬ',
     delay: 250,
   },
   {
     image: '/assets/images/portfolio/bot_img.svg',
-    date: 'Web apps',
-    title: 'Разработка чат ботов',
-    subtitle: 'И Mini Apps для Telegram и VK',
-    disc: 'От простых ботов до приложений Ecommerce',
+    tag: 'Bots & Mini Apps',
+    title: 'Telegram-боты и Mini Apps',
+    subtitle: 'Для Telegram и ВКонтакте',
+    disc: 'От информационных ботов до полноценных e-commerce приложений с оплатой и личным кабинетом.',
     btnLabel: 'ЗАКАЗАТЬ',
     delay: 300,
+  },
+  {
+    image: '/assets/images/portfolio/mcp-server.svg',
+    tag: 'Backend & API',
+    title: 'Серверная разработка и API',
+    subtitle: 'REST, Webhook, микросервисы',
+    disc: 'Go (Golang), Laravel, Node.js. Проектируем и разрабатываем надёжные API, CRM и административные панели.',
+    btnLabel: 'ОБСУДИТЬ',
+    delay: 350,
   },
 ]
 </script>
@@ -60,8 +69,8 @@ const services = [
             data-aos-once="true"
             class="section-title text-center"
           >
-            <span class="subtitle">Опыт более 13 лет</span>
-            <h2 class="title">Мои услуги</h2>
+            <span class="subtitle">Полный цикл разработки продуктов</span>
+            <h2 class="title">Наши услуги</h2>
           </div>
         </div>
       </div>
@@ -76,12 +85,12 @@ const services = [
             data-aos-once="true"
             class="experience-style-two"
           >
+            <div class="experience-image">
+              <img :src="service.image" :alt="service.tag">
+            </div>
             <div class="experience-left">
-              <div class="experience-image">
-                <img :src="service.image" :alt="service.date">
-              </div>
               <div class="experience-center">
-                <span class="date">{{ service.date }}</span>
+                <span class="date">{{ service.tag }}</span>
                 <h4 class="experience-title">{{ service.title }}</h4>
                 <h6 class="subtitle">{{ service.subtitle }}</h6>
                 <p class="disc">{{ service.disc }}</p>

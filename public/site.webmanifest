@@ -1,19 +1,16 @@
 {
-    "name": "Coderok || Andrey Lyubichenko",
-    "short_name": "Andrey Lyubichenko",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#a656ff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+  "name": "Coderok — студия разработки",
+  "short_name": "Coderok",
+  "description": "Создаём мобильные приложения, веб-сервисы и CRM. iOS, Android, Flutter, Laravel, Vue.",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#a656ff",
+  "background_color": "#0a0a0a",
+  "display": "standalone",
+  "lang": "ru",
+  "categories": ["business", "productivity"]
 }

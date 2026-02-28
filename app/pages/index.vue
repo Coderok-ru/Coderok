@@ -13,6 +13,7 @@ onMounted(async () => {
   initTheme()
   document.body.classList.add('template-color-1', 'spybody')
   AOS.init({ once: true })
+  // @ts-ignore
   await import('bootstrap')
   cleanupObserver = observe() ?? undefined
 })
@@ -43,4 +44,6 @@ onUnmounted(() => {
 
   <SectionContact />
   <AppFooter />
+
+  <ResumeModal />
 </template>

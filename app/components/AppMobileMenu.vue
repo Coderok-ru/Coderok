@@ -3,11 +3,13 @@ defineProps<{
   isOpen: boolean
   navItems: { id: string; label: string }[]
   active: string
+  isLight: boolean
 }>()
 
 const emit = defineEmits<{
   close: []
   navigate: [id: string]
+  toggleTheme: []
 }>()
 </script>
 
@@ -43,6 +45,16 @@ const emit = defineEmits<{
             >{{ item.label }}</a>
           </li>
         </ul>
+
+        <div class="theme-toggle-mobile mt--40">
+          <span class="title">Тема оформления</span>
+          <div class="toggle-row mb-3">
+            <label class="switch">
+              <input type="checkbox" :checked="isLight" @change="emit('toggleTheme')">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
 
         <div class="social-share-style-1 mt--40">
           <span class="title">Для связи со мной</span>

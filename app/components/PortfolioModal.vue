@@ -42,9 +42,8 @@ onMounted(() => $featherReplace())
             </div>
             <div class="col-lg-6">
               <div class="text-content">
-                <h3>
-                  <span>{{ project.tech }}</span> {{ project.title }}
-                </h3>
+                <h3>{{ project.title }}</h3>
+                <p class="mb--20"><span>{{ project.tech }}</span></p>
                 <p
                   v-for="(desc, i) in project.description"
                   :key="i"

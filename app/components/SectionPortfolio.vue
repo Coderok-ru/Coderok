@@ -20,7 +20,7 @@ onMounted(() => $featherReplace())
             class="section-title text-center"
           >
             <span class="subtitle">Коммерческая разработка</span>
-            <h2 class="title">Мои работы</h2>
+            <h2 class="title">Наши работы</h2>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ onMounted(() => $featherReplace())
             <div class="inner">
               <div class="thumbnail">
                 <a href="javascript:void(0)">
-                  <img :src="project.image" alt="Personal Portfolio Images">
+                  <img :src="project.image" :alt="project.title">
                 </a>
               </div>
               <div class="content">
@@ -87,7 +87,7 @@ onMounted(() => $featherReplace())
                     И еще много работ с кем подписано NDA.
                   </a>
                 </h4>
-                <p class="description">А так же работ в которых мною были разработаны и внедрены отдельные компоненты.</p>
+                <p class="description">А также проектов, в которых нами были разработаны и внедрены отдельные модули и компоненты.</p>
               </div>
             </div>
           </div>
