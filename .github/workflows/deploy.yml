@@ -53,10 +53,10 @@ jobs:
             --exclude='storage/framework/sessions/*' \
             --exclude='storage/framework/views/*' \
             --exclude='.env' \
-            ./ ${{ secrets.BEGET_USER }}@pulum.beget.tech:${{ secrets.BEGET_PATH }}
+            ./ ${{ secrets.BEGET_USER }}:${{ secrets.BEGET_PATH }}
 
       - name: Run post-deploy commands
         run: |
           ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no \
-            ${{ secrets.BEGET_USER }}@pulum.beget.tech \
+            ${{ secrets.BEGET_USER }} \
             "cd ${{ secrets.BEGET_PATH }} && php artisan config:cache && php artisan route:cache"

@@ -22,7 +22,7 @@ cat /root/.ssh/pulum_coderok_ed25519
 Скопируй **весь вывод** (включая `-----BEGIN OPENSSH PRIVATE KEY-----` и `-----END OPENSSH PRIVATE KEY-----`)
 
 #### 2. `BEGET_USER`
-**Значение:** `pulum_coderokmain@pulum.beget.tech`
+**Значение:** `pulum_coderokmain@pulum.beget.tech` (полный адрес с хостом)
 
 #### 3. `BEGET_PATH`
 **Значение:** `/home/p/pulum/coderok.ru/public_html`
