@@ -6,6 +6,9 @@ RewriteEngine On
 # Serve sitemap.xml dynamically via PHP (always fresh date)
 RewriteRule ^sitemap\.xml$ /sitemap.php [L]
 
+# Serve llms.txt via PHP to force UTF-8 charset header
+RewriteRule ^llms\.txt$ /llms.php [L]
+
 # SPA fallback — serve index.html for all non-file routes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
