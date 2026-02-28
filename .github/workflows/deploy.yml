@@ -56,4 +56,4 @@ jobs:
         run: |
           ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no \
             ${{ secrets.BEGET_USER }} \
-            "cd ${{ secrets.BEGET_PATH }} && composer install --no-dev --optimize-autoloader --no-interaction && php artisan config:cache && php artisan route:cache"
+            "cd ${{ secrets.BEGET_PATH }} && /usr/local/bin/php8.2 composer.phar install --no-dev --optimize-autoloader --no-interaction && /usr/local/bin/php8.2 artisan config:cache && /usr/local/bin/php8.2 artisan route:cache"
