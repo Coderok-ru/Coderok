@@ -1,8 +1,0 @@
-# PHP 8.2+
-AddHandler php82-cgi .php
-
-<IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteCond %{REQUEST_URI} !^public
-    RewriteRule ^(.*)$ public/$1 [L]
-</IfModule>
