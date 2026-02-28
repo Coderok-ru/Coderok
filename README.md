@@ -13,3 +13,4 @@ A developer of mobile and web applications with creative thinking and high stand
 I accept both one-time contracts and long-term development contracts.
 
 Write to me in  [Telegram](https://t.me/coderok_official).
+# Auto-deploy configured
