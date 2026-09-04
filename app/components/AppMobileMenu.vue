@@ -1,16 +1,17 @@
 <script setup lang="ts">
 defineProps<{
   isOpen: boolean
-  navItems: { id: string; label: string }[]
-  active: string
   isLight: boolean
 }>()
 
 const emit = defineEmits<{
   close: []
-  navigate: [id: string]
   toggleTheme: []
 }>()
+
+const { navItems, isActive } = useNavState()
+const { channels } = useContact()
+const items = computed(() => channels('Заявка с сайта coderok.ru'))
 </script>
 
 <template>
@@ -18,31 +19,31 @@ const emit = defineEmits<{
     <div class="inner">
       <div class="menu-top">
         <div class="menu-header">
-          <a class="logo" href="#" @click.prevent="emit('navigate', 'home')">
-            <img class="mobile-logo" src="/logo/logo-coder.svg" alt="logo">
-          </a>
+          <NuxtLink class="logo" to="/" @click="emit('close')">
+            <img class="mobile-logo" src="/logo/logo-coder.svg" alt="Coderok">
+          </NuxtLink>
           <div class="close-button">
-            <button class="close-menu-activation close" @click="emit('close')">
-              <i data-feather="x"></i>
+            <button class="close-menu-activation close" aria-label="Закрыть меню" @click="emit('close')">
+              <i class="feather-x"></i>
             </button>
           </div>
         </div>
-        <p class="discription">Разработка мобильных и веб приложений, ботов и mini apps.</p>
+        <p class="discription">Сайты, мобильные приложения и CRM — от идеи до продакшена.</p>
       </div>
       <div class="content">
-        <ul class="primary-menu nav nav-pills onepagenav">
+        <ul class="primary-menu nav nav-pills">
           <li
             v-for="item in navItems"
-            :key="item.id"
+            :key="item.to"
             class="nav-item"
-            :class="{ current: active === item.id }"
+            :class="{ current: isActive(item) }"
           >
-            <a
+            <NuxtLink
               class="nav-link smoth-animation"
-              :class="{ active: active === item.id }"
-              :href="`#${item.id}`"
-              @click.prevent="emit('navigate', item.id)"
-            >{{ item.label }}</a>
+              :class="{ active: isActive(item) }"
+              :to="item.to"
+              @click="emit('close')"
+            >{{ item.label }}</NuxtLink>
           </li>
         </ul>
 
@@ -57,21 +58,15 @@ const emit = defineEmits<{
         </div>
 
         <div class="social-share-style-1 mt--40">
-          <span class="title">Для связи со мной</span>
+          <span class="title">Для связи</span>
           <ul class="social-share d-flex liststyle">
-            <li class="instagram">
-              <a href="https://t.me/coderok_official"><i data-feather="send"></i></a>
-            </li>
-            <li class="linkedin">
-              <a href="https://wa.me/79992213383?text=CODEROK.RU%20%7C%20%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%20">
-                <i data-feather="message-circle"></i>
-              </a>
-            </li>
-            <li class="linkedin">
-              <a href="tel:+79992213383"><i data-feather="phone-call"></i></a>
-            </li>
-            <li class="linkedin">
-              <a href="mailto:info@coderok.ru"><i data-feather="mail"></i></a>
+            <li v-for="channel in items" :key="channel.id">
+              <a
+                :href="channel.href"
+                :target="channel.external ? '_blank' : undefined"
+                :rel="channel.external ? 'noopener' : undefined"
+                :aria-label="channel.label"
+              ><i :class="`feather-${channel.icon}`"></i></a>
             </li>
           </ul>
         </div>

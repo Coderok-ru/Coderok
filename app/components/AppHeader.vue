@@ -1,31 +1,11 @@
 <script setup lang="ts">
-const { $featherReplace } = useNuxtApp()
 const { isSticky } = useStickyHeader()
 const { isLight, toggle } = useTheme()
-const injected = inject('activeSection') as { active: Ref<string> } | undefined
-const active = injected?.active ?? ref('home')
+const { navItems, isActive } = useNavState()
 
 const mobileMenuOpen = ref(false)
-
 const openMobileMenu = () => { mobileMenuOpen.value = true }
 const closeMobileMenu = () => { mobileMenuOpen.value = false }
-
-const scrollTo = (id: string) => {
-  closeMobileMenu()
-  if (import.meta.client) {
-    const el = document.getElementById(id)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
-}
-
-onMounted(() => $featherReplace())
-
-const navItems = [
-  { id: 'home', label: 'О студии' },
-  { id: 'experiences', label: 'Услуги' },
-  { id: 'portfolio', label: 'Портфолио' },
-  { id: 'contacts', label: 'Контакты' },
-]
 </script>
 
 <template>
@@ -37,29 +17,28 @@ const navItems = [
       <div class="col-lg-2 col-6">
         <div class="header-left">
           <div class="logo">
-            <a href="#home" @click.prevent="scrollTo('home')">
-              <img class="main-logo" src="/logo/logo-coder.svg" alt="logo">
-            </a>
+            <NuxtLink to="/">
+              <img class="main-logo" src="/logo/logo-coder.svg" alt="Coderok">
+            </NuxtLink>
           </div>
         </div>
       </div>
 
       <div class="col-lg-10 col-6">
         <div class="header-center">
-          <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav">
+          <nav id="sideNav" class="mainmenu-nav d-none d-xl-block">
             <ul class="primary-menu nav nav-pills">
               <li
                 v-for="item in navItems"
-                :key="item.id"
+                :key="item.to"
                 class="nav-item"
-                :class="{ current: active === item.id }"
+                :class="{ current: isActive(item) }"
               >
-                <a
+                <NuxtLink
                   class="nav-link smoth-animation"
-                  :class="{ active: active === item.id }"
-                  :href="`#${item.id}`"
-                  @click.prevent="scrollTo(item.id)"
-                >{{ item.label }}</a>
+                  :class="{ active: isActive(item) }"
+                  :to="item.to"
+                >{{ item.label }}</NuxtLink>
               </li>
             </ul>
           </nav>
@@ -70,8 +49,13 @@ const navItems = [
               <span class="slider round"></span>
             </label>
 
-            <div class="hamberger-menu d-block d-xl-none header-hamburger me-5" @click="openMobileMenu">
-              <i data-feather="menu" class="humberger-menu"></i>
+            <div
+              class="hamberger-menu d-block d-xl-none header-hamburger me-5"
+              role="button"
+              aria-label="Открыть меню"
+              @click="openMobileMenu"
+            >
+              <i class="feather-menu humberger-menu"></i>
             </div>
           </div>
         </div>
@@ -81,11 +65,8 @@ const navItems = [
 
   <AppMobileMenu
     :is-open="mobileMenuOpen"
-    :nav-items="navItems"
-    :active="active"
     :is-light="isLight"
     @close="closeMobileMenu"
-    @navigate="scrollTo"
     @toggle-theme="toggle"
   />
 </template>
@@ -100,9 +81,8 @@ const navItems = [
   cursor: pointer;
 }
 
-.header-hamburger :deep(svg) {
-  width: 36px;
-  height: 36px;
-  stroke: currentColor;
+.header-hamburger i {
+  font-size: 30px;
+  line-height: 1;
 }
 </style>

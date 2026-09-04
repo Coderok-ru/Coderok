@@ -1,18 +1,45 @@
+import { services } from '../../app/data/services'
+import { cases } from '../../app/data/cases'
+
+const SITE_URL = 'https://coderok.ru'
+
+interface SitemapEntry {
+  path: string
+  priority: string
+  changefreq: string
+}
+
+const entries: SitemapEntry[] = [
+  { path: '/', priority: '1.0', changefreq: 'weekly' },
+  { path: '/cases', priority: '0.9', changefreq: 'weekly' },
+  ...services.map(service => ({
+    path: `/services/${service.slug}`,
+    priority: '0.9',
+    changefreq: 'monthly',
+  })),
+  ...cases.map(item => ({
+    path: `/cases/${item.slug}`,
+    priority: '0.8',
+    changefreq: 'monthly',
+  })),
+  { path: '/about', priority: '0.6', changefreq: 'monthly' },
+  { path: '/contacts', priority: '0.6', changefreq: 'monthly' },
+]
+
 export default defineEventHandler((event) => {
   const date = new Date().toISOString().split('T')[0]
 
   setHeader(event, 'Content-Type', 'application/xml; charset=utf-8')
 
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <url>
-    <loc>https://coderok.ru/</loc>
+  const urls = entries.map(entry => `  <url>
+    <loc>${SITE_URL}${entry.path}</loc>
     <lastmod>${date}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <changefreq>${entry.changefreq}</changefreq>
+    <priority>${entry.priority}</priority>
+  </url>`).join('\n')
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
 </urlset>`
 })

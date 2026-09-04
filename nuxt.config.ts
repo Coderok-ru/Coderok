@@ -1,8 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { services } from './app/data/services'
+import { cases } from './app/data/cases'
+import { company, contacts, yearsInDev, integrations } from './app/data/company'
+
 const SITE_URL = 'https://coderok.ru'
 const OG_IMAGE = `${SITE_URL}/img/og-image.jpg`
-const SITE_TITLE = 'Coderok — студия разработки веб и мобильных приложений'
-const SITE_DESC = 'Создаём мобильные приложения (iOS, Android), веб-сервисы и CRM. Flutter, Laravel, Vue, Nuxt. 13+ лет опыта. Разработка под ключ — от идеи до продакшена.'
+const SITE_TITLE = 'Разработка сайтов, мобильных приложений и CRM — Coderok'
+const SITE_DESC = 'Разрабатываем и чиним то, на чём работает бизнес: сайты, мобильные приложения и CRM. Забираем проекты в любом состоянии — с нуля, из чужого кода или из тупика. Цены и сроки на сайте.'
+
+/** Все статические маршруты для генерации и sitemap */
+const staticRoutes = [
+  '/',
+  '/cases',
+  '/about',
+  '/contacts',
+  ...services.map(service => `/services/${service.slug}`),
+  ...cases.map(item => `/cases/${item.slug}`),
+]
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -10,7 +24,8 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   nitro: {
     prerender: {
-      routes: ['/sitemap.xml'],
+      crawlLinks: true,
+      routes: [...staticRoutes, '/sitemap.xml'],
     },
   },
   app: {
@@ -23,11 +38,11 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
         { name: 'googlebot', content: 'index, follow' },
         { name: 'yandex', content: 'index, follow' },
-        { name: 'author', content: 'Андрей Любиченко, Coderok, info@coderok.ru' },
+        { name: 'author', content: `${company.founder}, Coderok, ${contacts.email}` },
         { name: 'copyright', content: '© Coderok' },
         { name: 'theme-color', content: '#a656ff' },
         { name: 'description', content: SITE_DESC },
-        { name: 'keywords', content: 'разработка мобильных приложений, веб-разработка, Flutter, Laravel, Vue, Nuxt, Go, Golang, CRM, iOS, Android, студия разработки, Coderok' },
+        { name: 'keywords', content: 'разработка сайтов, разработка мобильных приложений, Flutter, CRM под ключ, Telegram-бот, интеграция AI, поддержка сайта, доработка после другого разработчика, Санкт-Петербург, Coderok' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-touch-fullscreen', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
@@ -41,19 +56,19 @@ export default defineNuxtConfig({
         { property: 'og:image:secure_url', content: OG_IMAGE },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: 'Coderok — студия разработки веб и мобильных приложений' },
+        { property: 'og:image:alt', content: 'Coderok — разработка сайтов, мобильных приложений и CRM' },
         { property: 'og:image:type', content: 'image/jpeg' },
         { property: 'og:site_name', content: 'Coderok' },
         { property: 'og:locale', content: 'ru_RU' },
-        { property: 'og:email', content: 'info@coderok.ru' },
-        { property: 'og:phone_number', content: '+79992213383' },
+        { property: 'og:email', content: contacts.email },
+        { property: 'og:phone_number', content: contacts.phoneRaw },
         // Twitter / X Card
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:url', content: SITE_URL },
         { name: 'twitter:title', content: SITE_TITLE },
         { name: 'twitter:description', content: SITE_DESC },
         { name: 'twitter:image', content: OG_IMAGE },
-        { name: 'twitter:image:alt', content: 'Coderok — студия разработки' },
+        { name: 'twitter:image:alt', content: 'Coderok — разработка сайтов, мобильных приложений и CRM' },
         { name: 'twitter:creator', content: '@coderok_official' },
       ],
       link: [
@@ -80,58 +95,66 @@ export default defineNuxtConfig({
                 '@type': ['Organization', 'ProfessionalService'],
                 '@id': `${SITE_URL}/#organization`,
                 name: 'Coderok',
-                legalName: 'ИП Любиченко Андрей Анатольевич',
+                legalName: company.legalName,
                 url: SITE_URL,
                 logo: {
                   '@type': 'ImageObject',
                   url: `${SITE_URL}/logo/logo-coder.svg`,
                 },
                 image: OG_IMAGE,
-                description: 'Студия разработки веб и мобильных приложений. Flutter, Laravel, Vue, Nuxt. iOS, Android, CRM, AI-интеграции. 13+ лет опыта.',
-                email: 'info@coderok.ru',
-                telephone: '+7-999-221-33-83',
-                taxID: '784200644930',
+                description: `Разработка сайтов, мобильных приложений, CRM, Telegram-ботов и AI-интеграций. ${yearsInDev} лет в коммерческой разработке. Работаем по договору как ИП.`,
+                email: contacts.email,
+                telephone: contacts.phoneRaw,
+                taxID: company.inn,
+                foundingDate: '2024-09-04',
                 identifier: [
-                  { '@type': 'PropertyValue', name: 'ИНН', value: '784200644930' },
-                  { '@type': 'PropertyValue', name: 'ОГРНИП', value: '324784700283561' },
+                  { '@type': 'PropertyValue', name: 'ИНН', value: company.inn },
+                  { '@type': 'PropertyValue', name: 'ОГРНИП', value: company.ogrnip },
                 ],
+                address: {
+                  '@type': 'PostalAddress',
+                  addressLocality: company.city,
+                  addressCountry: 'RU',
+                },
                 areaServed: { '@type': 'Country', name: 'Russia' },
                 knowsLanguage: 'ru',
+                knowsAbout: integrations,
                 founder: { '@id': `${SITE_URL}/#person` },
                 employee: { '@id': `${SITE_URL}/#person` },
-                sameAs: ['https://t.me/coderok_official'],
+                sameAs: [contacts.telegram],
                 hasOfferCatalog: {
                   '@type': 'OfferCatalog',
                   name: 'Услуги разработки',
-                  itemListElement: [
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Разработка мобильных приложений', description: 'Flutter + Dart. iOS, Android, кроссплатформа. App Store, Google Play, RuStore.' } },
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Разработка веб-приложений', description: 'Laravel, Vue 3, Nuxt, Tailwind. От лендинга до SaaS-платформы.' } },
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Серверная разработка и API', description: 'Go, Laravel, Node.js. REST API, микросервисы, CRM.' } },
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI и LLM-интеграция', description: 'Интеграция GPT, Claude, локальных моделей. RAG, чат-боты, автоматизация.' } },
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Telegram-боты и Mini Apps', description: 'Боты и приложения для Telegram и ВКонтакте с оплатой и личным кабинетом.' } },
-                    { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Десктопные приложения', description: 'Flutter, Electron, Swift, C#. Windows и macOS.' } },
-                  ],
+                  itemListElement: services.map(service => ({
+                    '@type': 'Offer',
+                    url: `${SITE_URL}/services/${service.slug}`,
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: service.title,
+                      description: service.solution,
+                    },
+                  })),
                 },
               },
               {
                 '@type': 'Person',
                 '@id': `${SITE_URL}/#person`,
-                name: 'Андрей Любиченко',
+                name: company.founder,
                 givenName: 'Андрей',
                 familyName: 'Любиченко',
-                jobTitle: 'Основатель и ведущий разработчик',
+                jobTitle: company.founderRole,
                 worksFor: { '@id': `${SITE_URL}/#organization` },
-                url: SITE_URL,
-                email: 'info@coderok.ru',
-                telephone: '+7-999-221-33-83',
-                knowsAbout: ['Flutter', 'Dart', 'Laravel', 'Vue.js', 'Nuxt.js', 'Go', 'iOS', 'Android', 'AI', 'LLM', 'Telegram Bot', 'CRM'],
-                sameAs: ['https://t.me/coderok_official'],
+                url: `${SITE_URL}/about`,
+                email: contacts.email,
+                telephone: contacts.phoneRaw,
+                knowsAbout: ['Go', 'Flutter', 'Dart', 'Laravel', 'Vue.js', 'React', 'Nuxt', 'HTMX', 'PostgreSQL', 'iOS', 'Android', 'CRM', 'AI', 'LLM', 'Telegram Bot'],
+                sameAs: [contacts.telegram],
               },
               {
                 '@type': 'WebSite',
                 '@id': `${SITE_URL}/#website`,
                 url: SITE_URL,
-                name: 'Coderok — студия разработки',
+                name: 'Coderok',
                 description: SITE_DESC,
                 publisher: { '@id': `${SITE_URL}/#organization` },
                 inLanguage: 'ru-RU',
@@ -152,6 +175,6 @@ export default defineNuxtConfig({
         { innerHTML: '<div><img src="https://mc.yandex.ru/watch/65087863" style="position:absolute; left:-9999px;" alt="" /></div>' },
         { innerHTML: '<div><img src="https://top-fwz1.mail.ru/counter?id=3536367;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div>' },
       ],
-    }
-  }
+    },
+  },
 })

@@ -1,15 +1,19 @@
-Options -MultiViews
+Options -MultiViews -Indexes
 AddDefaultCharset UTF-8
 AddCharset UTF-8 .txt .xml .html .htm .css .js .json
+
+DirectoryIndex index.html
+
 RewriteEngine On
 
-# Serve sitemap.xml dynamically via PHP (always fresh date)
-RewriteRule ^sitemap\.xml$ /sitemap.php [L]
-
-# Serve llms.txt via PHP to force UTF-8 charset header
+# llms.txt отдаём через PHP — иначе Apache теряет UTF-8 в заголовке
 RewriteRule ^llms\.txt$ /llms.php [L]
 
-# SPA fallback — serve index.html for all non-file routes
+# Страницы лежат каталогами: /cases → /cases/index.html без 301 на слэш.
+# Так живой URL совпадает с canonical и sitemap.xml.
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ /index.html [L]
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+# Несуществующий адрес отдаёт честный 404, а не главную со статусом 200
+ErrorDocument 404 /404.html

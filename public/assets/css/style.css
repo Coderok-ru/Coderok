@@ -21520,3 +21520,870 @@ input:checked + .slider:before {
 }
 
 /*# sourceMappingURL=../maps/style.css.map */
+
+/*--------------------------------------
+    Coderok — секции структуры 2026
+    Все компоненты используют переменные темы,
+    светлая версия перекрывается через .white-version
+---------------------------------------*/
+
+.ck-lead {
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--color-lightn);
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.ck-lead.text-start {
+    margin: 0;
+}
+
+.white-version .ck-lead {
+    color: var(--color-body-white);
+}
+
+.ck-note {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--color-lightn);
+    opacity: 0.85;
+}
+
+.white-version .ck-note {
+    color: var(--color-body-white);
+}
+
+.ck-card {
+    height: 100%;
+    padding: 32px;
+    border-radius: 10px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    transition: var(--transition);
+}
+
+.white-version .ck-card {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-card__icon i {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.ck-card__title {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 12px;
+}
+
+.white-version .ck-card__title {
+    color: var(--color-heading-wv);
+}
+
+.ck-card__text {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--color-lightn);
+    margin: 0;
+}
+
+.white-version .ck-card__text {
+    color: var(--color-body-white);
+}
+
+@media only screen and (max-width: 767px) {
+    .ck-card {
+        padding: 24px;
+    }
+}
+
+/* Услуги: проблема → решение → пример → стек */
+
+.ck-service {
+    padding: 40px;
+    border-radius: 10px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.white-version .ck-service {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+@media only screen and (max-width: 767px) {
+    .ck-service {
+        padding: 26px;
+    }
+}
+
+.ck-service__head {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.ck-service__head img {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+}
+
+.ck-service__title {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.white-version .ck-service__title {
+    color: var(--color-heading-wv);
+}
+
+.ck-service__problem {
+    font-size: 17px;
+    line-height: 30px;
+    color: var(--color-white);
+    margin-bottom: 18px;
+    padding-left: 18px;
+    border-left: 2px solid var(--color-primary);
+}
+
+.white-version .ck-service__problem {
+    color: var(--color-heading-wv);
+}
+
+.ck-service__solution {
+    font-size: 16px;
+    line-height: 29px;
+    color: var(--color-lightn);
+    margin-bottom: 20px;
+}
+
+.white-version .ck-service__solution {
+    color: var(--color-body-white);
+}
+
+.ck-service__example {
+    font-size: 15px;
+    line-height: 27px;
+    font-style: italic;
+    color: var(--color-lightn);
+    opacity: 0.9;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: rgba(166, 86, 255, 0.07);
+    margin-bottom: 22px;
+}
+
+.white-version .ck-service__example {
+    color: var(--color-body-white);
+    background: rgba(166, 86, 255, 0.08);
+}
+
+.ck-service__footer {
+    margin-top: auto;
+}
+
+.ck-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.ck-stack span {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    color: var(--color-lightn);
+    opacity: 0.7;
+    padding: 3px 10px;
+    border: 1px solid rgba(196, 207, 222, 0.18);
+    border-radius: 30px;
+}
+
+.white-version .ck-stack span {
+    color: var(--color-body-white);
+    border-color: rgba(60, 62, 65, 0.18);
+}
+
+/* Шаги «как мы работаем» */
+
+.ck-step {
+    height: 100%;
+    padding: 32px;
+    border-radius: 10px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+}
+
+.white-version .ck-step {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-step__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: rgba(166, 86, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Таблица цен */
+
+.ck-price {
+    border-radius: 10px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    overflow: hidden;
+}
+
+.white-version .ck-price {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-price table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.ck-price th,
+.ck-price td {
+    padding: 20px 30px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 26px;
+    border-bottom: 1px solid rgba(196, 207, 222, 0.08);
+}
+
+.white-version .ck-price th,
+.white-version .ck-price td {
+    border-bottom-color: rgba(60, 62, 65, 0.08);
+}
+
+.ck-price tr:last-child td {
+    border-bottom: none;
+}
+
+.ck-price th {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--color-lightn);
+    opacity: 0.6;
+}
+
+.ck-price td {
+    color: var(--color-lightn);
+}
+
+.ck-price td:first-child {
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+.ck-price td.ck-price__from {
+    color: var(--color-primary);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.white-version .ck-price th,
+.white-version .ck-price td {
+    color: var(--color-body-white);
+}
+
+.white-version .ck-price td:first-child {
+    color: var(--color-heading-wv);
+}
+
+.white-version .ck-price td.ck-price__from {
+    color: var(--color-primary);
+}
+
+@media only screen and (max-width: 767px) {
+    .ck-price th,
+    .ck-price td {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+}
+
+/* FAQ */
+
+.ck-faq {
+    border-radius: 10px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    overflow: hidden;
+}
+
+.white-version .ck-faq {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-faq__item {
+    border-bottom: 1px solid rgba(196, 207, 222, 0.08);
+}
+
+.white-version .ck-faq__item {
+    border-bottom-color: rgba(60, 62, 65, 0.08);
+}
+
+.ck-faq__item:last-child {
+    border-bottom: none;
+}
+
+.ck-faq__q {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 30px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.white-version .ck-faq__q {
+    color: var(--color-heading-wv);
+}
+
+.ck-faq__q:hover {
+    color: var(--color-primary);
+}
+
+.ck-faq__q i {
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 18px;
+    line-height: 1;
+    margin-top: 7px;
+    transition: var(--transition);
+}
+
+.ck-faq__item.is-open .ck-faq__q i {
+    transform: rotate(180deg);
+    color: var(--color-primary);
+}
+
+.ck-faq__a {
+    padding: 0 30px 26px;
+    font-size: 16px;
+    line-height: 29px;
+    color: var(--color-lightn);
+    margin: 0;
+}
+
+.white-version .ck-faq__a {
+    color: var(--color-body-white);
+}
+
+@media only screen and (max-width: 767px) {
+    .ck-faq__q {
+        padding: 18px 20px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .ck-faq__a {
+        padding: 0 20px 20px;
+    }
+}
+
+/* Каналы связи */
+
+.ck-channels {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+@media only screen and (max-width: 991px) {
+    .ck-channels {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .ck-channels {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.ck-channel {
+    display: block;
+    padding: 26px;
+    border-radius: 10px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    transition: var(--transition);
+}
+
+.white-version .ck-channel {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-channel:hover {
+    transform: translateY(-4px);
+}
+
+.ck-channel i {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.ck-channel__label {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--color-lightn);
+    opacity: 0.6;
+    margin-bottom: 6px;
+}
+
+.ck-channel__value {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--color-white);
+    word-break: break-word;
+}
+
+.white-version .ck-channel__label,
+.white-version .ck-channel__value {
+    color: var(--color-body-white);
+}
+
+.white-version .ck-channel__value {
+    color: var(--color-heading-wv);
+}
+
+/* Карточка кейса */
+
+.ck-case-card {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    transition: var(--transition);
+}
+
+.white-version .ck-case-card {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-case-card:hover {
+    transform: translateY(-6px);
+}
+
+.ck-case-card__thumb {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--background-color-2);
+}
+
+.ck-case-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.6s ease;
+}
+
+.ck-case-card:hover .ck-case-card__thumb img {
+    transform: scale(1.04);
+}
+
+.ck-case-card__body {
+    padding: 26px 28px 30px;
+}
+
+.ck-case-card__cat {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+.ck-case-card__title {
+    font-size: 20px;
+    line-height: 31px;
+    font-weight: 500;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.white-version .ck-case-card__title {
+    color: var(--color-heading-wv);
+}
+
+.ck-case-card__desc {
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--color-lightn);
+    margin: 14px 0 0;
+}
+
+.white-version .ck-case-card__desc {
+    color: var(--color-body-white);
+}
+
+.ck-case-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.ck-case-card__links a {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+/* Страница кейса и услуги */
+
+.ck-page-head {
+    padding-top: 160px;
+}
+
+@media only screen and (max-width: 767px) {
+    .ck-page-head {
+        padding-top: 120px;
+    }
+}
+
+.ck-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--color-lightn);
+    opacity: 0.7;
+    margin-bottom: 22px;
+}
+
+.ck-breadcrumb a {
+    color: var(--color-lightn);
+}
+
+.ck-breadcrumb a:hover {
+    color: var(--color-primary);
+}
+
+.white-version .ck-breadcrumb,
+.white-version .ck-breadcrumb a {
+    color: var(--color-body-white);
+}
+
+.ck-page-title {
+    font-size: 44px;
+    line-height: 60px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 22px;
+}
+
+.white-version .ck-page-title {
+    color: var(--color-heading-wv);
+}
+
+@media only screen and (max-width: 991px) {
+    .ck-page-title {
+        font-size: 32px;
+        line-height: 46px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .ck-page-title {
+        font-size: 26px;
+        line-height: 38px;
+    }
+}
+
+.ck-cover {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-1);
+}
+
+.white-version .ck-cover {
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-cover img {
+    width: 100%;
+    display: block;
+}
+
+.ck-article h2 {
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin: 50px 0 24px;
+}
+
+.ck-article h3 {
+    font-size: 22px;
+    line-height: 34px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin: 36px 0 16px;
+}
+
+.white-version .ck-article h2,
+.white-version .ck-article h3 {
+    color: var(--color-heading-wv);
+}
+
+.ck-article p {
+    font-size: 17px;
+    line-height: 32px;
+    color: var(--color-lightn);
+    margin-bottom: 20px;
+}
+
+.white-version .ck-article p {
+    color: var(--color-body-white);
+}
+
+.ck-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.ck-list li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 17px;
+    line-height: 32px;
+    color: var(--color-lightn);
+    margin-bottom: 10px;
+}
+
+.white-version .ck-list li {
+    color: var(--color-body-white);
+}
+
+.ck-list li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.ck-list--check li::before {
+    content: "\2713";
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    background: transparent;
+    color: var(--color-primary);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.ck-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 30px 0 0;
+}
+
+.ck-fact__value {
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--color-primary);
+    line-height: 40px;
+}
+
+.ck-fact__label {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-lightn);
+    max-width: 220px;
+}
+
+.white-version .ck-fact__label {
+    color: var(--color-body-white);
+}
+
+.ck-meta-line {
+    font-size: 14px;
+    color: var(--color-lightn);
+    opacity: 0.7;
+    margin-top: 14px;
+}
+
+.white-version .ck-meta-line {
+    color: var(--color-body-white);
+}
+
+/* Финальный призыв на внутренних страницах */
+
+.ck-cta {
+    padding: 50px;
+    border-radius: 10px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    text-align: center;
+}
+
+.white-version .ck-cta {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-cta h3 {
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 14px;
+}
+
+.white-version .ck-cta h3 {
+    color: var(--color-heading-wv);
+}
+
+@media only screen and (max-width: 767px) {
+    .ck-cta {
+        padding: 30px 24px;
+    }
+
+    .ck-cta h3 {
+        font-size: 22px;
+        line-height: 34px;
+    }
+}
+
+.ck-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ck-buttons.justify-center {
+    justify-content: center;
+}
+
+/* Реквизиты */
+
+.ck-legal {
+    font-size: 15px;
+    line-height: 28px;
+    color: var(--color-lightn);
+}
+
+.white-version .ck-legal {
+    color: var(--color-body-white);
+}
+
+.ck-legal dt {
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.ck-legal dd {
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+/* Ссылки и определения внутри наших блоков: шаблон красит их в белый,
+   поэтому задаём цвет явно для обеих тем */
+
+.ck-article a,
+.ck-list a,
+.ck-note a,
+.ck-lead a,
+.ck-legal a {
+    color: var(--color-primary);
+}
+
+.ck-article a:hover,
+.ck-list a:hover,
+.ck-note a:hover,
+.ck-lead a:hover,
+.ck-legal a:hover {
+    opacity: 0.8;
+}
+
+.ck-legal dt {
+    color: var(--color-lightn);
+}
+
+.ck-legal dd {
+    color: var(--color-white);
+}
+
+.white-version .ck-legal dt {
+    color: var(--color-body-white);
+}
+
+.white-version .ck-legal dd {
+    color: var(--color-heading-wv);
+}
+
+@media only screen and (max-width: 575px) {
+    .ck-facts {
+        gap: 22px;
+    }
+
+    .ck-fact__label {
+        max-width: none;
+    }
+}

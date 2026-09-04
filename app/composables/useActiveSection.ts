@@ -1,10 +1,12 @@
-export const useActiveSection = () => {
-  const active = ref('home')
+/** Секции главной страницы в порядке следования. */
+export const HOME_SECTIONS = ['home', 'pains', 'services', 'process', 'cases', 'pricing', 'why', 'about', 'faq', 'contacts']
+
+export const useActiveSection = (sections: string[] = HOME_SECTIONS) => {
+  const active = ref(sections[0] ?? '')
 
   const observe = () => {
     if (!import.meta.client) return
 
-    const sections = ['home', 'experiences', 'portfolio', 'contacts']
     const observers: IntersectionObserver[] = []
 
     sections.forEach((id) => {
@@ -19,13 +21,13 @@ export const useActiveSection = () => {
             }
           })
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 },
       )
       observer.observe(el)
       observers.push(observer)
     })
 
-    return () => observers.forEach((o) => o.disconnect())
+    return () => observers.forEach(o => o.disconnect())
   }
 
   return { active, observe }
