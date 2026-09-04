@@ -8,6 +8,15 @@ const OG_IMAGE = `${SITE_URL}/img/og-image.jpg`
 const SITE_TITLE = 'Разработка сайтов, мобильных приложений и CRM — Coderok'
 const SITE_DESC = 'Разрабатываем и чиним то, на чём работает бизнес: сайты, мобильные приложения и CRM. Забираем проекты в любом состоянии — с нуля, из чужого кода или из тупика. Цены и сроки на сайте.'
 
+/**
+ * Адреса, которые уже были опубликованы и сменились.
+ * rsync не удаляет файлы с сервера, поэтому старую страницу нужно перекрыть
+ * редиректом, иначе она останется в выдаче с устаревшим содержимым.
+ */
+const redirects: Record<string, string> = {
+  '/cases/mopup-excel-routes': '/cases/zalog-chistoty-route-maps/',
+}
+
 /** Все статические маршруты для генерации и sitemap */
 const staticRoutes = [
   '/',
@@ -25,9 +34,12 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: [...staticRoutes, '/sitemap.xml'],
+      routes: [...staticRoutes, ...Object.keys(redirects), '/sitemap.xml'],
     },
   },
+  routeRules: Object.fromEntries(
+    Object.entries(redirects).map(([from, to]) => [from, { redirect: { to, statusCode: 301 } }]),
+  ),
   experimental: {
     // nginx на хостинге редиректит /cases на /cases/, поэтому внутренние
     // ссылки сразу ведут на адрес со слэшем — без лишнего 301 у посетителя
