@@ -34,7 +34,7 @@ jobs:
 
       - name: Deploy to Beget
         run: |
-          rsync -avz \
+          rsync -avz --omit-dir-times \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
             .output/public/ ${{ secrets.BEGET_USER }}:${{ secrets.BEGET_PATH }}
 
