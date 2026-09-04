@@ -1,3 +1,5 @@
+import { CONTENT_UPDATED_AT } from '../data/company'
+
 export const SITE_URL = 'https://coderok.ru'
 export const OG_IMAGE = `${SITE_URL}/img/og-image.jpg`
 
@@ -16,6 +18,7 @@ interface PageSeoOptions {
   description: string
   /** Путь без домена, например /cases/artfabric-migration */
   path: string
+  /** Картинка для соцсетей, 1200×630 JPEG */
   image?: string
   type?: 'website' | 'article'
   /** Дополнительная микроразметка страницы */
@@ -26,6 +29,25 @@ interface PageSeoOptions {
 export const usePageSeo = (options: PageSeoOptions) => {
   const url = absUrl(options.path)
   const image = options.image ? `${SITE_URL}${options.image}` : OG_IMAGE
+
+  // WebPage связывает страницу с организацией и даёт поисковику дату контента
+  const pageLd = {
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: options.title,
+    description: options.description,
+    inLanguage: 'ru-RU',
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/#organization` },
+    primaryImageOfPage: image,
+    dateModified: CONTENT_UPDATED_AT,
+  }
+
+  const graph = [
+    pageLd,
+    ...(options.jsonLd ? (Array.isArray(options.jsonLd) ? options.jsonLd : [options.jsonLd]) : []),
+  ]
 
   useHead({
     title: options.title,
@@ -42,16 +64,10 @@ export const usePageSeo = (options: PageSeoOptions) => {
       { name: 'twitter:image', content: image },
       { name: 'twitter:url', content: url },
     ],
-    script: options.jsonLd
-      ? [{
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify(
-            Array.isArray(options.jsonLd)
-              ? { '@context': 'https://schema.org', '@graph': options.jsonLd }
-              : { '@context': 'https://schema.org', ...options.jsonLd },
-          ),
-        }]
-      : undefined,
+    script: [{
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }),
+    }],
   })
 }
 

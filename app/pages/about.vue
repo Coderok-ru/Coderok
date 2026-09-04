@@ -13,8 +13,9 @@ const engagements: { client: string, since?: string, what: string }[] = [
 
 usePageSeo({
   title: 'О нас — студия разработки Coderok, Санкт-Петербург',
-  description: `Coderok — команда разработки из Санкт-Петербурга, ${yearsInDev} лет в коммерческой разработке. Работаем как ИП по договору с закрывающими документами. Реквизиты, принципы работы и проекты, которые ведём годами.`,
+  description: `Команда разработки из Санкт-Петербурга, ${yearsInDev} лет в профессии. Работаем как ИП по договору с закрывающими документами. Реквизиты и принципы работы.`,
   path: '/about',
+  image: '/img/og/about.jpg',
   jsonLd: [
     breadcrumbLd([
       { name: 'Главная', path: '/' },
@@ -57,7 +58,7 @@ usePageSeo({
         <div class="row align-items-center">
           <div class="col-lg-5">
             <div class="ck-cover">
-              <img :src="company.photo" :alt="company.founder">
+              <ResponsiveImage :src="company.photo" :alt="company.founder" sizes="(max-width: 991px) 100vw, 460px" eager />
             </div>
           </div>
           <div class="col-lg-7 mt_md--40 mt_sm--40">

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { caseBySlug, cases } from '../../data/cases'
 import { services } from '../../data/services'
+import { CONTENT_UPDATED_AT } from '../../data/company'
 
 const route = useRoute()
 const slug = route.params.slug as string
@@ -17,11 +18,14 @@ const relatedServices = computed(() =>
 
 const otherCases = computed(() => cases.filter(c => c.slug !== study!.slug).slice(0, 3))
 
+/** Для соцсетей отдаём JPEG 1200×630, а не исходник обложки на полтора мегабайта */
+const ogImage = computed(() => study!.cover.replace(/\.(png|jpe?g)$/i, '-og.jpg'))
+
 usePageSeo({
   title: study.meta.title,
   description: study.meta.description,
   path: `/cases/${study.slug}`,
-  image: study.cover,
+  image: ogImage.value,
   type: 'article',
   jsonLd: [
     breadcrumbLd([
@@ -41,6 +45,9 @@ usePageSeo({
       author: { '@id': `${SITE_URL}/#organization` },
       creator: { '@id': `${SITE_URL}/#organization` },
       about: study.client,
+      datePublished: CONTENT_UPDATED_AT,
+      dateModified: CONTENT_UPDATED_AT,
+      mainEntityOfPage: { '@id': `${SITE_URL}/cases/${study.slug}/#webpage` },
     },
   ],
 })
@@ -71,7 +78,7 @@ usePageSeo({
         <div class="row mt--40">
           <div class="col-lg-12">
             <div class="ck-cover">
-              <img :src="study.cover" :alt="study.title">
+              <ResponsiveImage :src="study.cover" :alt="study.title" sizes="(max-width: 1199px) 100vw, 1140px" eager />
             </div>
           </div>
         </div>
@@ -106,7 +113,7 @@ usePageSeo({
               <template v-if="study.gallery?.length">
                 <h2>Как это выглядит</h2>
                 <div v-for="image in study.gallery" :key="image" class="ck-cover mb--30">
-                  <img :src="image" :alt="study.title" loading="lazy">
+                  <ResponsiveImage :src="image" :alt="study.title" sizes="(max-width: 1199px) 100vw, 1140px" />
                 </div>
               </template>
             </article>

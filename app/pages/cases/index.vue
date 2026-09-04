@@ -2,9 +2,10 @@
 import { cases, showcase } from '../../data/cases'
 
 usePageSeo({
-  title: 'Кейсы разработки: сайты, приложения, CRM и AI — Coderok',
-  description: 'Наши работы с результатом: миграция интернет-магазина на Go, экосистема клинингового сервиса, автоматизация графика уборок, заявки из Telegram в CRM, платформа онлайн-школы, AI-проверка каталога.',
+  title: 'Кейсы разработки: сайты, приложения и CRM — Coderok',
+  description: 'Работы с измеримым результатом: миграция магазина на Go, экосистема клининга, график уборок из Excel, заявки из Telegram в CRM, онлайн-школа, AI-проверка каталога.',
   path: '/cases',
+  image: '/img/og/cases.jpg',
   jsonLd: [
     breadcrumbLd([
       { name: 'Главная', path: '/' },
@@ -77,7 +78,7 @@ usePageSeo({
           >
             <div class="ck-case-card">
               <div class="ck-case-card__thumb">
-                <img :src="item.image" :alt="item.title" loading="lazy">
+                <ResponsiveImage :src="item.image" :alt="item.title" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" />
               </div>
               <div class="ck-case-card__body">
                 <span class="ck-case-card__cat">{{ item.category }}</span>

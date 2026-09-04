@@ -1,5 +1,6 @@
 import { services } from '../../app/data/services'
 import { cases } from '../../app/data/cases'
+import { CONTENT_UPDATED_AT } from '../../app/data/company'
 
 const SITE_URL = 'https://coderok.ru'
 
@@ -27,7 +28,9 @@ const entries: SitemapEntry[] = [
 ]
 
 export default defineEventHandler((event) => {
-  const date = new Date().toISOString().split('T')[0]
+  // Дата содержательного обновления, а не сборки: иначе каждый деплой говорит
+  // поисковику «изменились все страницы», и он перестаёт верить lastmod
+  const date = CONTENT_UPDATED_AT
 
   setHeader(event, 'Content-Type', 'application/xml; charset=utf-8')
 

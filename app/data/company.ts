@@ -6,6 +6,14 @@
 
 export const FOUNDED_YEAR = 2015
 
+/**
+ * Дата последнего содержательного обновления текстов сайта.
+ * Уходит в sitemap как lastmod и в микроразметку как dateModified.
+ * Бампать руками при правке контента — не при каждом деплое, иначе поисковик
+ * получает сигнал «всё изменилось» каждый раз и перестаёт ему верить.
+ */
+export const CONTENT_UPDATED_AT = '2026-09-04'
+
 /** Стаж считается от даты старта, а не хардкодится. */
 export const yearsInDev = new Date().getFullYear() - FOUNDED_YEAR
 
@@ -22,7 +30,17 @@ export const company = {
   founder: 'Андрей Любиченко',
   founderRole: 'Основатель и ведущий разработчик',
   photo: '/assets/images/about/andrey.jpg',
+  slogan: 'Разрабатываем и чиним то, на чём работает ваш бизнес',
+  /** Нижняя граница прайса — Google показывает её в карточке организации */
+  priceRange: 'от 80 000 ₽',
 } as const
+
+/** Внешние профили — подтверждают, что организация реальна */
+export const profiles = [
+  'https://t.me/coderok_official',
+  'https://github.com/Coderok-ru',
+  'https://workspace.ru/cases/magazin-gruzilsya-5-sekund-teper-mgnovenno-pereveli-monolit-na-laravel-v-7-servisov-na-go-i-s/?agency=coderok',
+]
 
 export const contacts = {
   email: 'info@coderok.ru',

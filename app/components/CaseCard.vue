@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <NuxtLink class="ck-case-card" :to="`/cases/${item.slug}`">
     <div class="ck-case-card__thumb">
-      <img :src="item.cover" :alt="item.cardTitle" loading="lazy">
+      <ResponsiveImage :src="item.cover" :alt="item.cardTitle" sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw" />
     </div>
     <div class="ck-case-card__body">
       <span class="ck-case-card__cat">{{ item.category }}</span>

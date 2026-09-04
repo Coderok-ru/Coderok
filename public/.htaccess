@@ -6,7 +6,8 @@ DirectoryIndex index.html
 
 RewriteEngine On
 
-# llms.txt отдаём через PHP — иначе Apache теряет UTF-8 в заголовке
+# llms.txt отдаёт PHP: файла с таким именем на диске нет, поэтому запрос
+# доходит до Apache, а не перехватывается nginx, который не ставит charset
 RewriteRule ^llms\.txt$ /llms.php [L]
 
 # Страницы лежат каталогами: /cases → /cases/index.html.

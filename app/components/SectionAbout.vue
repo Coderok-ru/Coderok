@@ -21,7 +21,7 @@ const facts = computed(() => [
             data-aos-once="true"
             class="ck-cover"
           >
-            <img :src="company.photo" :alt="company.founder" loading="lazy">
+            <ResponsiveImage :src="company.photo" :alt="company.founder" sizes="(max-width: 991px) 100vw, 460px" />
           </div>
         </div>
 

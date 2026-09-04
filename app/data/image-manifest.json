@@ -1,0 +1,20 @@
+{
+  "/assets/images/about/andrey.jpg": { "width": 1344, "height": 768, "widths": [480,960] },
+  "/assets/images/portfolio/ai_assistent.jpg": { "width": 1280, "height": 800, "widths": [480,960] },
+  "/assets/images/portfolio/artfabric_cms.jpg": { "width": 1280, "height": 800, "widths": [480,960] },
+  "/assets/images/portfolio/artfabric.jpg": { "width": 1280, "height": 800, "widths": [480,960] },
+  "/assets/images/portfolio/bot_mopup.png": { "width": 1888, "height": 1061, "widths": [480,960,1600] },
+  "/assets/images/portfolio/cryptor.jpg": { "width": 1280, "height": 800, "widths": [480,960] },
+  "/assets/images/portfolio/finflow.jpg": { "width": 1280, "height": 800, "widths": [480,960] },
+  "/assets/images/portfolio/golang_template.jpg": { "width": 1280, "height": 800, "widths": [480,960] },
+  "/assets/images/portfolio/ivinsight_bot.jpg": { "width": 1280, "height": 800, "widths": [480,960] },
+  "/assets/images/portfolio/ivinsight.png": { "width": 2880, "height": 1626, "widths": [480,960,1600] },
+  "/assets/images/portfolio/mop_cleaner.png": { "width": 2880, "height": 1640, "widths": [480,960,1600] },
+  "/assets/images/portfolio/mop_clients.png": { "width": 2878, "height": 1634, "widths": [480,960,1600] },
+  "/assets/images/portfolio/mopup_admin.png": { "width": 2000, "height": 1129, "widths": [480,960,1600] },
+  "/assets/images/portfolio/mopup.png": { "width": 2880, "height": 1628, "widths": [480,960,1600] },
+  "/assets/images/portfolio/recipes_admin.png": { "width": 2880, "height": 1638, "widths": [480,960,1600] },
+  "/assets/images/portfolio/recipes.png": { "width": 2880, "height": 1638, "widths": [480,960,1600] },
+  "/assets/images/portfolio/sleep.png": { "width": 2874, "height": 1628, "widths": [480,960,1600] },
+  "/assets/images/portfolio/zalog_chistoty.png": { "width": 1440, "height": 900, "widths": [480,960] }
+}

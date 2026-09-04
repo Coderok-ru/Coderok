@@ -1,14 +1,28 @@
 User-agent: *
 Allow: /
 
-# AI crawlers — welcome to index this site
+# Nuxt internals: not pages, nothing to index here
+Disallow: /*_payload.json$
+Disallow: /200.html
+Disallow: /404.html
+
+# Campaign tags do not create a new page (Yandex directive)
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&_openstat&from&ysclid
+
+# AI crawlers: indexing and citing this site is welcome
 User-agent: GPTBot
 Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: anthropic-ai
@@ -17,16 +31,13 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: YandexBot
-Allow: /
-
-User-agent: YandexImages
-Allow: /
-
-User-agent: Googlebot
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
@@ -44,11 +55,23 @@ Allow: /
 User-agent: Diffbot
 Allow: /
 
-# Sitemap
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexImages
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
 Sitemap: https://coderok.ru/sitemap.xml
-
-# LLM description
-LLMs: https://coderok.ru/llms.txt
-
-# Host (Yandex)
 Host: https://coderok.ru

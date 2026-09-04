@@ -23,6 +23,7 @@ usePageSeo({
   title: service.meta.title,
   description: service.meta.description,
   path: `/services/${service.slug}`,
+  image: `/img/og/${service.slug}.jpg`,
   jsonLd: [
     breadcrumbLd([
       { name: 'Главная', path: '/' },
@@ -34,13 +35,19 @@ usePageSeo({
       description: service.meta.description,
       serviceType: service.navTitle,
       provider: { '@id': `${SITE_URL}/#organization` },
-      areaServed: { '@type': 'Country', name: 'Russia' },
+      areaServed: [
+        { '@type': 'Country', name: 'Россия' },
+        { '@type': 'City', name: 'Санкт-Петербург' },
+      ],
       url: absUrl(`/services/${service.slug}`),
+      mainEntityOfPage: { '@id': `${SITE_URL}/services/${service.slug}/#webpage` },
       offers: pricesFor(service.priceIds).map(row => ({
         '@type': 'Offer',
         name: row.title,
         priceCurrency: 'RUB',
         price: row.from.replace(/[^\d]/g, ''),
+        availability: 'https://schema.org/InStock',
+        url: absUrl(`/services/${service.slug}`),
       })),
     },
     {

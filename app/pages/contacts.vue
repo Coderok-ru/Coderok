@@ -6,8 +6,9 @@ const { emailFor } = useContact()
 
 usePageSeo({
   title: 'Контакты и реквизиты — Coderok, Санкт-Петербург',
-  description: 'Связаться с Coderok: почта, Telegram, WhatsApp, телефон. Реквизиты ИП, порядок работы по договору с закрывающими документами для юрлиц.',
+  description: 'Почта, Telegram, WhatsApp и телефон — отвечаем в течение рабочего дня. Реквизиты ИП и порядок работы по договору с закрывающими документами для юрлиц.',
   path: '/contacts',
+  image: '/img/og/contacts.jpg',
   jsonLd: [
     breadcrumbLd([
       { name: 'Главная', path: '/' },

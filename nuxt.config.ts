@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { services } from './app/data/services'
 import { cases } from './app/data/cases'
-import { company, contacts, yearsInDev, integrations } from './app/data/company'
+import { company, contacts, yearsInDev, integrations, profiles, CONTENT_UPDATED_AT } from './app/data/company'
 
 const SITE_URL = 'https://coderok.ru'
 const OG_IMAGE = `${SITE_URL}/img/og-image.jpg`
@@ -135,12 +135,25 @@ export default defineNuxtConfig({
                   addressLocality: company.city,
                   addressCountry: 'RU',
                 },
-                areaServed: { '@type': 'Country', name: 'Russia' },
+                areaServed: [
+                  { '@type': 'Country', name: 'Россия' },
+                  { '@type': 'City', name: company.city },
+                ],
                 knowsLanguage: 'ru',
                 knowsAbout: integrations,
+                slogan: company.slogan,
+                priceRange: company.priceRange,
                 founder: { '@id': `${SITE_URL}/#person` },
                 employee: { '@id': `${SITE_URL}/#person` },
-                sameAs: [contacts.telegram],
+                sameAs: profiles,
+                contactPoint: {
+                  '@type': 'ContactPoint',
+                  contactType: 'sales',
+                  telephone: contacts.phoneRaw,
+                  email: contacts.email,
+                  areaServed: 'RU',
+                  availableLanguage: ['ru'],
+                },
                 hasOfferCatalog: {
                   '@type': 'OfferCatalog',
                   name: 'Услуги разработки',
@@ -167,7 +180,12 @@ export default defineNuxtConfig({
                 email: contacts.email,
                 telephone: contacts.phoneRaw,
                 knowsAbout: ['Go', 'Flutter', 'Dart', 'Laravel', 'Vue.js', 'React', 'Nuxt', 'HTMX', 'PostgreSQL', 'iOS', 'Android', 'CRM', 'AI', 'LLM', 'Telegram Bot'],
-                sameAs: [contacts.telegram],
+                address: {
+                  '@type': 'PostalAddress',
+                  addressLocality: company.city,
+                  addressCountry: 'RU',
+                },
+                sameAs: profiles,
               },
               {
                 '@type': 'WebSite',
@@ -177,6 +195,7 @@ export default defineNuxtConfig({
                 description: SITE_DESC,
                 publisher: { '@id': `${SITE_URL}/#organization` },
                 inLanguage: 'ru-RU',
+                dateModified: CONTENT_UPDATED_AT,
               },
             ],
           }),
