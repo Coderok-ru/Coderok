@@ -104,13 +104,7 @@ usePageSeo({
               <dd>{{ company.ogrnip }}</dd>
               <dt>ИНН</dt>
               <dd>{{ company.inn }}</dd>
-              <dt>Дата регистрации</dt>
-              <dd>{{ company.registeredAt }}</dd>
-              <dt>Система налогообложения</dt>
-              <dd>{{ company.taxSystem }}</dd>
-              <dt>Регион</dt>
-              <dd>{{ company.city }}</dd>
-              <dt>Электронная почта</dt>
+              <dt>Почта</dt>
               <dd><a :href="emailFor('Заявка с сайта coderok.ru')">{{ contacts.email }}</a></dd>
               <dt>Телефон</dt>
               <dd><a :href="`tel:${contacts.phoneRaw}`">{{ contacts.phone }}</a></dd>

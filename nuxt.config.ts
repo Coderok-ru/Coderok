@@ -113,7 +113,7 @@ export default defineNuxtConfig({
                 email: contacts.email,
                 telephone: contacts.phoneRaw,
                 taxID: company.inn,
-                foundingDate: '2024-09-04',
+                foundingDate: company.registeredAtIso,
                 identifier: [
                   { '@type': 'PropertyValue', name: 'ИНН', value: company.inn },
                   { '@type': 'PropertyValue', name: 'ОГРНИП', value: company.ogrnip },

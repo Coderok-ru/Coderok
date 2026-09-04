@@ -21776,6 +21776,7 @@ input:checked + .slider:before {
     text-align: left;
     font-size: 16px;
     line-height: 26px;
+    border: none;
     border-bottom: 1px solid rgba(196, 207, 222, 0.08);
 }
 
@@ -22314,7 +22315,7 @@ input:checked + .slider:before {
 .ck-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 26px;
 }
 
 .ck-buttons.justify-center {
@@ -22324,9 +22325,24 @@ input:checked + .slider:before {
 /* Реквизиты */
 
 .ck-legal {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 10px 28px;
     font-size: 15px;
-    line-height: 28px;
+    line-height: 24px;
     color: var(--color-lightn);
+    margin: 0;
+}
+
+@media only screen and (max-width: 479px) {
+    .ck-legal {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2px 0;
+    }
+
+    .ck-legal dd:not(:last-child) {
+        margin-bottom: 12px;
+    }
 }
 
 .white-version .ck-legal {
@@ -22336,10 +22352,11 @@ input:checked + .slider:before {
 .ck-legal dt {
     font-weight: 400;
     opacity: 0.6;
+    white-space: nowrap;
 }
 
 .ck-legal dd {
-    margin-bottom: 14px;
+    margin: 0;
     font-weight: 500;
 }
 
@@ -22386,4 +22403,19 @@ input:checked + .slider:before {
     .ck-fact__label {
         max-width: none;
     }
+}
+
+/* Круглая иконка на первом экране: шаблон центрует её правилами для <svg>,
+   а мы используем иконочный шрифт — центруем флексом */
+
+.slide.slider-style-3 .slider-wrapper .slider-info .user-info-top .user-info-header .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide.slider-style-3 .slider-wrapper .slider-info .user-info-top .user-info-header .user i {
+    font-size: 20px;
+    line-height: 1;
+    color: #ffffff;
 }

@@ -65,6 +65,11 @@ const { emailFor } = useContact()
   margin-top: 34px;
 }
 
+/* Шаблон отступ над кнопками вешает на .button-wrapper, у нас .ck-buttons */
+.user-info-bottom .ck-buttons {
+  margin-top: 28px;
+}
+
 @media only screen and (max-width: 575px) {
   .ck-facts {
     gap: 22px;

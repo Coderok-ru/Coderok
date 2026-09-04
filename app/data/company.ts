@@ -16,6 +16,8 @@ export const company = {
   inn: '784200644930',
   taxSystem: 'УСН',
   registeredAt: '04.09.2024',
+  /** Та же дата в формате ISO — для микроразметки */
+  registeredAtIso: '2024-09-04',
   city: 'Санкт-Петербург',
   founder: 'Андрей Любиченко',
   founderRole: 'Основатель и ведущий разработчик',

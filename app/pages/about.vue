@@ -219,12 +219,6 @@ usePageSeo({
               <dd>{{ company.ogrnip }}</dd>
               <dt>ИНН</dt>
               <dd>{{ company.inn }}</dd>
-              <dt>Дата регистрации</dt>
-              <dd>{{ company.registeredAt }}</dd>
-              <dt>Система налогообложения</dt>
-              <dd>{{ company.taxSystem }}</dd>
-              <dt>Регион</dt>
-              <dd>{{ company.city }}</dd>
             </dl>
           </div>
           <div class="col-lg-6 mt_md--40 mt_sm--40">
