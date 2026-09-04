@@ -35,7 +35,7 @@ usePageSeo({
       serviceType: service.navTitle,
       provider: { '@id': `${SITE_URL}/#organization` },
       areaServed: { '@type': 'Country', name: 'Russia' },
-      url: `${SITE_URL}/services/${service.slug}`,
+      url: absUrl(`/services/${service.slug}`),
       offers: pricesFor(service.priceIds).map(row => ({
         '@type': 'Offer',
         name: row.title,

@@ -16,7 +16,7 @@ usePageSeo({
         '@type': 'ListItem',
         position: index + 1,
         name: item.cardTitle,
-        url: `${SITE_URL}/cases/${item.slug}`,
+        url: absUrl(`/cases/${item.slug}`),
       })),
     },
   ],

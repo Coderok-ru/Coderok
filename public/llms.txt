@@ -8,23 +8,23 @@
 
 ## Услуги
 
-- **Сайты и веб-сервисы** (https://coderok.ru/services/web) — от лендинга до нагруженного интернет-магазина. Контент, цены и акции меняются сотрудниками без разработчика, страницы отдаются мгновенно и полностью индексируются. Стек: Go, Laravel, Vue 3, React, Nuxt, HTMX, PostgreSQL. От 100 000 ₽.
-- **Мобильные приложения** (https://coderok.ru/services/mobile) — Flutter: одна кодовая база, два магазина. Публикация и релизы, включая сборки для RuStore без сервисов Google. Стек: Flutter, Dart, Firebase, OneSignal, эквайринг, Yandex MapKit. От 500 000 ₽.
-- **CRM и автоматизация** (https://coderok.ru/services/crm) — CRM под конкретный бизнес-процесс вместо настройки коробки. Связываем со складским учётом, внешними CRM и платежами, убираем ручной перенос данных. Стек: Laravel, Filament, Go, Vue 3, МойСклад, amoCRM, ЮKassa, Т-Банк. От 300 000 ₽.
-- **Интеграция AI** (https://coderok.ru/services/ai) — языковые модели там, где ошибка стоит дёшево: проверка данных, подготовка контента, разбор обращений, внутренние помощники. Решение принимает человек. Стек: OpenAI, Claude, OpenRouter, Go, Python.
-- **Telegram-боты и Mini Apps** (https://coderok.ru/services/bots) — заказ оформляется целиком внутри мессенджера, заявка попадает в CRM без менеджера. Работаем и с мессенджером MAX. Стек: Telegram Bot API, MAX Bot API, Mini Apps, Node.js, Python. От 80 000 ₽.
-- **Поддержка и доработка** (https://coderok.ru/services/support) — разбираемся в чужом коде и берём проект на сопровождение: аудит, исправления, новые модули, обновления, мониторинг. Любой стек. От 30 000 ₽/мес. Почасовая работа — 4 500 ₽/час.
+- **Сайты и веб-сервисы** (https://coderok.ru/services/web/) — от лендинга до нагруженного интернет-магазина. Контент, цены и акции меняются сотрудниками без разработчика, страницы отдаются мгновенно и полностью индексируются. Стек: Go, Laravel, Vue 3, React, Nuxt, HTMX, PostgreSQL. От 100 000 ₽.
+- **Мобильные приложения** (https://coderok.ru/services/mobile/) — Flutter: одна кодовая база, два магазина. Публикация и релизы, включая сборки для RuStore без сервисов Google. Стек: Flutter, Dart, Firebase, OneSignal, эквайринг, Yandex MapKit. От 500 000 ₽.
+- **CRM и автоматизация** (https://coderok.ru/services/crm/) — CRM под конкретный бизнес-процесс вместо настройки коробки. Связываем со складским учётом, внешними CRM и платежами, убираем ручной перенос данных. Стек: Laravel, Filament, Go, Vue 3, МойСклад, amoCRM, ЮKassa, Т-Банк. От 300 000 ₽.
+- **Интеграция AI** (https://coderok.ru/services/ai/) — языковые модели там, где ошибка стоит дёшево: проверка данных, подготовка контента, разбор обращений, внутренние помощники. Решение принимает человек. Стек: OpenAI, Claude, OpenRouter, Go, Python.
+- **Telegram-боты и Mini Apps** (https://coderok.ru/services/bots/) — заказ оформляется целиком внутри мессенджера, заявка попадает в CRM без менеджера. Работаем и с мессенджером MAX. Стек: Telegram Bot API, MAX Bot API, Mini Apps, Node.js, Python. От 80 000 ₽.
+- **Поддержка и доработка** (https://coderok.ru/services/support/) — разбираемся в чужом коде и берём проект на сопровождение: аудит, исправления, новые модули, обновления, мониторинг. Любой стек. От 30 000 ₽/мес. Почасовая работа — 4 500 ₽/час.
 
 ## Кейсы
 
-- **Магазин грузился 5 секунд — теперь мгновенно** (https://coderok.ru/cases/artfabric-migration) — Artfabric, интернет-магазин дизайнерской мебели на 2 200 позиций. Переписали монолит на Laravel в семь независимых сервисов на Go (Fiber, Chi), витрину перевели на SSR с Templ и HTMX, поиск — в Meilisearch с деградацией на pg_trgm, кеш — в Redis. Переезд без остановки продаж, переключение за одно ночное окно. Загрузка каталога — с ~5 секунд до долей секунды.
-- **Маркетплейс клининга: сайт, CRM и два приложения на одном бэкенде** (https://coderok.ru/cases/mopup-ecosystem) — Mop'up (ООО «Залог чистоты»). Сайт с калькулятором стоимости, CRM для координаторов, приложение для клиентов (App Store, Google Play) и Cleaner PRO для исполнителей (App Store, RuStore). Заказ создаётся в любом канале и живёт одной записью.
-- **Импорт маршрутных карт из Excel заменил ручное составление графика уборок** (https://coderok.ru/cases/mopup-excel-routes) — координатор загружает файл, CRM создаёт выезды с датами, объектами и исполнителями, ошибки видны до применения.
-- **Заявки из Telegram попадают в CRM без менеджера** (https://coderok.ru/cases/mopup-telegram-crm) — бот с Mini App: расчёт стоимости, выбор даты и времени, оплата внутри мессенджера, заявка сразу в CRM.
-- **Онлайн-школа: личный кабинет, закрытые уроки и калькуляторы нутриентов** (https://coderok.ru/cases/ivinsight-school) — Ivinsight: платформа с личным кабинетом, доступ к урокам по покупке, квизы и расчёт нутриентов, база рецептов, приложение в App Store, CMS и SEO.
-- **Проверку 2 200 карточек товара отдали ИИ** (https://coderok.ru/cases/artfabric-ai-check) — AI-сервис внутри платформы Artfabric проверяет полноту карточек и отдаёт контент-команде список проблемных позиций. Модель ничего не публикует сама.
+- **Магазин грузился 5 секунд — теперь мгновенно** (https://coderok.ru/cases/artfabric-migration/) — Artfabric, интернет-магазин дизайнерской мебели на 2 200 позиций. Переписали монолит на Laravel в семь независимых сервисов на Go (Fiber, Chi), витрину перевели на SSR с Templ и HTMX, поиск — в Meilisearch с деградацией на pg_trgm, кеш — в Redis. Переезд без остановки продаж, переключение за одно ночное окно. Загрузка каталога — с ~5 секунд до долей секунды.
+- **Маркетплейс клининга: сайт, CRM и два приложения на одном бэкенде** (https://coderok.ru/cases/mopup-ecosystem/) — Mop'up (ООО «Залог чистоты»). Сайт с калькулятором стоимости, CRM для координаторов, приложение для клиентов (App Store, Google Play) и Cleaner PRO для исполнителей (App Store, RuStore). Заказ создаётся в любом канале и живёт одной записью.
+- **Импорт маршрутных карт из Excel заменил ручное составление графика уборок** (https://coderok.ru/cases/mopup-excel-routes/) — координатор загружает файл, CRM создаёт выезды с датами, объектами и исполнителями, ошибки видны до применения.
+- **Заявки из Telegram попадают в CRM без менеджера** (https://coderok.ru/cases/mopup-telegram-crm/) — бот с Mini App: расчёт стоимости, выбор даты и времени, оплата внутри мессенджера, заявка сразу в CRM.
+- **Онлайн-школа: личный кабинет, закрытые уроки и калькуляторы нутриентов** (https://coderok.ru/cases/ivinsight-school/) — Ivinsight: платформа с личным кабинетом, доступ к урокам по покупке, квизы и расчёт нутриентов, база рецептов, приложение в App Store, CMS и SEO.
+- **Проверку 2 200 карточек товара отдали ИИ** (https://coderok.ru/cases/artfabric-ai-check/) — AI-сервис внутри платформы Artfabric проверяет полноту карточек и отдаёт контент-команде список проблемных позиций. Модель ничего не публикует сама.
 
-Другие работы: Slipstream Karting (сайт картинг-клуба), Telegram-бот школы Ivinsight, FinFlow PRO (App Store, RuStore), AI Assistent (App Store), Cryptor (шифрование AES для macOS и Windows), Golang Web Template (open source). Полный список: https://coderok.ru/cases
+Другие работы: Slipstream Karting (сайт картинг-клуба), Telegram-бот школы Ivinsight, FinFlow PRO (App Store, RuStore), AI Assistent (App Store), Cryptor (шифрование AES для macOS и Windows), Golang Web Template (open source). Полный список: https://coderok.ru/cases/
 
 ## Цены
 
@@ -57,9 +57,9 @@
 ## Контакты
 
 - Сайт: https://coderok.ru
-- Кейсы: https://coderok.ru/cases
-- О нас: https://coderok.ru/about
-- Контакты и реквизиты: https://coderok.ru/contacts
+- Кейсы: https://coderok.ru/cases/
+- О нас: https://coderok.ru/about/
+- Контакты и реквизиты: https://coderok.ru/contacts/
 - Email: info@coderok.ru
 - Telegram: https://t.me/coderok_official
 - WhatsApp: https://wa.me/79992213383

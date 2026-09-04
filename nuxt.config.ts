@@ -28,6 +28,13 @@ export default defineNuxtConfig({
       routes: [...staticRoutes, '/sitemap.xml'],
     },
   },
+  experimental: {
+    // nginx на хостинге редиректит /cases на /cases/, поэтому внутренние
+    // ссылки сразу ведут на адрес со слэшем — без лишнего 301 у посетителя
+    defaults: {
+      nuxtLink: { trailingSlash: 'append' },
+    },
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'ru' },
@@ -127,7 +134,7 @@ export default defineNuxtConfig({
                   name: 'Услуги разработки',
                   itemListElement: services.map(service => ({
                     '@type': 'Offer',
-                    url: `${SITE_URL}/services/${service.slug}`,
+                    url: `${SITE_URL}/services/${service.slug}/`,
                     itemOffered: {
                       '@type': 'Service',
                       name: service.title,
@@ -144,7 +151,7 @@ export default defineNuxtConfig({
                 familyName: 'Любиченко',
                 jobTitle: company.founderRole,
                 worksFor: { '@id': `${SITE_URL}/#organization` },
-                url: `${SITE_URL}/about`,
+                url: `${SITE_URL}/about/`,
                 email: contacts.email,
                 telephone: contacts.phoneRaw,
                 knowsAbout: ['Go', 'Flutter', 'Dart', 'Laravel', 'Vue.js', 'React', 'Nuxt', 'HTMX', 'PostgreSQL', 'iOS', 'Android', 'CRM', 'AI', 'LLM', 'Telegram Bot'],

@@ -1,6 +1,16 @@
 export const SITE_URL = 'https://coderok.ru'
 export const OG_IMAGE = `${SITE_URL}/img/og-image.jpg`
 
+/**
+ * nginx на хостинге сам редиректит /cases на /cases/, поэтому канонические
+ * адреса, sitemap и микроразметка пишутся сразу со слэшем — иначе поисковик
+ * получает 301 там, где мы обещали 200.
+ */
+export const absUrl = (path: string) => {
+  if (path === '/') return `${SITE_URL}/`
+  return `${SITE_URL}${path.endsWith('/') ? path : `${path}/`}`
+}
+
 interface PageSeoOptions {
   title: string
   description: string
@@ -14,7 +24,7 @@ interface PageSeoOptions {
 
 /** Единая точка настройки мета-тегов и микроразметки для внутренних страниц. */
 export const usePageSeo = (options: PageSeoOptions) => {
-  const url = `${SITE_URL}${options.path}`
+  const url = absUrl(options.path)
   const image = options.image ? `${SITE_URL}${options.image}` : OG_IMAGE
 
   useHead({
@@ -52,6 +62,6 @@ export const breadcrumbLd = (items: { name: string, path: string }[]) => ({
     '@type': 'ListItem',
     position: index + 1,
     name: item.name,
-    item: `${SITE_URL}${item.path}`,
+    item: absUrl(item.path),
   })),
 })

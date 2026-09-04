@@ -16,7 +16,7 @@ usePageSeo({
     {
       '@type': 'ContactPage',
       name: 'Контакты Coderok',
-      url: `${SITE_URL}/contacts`,
+      url: absUrl('/contacts'),
       mainEntity: { '@id': `${SITE_URL}/#organization` },
     },
   ],

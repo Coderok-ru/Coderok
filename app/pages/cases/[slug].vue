@@ -35,7 +35,7 @@ usePageSeo({
       headline: study.title,
       description: study.meta.description,
       image: `${SITE_URL}${study.cover}`,
-      url: `${SITE_URL}/cases/${study.slug}`,
+      url: absUrl(`/cases/${study.slug}`),
       inLanguage: 'ru-RU',
       keywords: study.stack.join(', '),
       author: { '@id': `${SITE_URL}/#organization` },

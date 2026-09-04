@@ -32,7 +32,7 @@ export default defineEventHandler((event) => {
   setHeader(event, 'Content-Type', 'application/xml; charset=utf-8')
 
   const urls = entries.map(entry => `  <url>
-    <loc>${SITE_URL}${entry.path}</loc>
+    <loc>${SITE_URL}${entry.path === '/' ? '/' : `${entry.path}/`}</loc>
     <lastmod>${date}</lastmod>
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority}</priority>

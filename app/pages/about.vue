@@ -23,7 +23,7 @@ usePageSeo({
     {
       '@type': 'AboutPage',
       name: 'О студии Coderok',
-      url: `${SITE_URL}/about`,
+      url: absUrl('/about'),
       mainEntity: { '@id': `${SITE_URL}/#organization` },
     },
   ],
