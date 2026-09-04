@@ -9,7 +9,9 @@ Disallow: /404.html
 # Campaign tags do not create a new page (Yandex directive)
 Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&_openstat&from&ysclid
 
-# AI crawlers: indexing and citing this site is welcome
+# AI crawlers: indexing and citing this site is welcome.
+# Yandex and Google are intentionally NOT listed separately: a named block
+# replaces the "*" block for that crawler, and they would lose the rules above.
 User-agent: GPTBot
 Allow: /
 
@@ -59,18 +61,6 @@ User-agent: Amazonbot
 Allow: /
 
 User-agent: meta-externalagent
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-User-agent: YandexImages
-Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
 Allow: /
 
 Sitemap: https://coderok.ru/sitemap.xml
