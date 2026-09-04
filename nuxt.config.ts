@@ -76,6 +76,9 @@ export default defineNuxtConfig({
         { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
         { name: 'googlebot', content: 'index, follow' },
         { name: 'yandex', content: 'index, follow' },
+        // Подтверждение прав в Яндекс.Вебмастере. Дублирует TXT-запись в DNS:
+        // мета-тег не зависит от DNS и продолжит работать при смене хостинга
+        { name: 'yandex-verification', content: '35445fcaa5e056e3' },
         { name: 'author', content: `${company.founder}, Coderok, ${contacts.email}` },
         { name: 'copyright', content: '© Coderok' },
         { name: 'theme-color', content: '#a656ff' },
