@@ -3,7 +3,26 @@ import { services } from './app/data/services'
 import { cases } from './app/data/cases'
 import { company, contacts, yearsInDev, integrations, profiles, CONTENT_UPDATED_AT } from './app/data/company'
 
+import { createHash } from 'node:crypto'
+import { readFileSync } from 'node:fs'
+
 const SITE_URL = 'https://coderok.ru'
+
+/**
+ * Хостинг кеширует статику на неделю, а имена CSS-файлов не содержат хеша —
+ * без версии в адресе правка стилей дойдёт до вернувшегося посетителя только
+ * через семь дней. Считаем хеш от содержимого: адрес меняется ровно тогда,
+ * когда меняется файл.
+ */
+const versioned = (path: string) => {
+  try {
+    const hash = createHash('md5').update(readFileSync(`public${path}`)).digest('hex').slice(0, 8)
+    return `${path}?v=${hash}`
+  }
+  catch {
+    return path
+  }
+}
 const OG_IMAGE = `${SITE_URL}/img/og-image.jpg`
 const SITE_TITLE = 'Разработка сайтов, мобильных приложений и CRM — Coderok'
 const SITE_DESC = 'Разрабатываем и чиним то, на чём работает бизнес: сайты, мобильные приложения и CRM. Забираем проекты в любом состоянии — с нуля, из чужого кода или из тупика. Цены и сроки на сайте.'
@@ -95,10 +114,10 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap' },
-        { rel: 'stylesheet', href: '/assets/css/vendor/bootstrap.min.css' },
-        { rel: 'stylesheet', href: '/assets/css/vendor/aos.css' },
-        { rel: 'stylesheet', href: '/assets/css/plugins/feature.css' },
-        { rel: 'stylesheet', href: '/assets/css/style.css' },
+        { rel: 'stylesheet', href: versioned('/assets/css/vendor/bootstrap.min.css') },
+        { rel: 'stylesheet', href: versioned('/assets/css/vendor/aos.css') },
+        { rel: 'stylesheet', href: versioned('/assets/css/plugins/feature.css') },
+        { rel: 'stylesheet', href: versioned('/assets/css/style.css') },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },

@@ -48,9 +48,12 @@ subprocess.run([
 # @font-face должен указывать на подрезанный шрифт, иначе браузер снова
 # скачает полный
 face_old = re.search(r"@font-face\{font-family:'Feather';src:[^}]*\}", css)
+# Версия в адресе шрифта = хеш файла: браузер не отдаст старый из кеша
+import hashlib
+digest = hashlib.md5(OUT.read_bytes()).hexdigest()[:8]
 face_new = (
     "@font-face{font-family:'Feather';"
-    "src:url('../../fonts/Feather-subset.woff2') format('woff2');"
+    f"src:url('../../fonts/Feather-subset.woff2?v={digest}') format('woff2');"
     "font-weight:normal;font-style:normal;font-display:swap}"
 )
 if face_old and face_old.group(0) != face_new:
