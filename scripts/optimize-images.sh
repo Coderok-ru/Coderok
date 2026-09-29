@@ -19,7 +19,7 @@ MANIFEST="app/data/image-manifest.json"
 command -v cwebp >/dev/null || { echo "Нужен cwebp: brew install webp"; exit 1; }
 
 sources=$(find public/assets/images/portfolio public/assets/images/about \
-  -type f \( -name '*.png' -o -name '*.jpg' \) ! -name '*-[0-9]*.webp' | sort)
+  -type f \( -name '*.png' -o -name '*.jpg' \) ! -name '*-og.jpg' | sort)
 
 echo '{' > "$MANIFEST"
 first=1

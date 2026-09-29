@@ -23,8 +23,8 @@
 
 ### Мобильные приложения — https://coderok.ru/services/mobile/
 С чем приходят: нужны обе платформы, а бюджета на две нативные команды нет; приложение написано, но его некому вести; нужна публикация в RuStore без сервисов Google.
-Что делаем: Flutter — одна кодовая база, два магазина. Берём на себя публикацию и релизы, включая сборки для российского рынка.
-Стек: Flutter, Dart, Firebase, OneSignal, эквайринг, Yandex MapKit.
+Что делаем: Flutter — одна кодовая база, два магазина. Берём на себя публикацию и релизы, включая сборки для российского рынка. Для Mac — нативно на Swift, с подписью Developer ID и нотаризацией Apple.
+Стек: Flutter, Dart, Firebase, OneSignal, эквайринг, Yandex MapKit, Swift, SwiftUI.
 Цены: приложение под ключ от 500 000 ₽ (от 2 месяцев).
 
 ### CRM и автоматизация — https://coderok.ru/services/crm/
@@ -86,7 +86,7 @@
 Стек: Go, OpenAI, Claude, OpenRouter, PostgreSQL.
 
 ### Другие работы — https://coderok.ru/cases/
-Slipstream Karting (сайт картинг-клуба, Laravel, Mapbox), Telegram-бот школы Ivinsight, FinFlow PRO (App Store, RuStore), AI Assistent (App Store), Cryptor — шифрование AES для macOS и Windows, Golang Web Template (open source: Go, Chi, Templ, HTMX, Swagger). Часть проектов закрыта NDA.
+Slipstream Karting (сайт картинг-клуба, Laravel, Mapbox), Telegram-бот школы Ivinsight, FinFlow PRO (App Store, RuStore), AI Assistent (App Store), Orbit.PRO — анализ, очистка и твики для Mac с откатом любого действия (Swift 6, SwiftUI, https://orbit-pro.ru/), Mishi Glance — просмотрщик фото для macOS, листает всю папку стрелками (Swift, open source, https://coderok-ru.github.io/mishi_glance/), Cryptor — шифрование AES для macOS и Windows, Golang Web Template (open source: Go, Chi, Templ, HTMX, Swagger). Часть проектов закрыта NDA.
 
 ## Прайс
 

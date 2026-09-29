@@ -500,6 +500,30 @@ export const showcase: ShowcaseItem[] = [
     ],
   },
   {
+    id: 'orbit-pro',
+    title: 'Orbit.PRO — анализ, очистка и твики для Mac',
+    category: 'macOS',
+    image: '/assets/images/portfolio/orbit_pro.jpg',
+    description: 'Утилита, которая объясняет, что происходит с Mac, и чистит только то, что можно вернуть: всё удалённое 7 дней лежит в карантине с откатом. Анализ диска, автозагрузка, приватность, бенчмарк и ИИ-ассистент по данным конкретной машины. Интерфейс на 10 языках.',
+    stack: 'Swift 6 · SwiftUI · XPC · WidgetKit · GRDB · Sparkle · DeepSeek',
+    links: [
+      { label: 'Открыть сайт', url: 'https://orbit-pro.ru/' },
+      { label: 'GitHub', url: 'https://github.com/Coderok-ru/orbit-pro' },
+    ],
+  },
+  {
+    id: 'mishi-glance',
+    title: 'Mishi Glance — просмотрщик фото для macOS',
+    category: 'macOS · Open Source',
+    image: '/assets/images/portfolio/mishi_glance.jpg',
+    description: 'Открываете одно фото из Finder и листаете всю папку стрелками или свайпом — чего в macOS нет из коробки. Порядок как в Finder, папка отслеживается вживую. Бесплатно, нотаризовано Apple.',
+    stack: 'Swift · SwiftUI · AppKit · Apple Silicon и Intel',
+    links: [
+      { label: 'Открыть сайт', url: 'https://coderok-ru.github.io/mishi_glance/' },
+      { label: 'GitHub', url: 'https://github.com/Coderok-ru/mishi_glance' },
+    ],
+  },
+  {
     id: 'cryptor',
     title: 'Cryptor — шифрование файлов AES',
     category: 'Десктоп',
