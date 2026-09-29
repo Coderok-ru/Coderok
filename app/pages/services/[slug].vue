@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { serviceBySlug, services } from '../../data/services'
 import { pricesFor, priceNote } from '../../data/pricing'
-import { caseBySlug } from '../../data/cases'
+import { casesForService, showcaseForService } from '../../data/cases'
 
 const route = useRoute()
 const slug = route.params.slug as string
@@ -14,9 +14,8 @@ if (!service) {
 const { emailFor } = useContact()
 
 const prices = computed(() => pricesFor(service!.priceIds))
-const relatedCases = computed(() =>
-  service!.caseSlugs.map(caseSlug => caseBySlug(caseSlug)).filter(Boolean),
-)
+const relatedCases = casesForService(service.slug)
+const relatedShowcase = showcaseForService(service.slug)
 const otherServices = computed(() => services.filter(s => s.slug !== service!.slug))
 
 usePageSeo({
@@ -160,7 +159,7 @@ usePageSeo({
       </div>
     </div>
 
-    <div v-if="relatedCases.length" class="rn-section-gap section-separator">
+    <div v-if="relatedCases.length || relatedShowcase.length" class="rn-section-gap section-separator">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -173,10 +172,17 @@ usePageSeo({
         <div class="row row--25 mt--30">
           <div
             v-for="item in relatedCases"
-            :key="item!.slug"
+            :key="item.slug"
             class="col-lg-4 col-md-6 col-12 mt--30"
           >
-            <CaseCard :item="item!" />
+            <CaseCard :item="item" />
+          </div>
+          <div
+            v-for="item in relatedShowcase"
+            :key="item.id"
+            class="col-lg-4 col-md-6 col-12 mt--30"
+          >
+            <ShowcaseCard :item="item" />
           </div>
         </div>
       </div>

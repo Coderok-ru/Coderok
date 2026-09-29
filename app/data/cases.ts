@@ -195,7 +195,7 @@ export const cases: CaseStudy[] = [
       title: 'Сайт, CRM и два приложения для клининга — кейс',
       description: 'Собрали экосистему сервиса уборки на одном бэкенде: сайт с калькулятором, CRM для координаторов и два приложения на Flutter в трёх сторах.',
     },
-    serviceSlugs: ['web', 'mobile', 'crm'],
+    serviceSlugs: ['web', 'mobile', 'crm', 'support'],
   },
   {
     slug: 'zalog-chistoty-route-maps',
@@ -443,7 +443,15 @@ export const cases: CaseStudy[] = [
 
 export const caseBySlug = (slug: string) => cases.find(c => c.slug === slug)
 
-export const casesForService = (slug: string) => cases.filter(c => c.serviceSlugs.includes(slug))
+/** Сначала кейсы, где услуга основная (стоит первой в serviceSlugs), затем остальные */
+const byRelevance = (slug: string) =>
+  <T extends { serviceSlugs: string[] }>(a: T, b: T) => a.serviceSlugs.indexOf(slug) - b.serviceSlugs.indexOf(slug)
+
+export const casesForService = (slug: string) =>
+  cases.filter(c => c.serviceSlugs.includes(slug)).sort(byRelevance(slug))
+
+export const showcaseForService = (slug: string) =>
+  showcase.filter(s => s.serviceSlugs.includes(slug)).sort(byRelevance(slug))
 
 /** Работы без отдельной страницы — витрина на /cases */
 export interface ShowcaseItem {
@@ -454,6 +462,8 @@ export interface ShowcaseItem {
   description: string
   stack: string
   links: CaseLink[]
+  /** Услуги, на страницах которых работа показывается в «Кейсах по теме» */
+  serviceSlugs: string[]
 }
 
 export const showcase: ShowcaseItem[] = [
@@ -465,6 +475,7 @@ export const showcase: ShowcaseItem[] = [
     description: 'Сайт картинг-клуба с бронированием заездов, прайс-листом, галереей и разделом школы. Интерактивная карта, стилизованная под общий дизайн, и оптимизация под локальный поиск.',
     stack: 'Laravel · Mapbox · SEO',
     links: [{ label: 'Открыть сайт', url: 'https://slipstream-karting.ru/' }],
+    serviceSlugs: ['web'],
   },
   {
     id: 'ivinsight-bot',
@@ -474,6 +485,7 @@ export const showcase: ShowcaseItem[] = [
     description: 'Бот-помощник для учеников онлайн-школы: доступ к материалам и рецептам, ответы на типовые вопросы, уведомления.',
     stack: 'Python · Telegram Bot API · REST API',
     links: [{ label: 'Открыть бота', url: 'https://t.me/ivinsightOfficial_bot' }],
+    serviceSlugs: ['bots'],
   },
   {
     id: 'finflow',
@@ -486,6 +498,7 @@ export const showcase: ShowcaseItem[] = [
       { label: 'App Store', url: 'https://apps.apple.com/us/app/finflow-pro/id6752355013' },
       { label: 'RuStore', url: 'https://www.rustore.ru/catalog/app/com.coderok.fin_flow_pro' },
     ],
+    serviceSlugs: ['mobile'],
   },
   {
     id: 'ai-assistent',
@@ -498,6 +511,7 @@ export const showcase: ShowcaseItem[] = [
       { label: 'App Store', url: 'https://apps.apple.com/us/app/ai-assistent/id6748020233' },
       { label: 'GitHub', url: 'https://github.com/Coderok-ru/ai_assistent' },
     ],
+    serviceSlugs: ['mobile', 'ai'],
   },
   {
     id: 'orbit-pro',
@@ -510,6 +524,7 @@ export const showcase: ShowcaseItem[] = [
       { label: 'Открыть сайт', url: 'https://orbit-pro.ru/' },
       { label: 'GitHub', url: 'https://github.com/Coderok-ru/orbit-pro' },
     ],
+    serviceSlugs: ['mobile', 'ai'],
   },
   {
     id: 'mishi-glance',
@@ -522,6 +537,7 @@ export const showcase: ShowcaseItem[] = [
       { label: 'Открыть сайт', url: 'https://coderok-ru.github.io/mishi_glance/' },
       { label: 'GitHub', url: 'https://github.com/Coderok-ru/mishi_glance' },
     ],
+    serviceSlugs: ['mobile'],
   },
   {
     id: 'cryptor',
@@ -531,6 +547,7 @@ export const showcase: ShowcaseItem[] = [
     description: 'Приложение для macOS и Windows: шифрование CSV-файлов и текста по AES для безопасной передачи через открытые каналы.',
     stack: 'Flutter · Dart · AES-256',
     links: [{ label: 'GitHub', url: 'https://github.com/Coderok-ru/cryptor' }],
+    serviceSlugs: [],
   },
   {
     id: 'golang-template',
@@ -540,5 +557,6 @@ export const showcase: ShowcaseItem[] = [
     description: 'Шаблон для быстрого старта Go-сервисов с готовой архитектурой: Clean Architecture, Chi, Templ, HTMX, Swagger, hot reload.',
     stack: 'Go · Chi · Templ · HTMX · Tailwind · Swagger',
     links: [{ label: 'GitHub', url: 'https://github.com/Coderok-ru/golang_web_template' }],
+    serviceSlugs: [],
   },
 ]
