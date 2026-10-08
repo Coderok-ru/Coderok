@@ -32,6 +32,7 @@ const { emailFor } = useContact()
           <h6 class="footer-title">Разделы</h6>
           <ul class="footer-links">
             <li><NuxtLink to="/cases">Кейсы</NuxtLink></li>
+            <li><NuxtLink to="/journal">Журнал</NuxtLink></li>
             <li><NuxtLink to="/#pricing">Цены</NuxtLink></li>
             <li><NuxtLink to="/#faq">Вопросы</NuxtLink></li>
             <li><NuxtLink to="/about">О нас</NuxtLink></li>

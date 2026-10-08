@@ -2,6 +2,7 @@
 import { serviceBySlug, services } from '../../data/services'
 import { pricesFor, priceNote } from '../../data/pricing'
 import { casesForService, showcaseForService } from '../../data/cases'
+import { articlesForService } from '../../data/articles'
 
 const route = useRoute()
 const slug = route.params.slug as string
@@ -16,6 +17,7 @@ const { emailFor } = useContact()
 const prices = computed(() => pricesFor(service!.priceIds))
 const relatedCases = casesForService(service.slug)
 const relatedShowcase = showcaseForService(service.slug)
+const relatedArticles = articlesForService(service.slug)
 const otherServices = computed(() => services.filter(s => s.slug !== service!.slug))
 
 usePageSeo({
@@ -183,6 +185,28 @@ usePageSeo({
             class="col-lg-4 col-md-6 col-12 mt--30"
           >
             <ShowcaseCard :item="item" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="relatedArticles.length" class="rn-section-gap section-separator">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title text-center">
+              <span class="subtitle">Журнал</span>
+              <h2 class="title">Статьи по теме</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row row--25 mt--30">
+          <div
+            v-for="article in relatedArticles"
+            :key="article.slug"
+            class="col-lg-4 col-md-6 col-12 mt--30"
+          >
+            <ArticleCard :item="article" />
           </div>
         </div>
       </div>

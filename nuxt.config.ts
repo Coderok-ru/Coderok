@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { services } from './app/data/services'
 import { cases } from './app/data/cases'
+import { articles } from './app/data/articles'
 import { company, contacts, yearsInDev, integrations, profiles, CONTENT_UPDATED_AT } from './app/data/company'
 
 import { createHash } from 'node:crypto'
@@ -40,10 +41,12 @@ const redirects: Record<string, string> = {
 const staticRoutes = [
   '/',
   '/cases',
+  '/journal',
   '/about',
   '/contacts',
   ...services.map(service => `/services/${service.slug}`),
   ...cases.map(item => `/cases/${item.slug}`),
+  ...articles.map(article => `/journal/${article.slug}`),
 ]
 
 export default defineNuxtConfig({

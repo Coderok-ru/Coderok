@@ -8,6 +8,7 @@ export interface NavItem {
 export const navItems: NavItem[] = [
   { label: 'Услуги', to: '/#services', section: 'services' },
   { label: 'Кейсы', to: '/cases' },
+  { label: 'Журнал', to: '/journal' },
   { label: 'Цены', to: '/#pricing', section: 'pricing' },
   { label: 'Вопросы', to: '/#faq', section: 'faq' },
   { label: 'О нас', to: '/about' },

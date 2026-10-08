@@ -22419,3 +22419,242 @@ input:checked + .slider:before {
     line-height: 1;
     color: #ffffff;
 }
+
+/* Журнал: карточка статьи, «Коротко», оглавление, таблицы и иллюстрации */
+
+.ck-article-meta {
+    font-size: 13px;
+    line-height: 22px;
+    color: var(--color-lightn);
+    opacity: 0.7;
+    margin: 16px 0 0;
+}
+
+.white-version .ck-article-meta {
+    color: var(--color-body-white);
+}
+
+.ck-meta-line a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ck-meta-line a:hover {
+    color: var(--color-primary);
+}
+
+/* Якорные переходы из оглавления не прячут заголовок под фиксированной шапкой */
+.ck-article h2[id] {
+    scroll-margin-top: 110px;
+}
+
+.ck-article strong {
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.white-version .ck-article strong {
+    color: var(--color-heading-wv);
+}
+
+.ck-summary {
+    padding: 30px 32px 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 3px solid var(--color-primary);
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+}
+
+.white-version .ck-summary {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-article .ck-summary__title {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin: 0 0 16px;
+}
+
+.white-version .ck-article .ck-summary__title {
+    color: var(--color-primary);
+}
+
+.ck-summary .ck-list li {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.ck-list--ordered {
+    counter-reset: ck-step;
+}
+
+.ck-list--ordered li {
+    counter-increment: ck-step;
+    padding-left: 38px;
+}
+
+.ck-list--ordered li::before {
+    content: counter(ck-step);
+    top: 3px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.ck-aside {
+    position: sticky;
+    top: 110px;
+}
+
+.ck-toc ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ck-toc li {
+    margin: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(196, 207, 222, 0.08);
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.ck-toc li:last-child {
+    border-bottom: 0;
+}
+
+.ck-toc a {
+    color: var(--color-lightn);
+}
+
+.ck-toc a:hover {
+    color: var(--color-primary);
+}
+
+.white-version .ck-toc li {
+    border-bottom-color: rgba(60, 62, 65, 0.1);
+}
+
+.white-version .ck-toc a {
+    color: var(--color-body-white);
+}
+
+.white-version .ck-toc a:hover {
+    color: var(--color-primary);
+}
+
+.ck-table,
+.ck-figure {
+    margin: 10px 0 34px;
+}
+
+.ck-table__scroll {
+    overflow-x: auto;
+    border-radius: 10px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+}
+
+.white-version .ck-table__scroll {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+}
+
+.ck-table table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.ck-table th,
+.ck-table td {
+    padding: 14px 18px;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+    vertical-align: top;
+    color: var(--color-lightn);
+    border: 0;
+    border-bottom: 1px solid rgba(196, 207, 222, 0.08);
+}
+
+.ck-table thead th {
+    font-size: 13px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.ck-table tbody th {
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--color-white);
+}
+
+.ck-table tbody tr:last-child th,
+.ck-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.white-version .ck-table th,
+.white-version .ck-table td {
+    color: var(--color-body-white);
+    border-bottom-color: rgba(60, 62, 65, 0.1);
+}
+
+.white-version .ck-table thead th {
+    color: var(--color-primary);
+}
+
+.white-version .ck-table tbody th {
+    color: var(--color-heading-wv);
+}
+
+.ck-table figcaption,
+.ck-figure figcaption {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--color-lightn);
+    opacity: 0.7;
+    margin-top: 14px;
+}
+
+.white-version .ck-table figcaption,
+.white-version .ck-figure figcaption {
+    color: var(--color-body-white);
+}
+
+.ck-article .ck-faq {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+    .ck-aside {
+        position: static;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .ck-summary {
+        padding: 24px 20px 6px;
+    }
+
+    .ck-article h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+}
