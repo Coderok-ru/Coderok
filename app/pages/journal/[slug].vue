@@ -23,8 +23,7 @@ usePageSeo({
   path: `/journal/${article.slug}`,
   image: article.ogImage,
   type: 'article',
-  published: article.publishedAt,
-  modified: article.updatedAt,
+  undated: true,
   jsonLd: [
     breadcrumbLd([
       { name: 'Главная', path: '/' },
@@ -40,8 +39,6 @@ usePageSeo({
       image: [`${SITE_URL}${article.ogImage}`, `${SITE_URL}${article.cover.replace(/\.png$/, '-1600.webp')}`],
       url,
       inLanguage: 'ru-RU',
-      datePublished: article.publishedAt,
-      dateModified: article.updatedAt,
       articleSection: article.category,
       keywords: article.keywords.join(', '),
       wordCount: wordCount(article),

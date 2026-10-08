@@ -6,6 +6,7 @@ usePageSeo({
   description: 'Статьи о разработке без воды: как выбрать хостинг и стек технологий, чем опасны конструкторы сайтов и что важно для SEO и ответов нейросетей.',
   path: '/journal',
   image: '/img/og/journal.jpg',
+  undated: true,
   jsonLd: [
     breadcrumbLd([
       { name: 'Главная', path: '/' },

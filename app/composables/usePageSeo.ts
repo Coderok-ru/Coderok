@@ -21,9 +21,8 @@ interface PageSeoOptions {
   /** Картинка для соцсетей, 1200×630 JPEG */
   image?: string
   type?: 'website' | 'article'
-  /** Даты статьи (YYYY-MM-DD). Без них страница датируется общим CONTENT_UPDATED_AT */
-  published?: string
-  modified?: string
+  /** Не датировать страницу: ни dateModified в разметке, ни метатегов с датой (журнал) */
+  undated?: boolean
   /** Дополнительная микроразметка страницы */
   jsonLd?: Record<string, unknown> | Record<string, unknown>[]
 }
@@ -32,7 +31,6 @@ interface PageSeoOptions {
 export const usePageSeo = (options: PageSeoOptions) => {
   const url = absUrl(options.path)
   const image = options.image ? `${SITE_URL}${options.image}` : OG_IMAGE
-  const modified = options.modified ?? CONTENT_UPDATED_AT
 
   // WebPage связывает страницу с организацией и даёт поисковику дату контента
   const pageLd = {
@@ -45,8 +43,7 @@ export const usePageSeo = (options: PageSeoOptions) => {
     isPartOf: { '@id': `${SITE_URL}/#website` },
     about: { '@id': `${SITE_URL}/#organization` },
     primaryImageOfPage: image,
-    ...(options.published ? { datePublished: options.published } : {}),
-    dateModified: modified,
+    ...(options.undated ? {} : { dateModified: CONTENT_UPDATED_AT }),
   }
 
   const graph = [
@@ -68,12 +65,6 @@ export const usePageSeo = (options: PageSeoOptions) => {
       { name: 'twitter:description', content: options.description },
       { name: 'twitter:image', content: image },
       { name: 'twitter:url', content: url },
-      ...(options.published
-        ? [
-            { property: 'article:published_time', content: options.published },
-            { property: 'article:modified_time', content: modified },
-          ]
-        : []),
     ],
     script: [{
       type: 'application/ld+json',
