@@ -94,10 +94,6 @@ useHead({
             <p class="ck-lead text-start">{{ article.excerpt }}</p>
             <p class="ck-meta-line">
               <NuxtLink to="/about">{{ company.founder }}</NuxtLink>, {{ company.founderRole.toLowerCase() }} Coderok
-              · <time :datetime="article.publishedAt">{{ dayLabel(article.publishedAt) }}</time>
-              <template v-if="article.updatedAt !== article.publishedAt">
-                · обновлено <time :datetime="article.updatedAt">{{ dayLabel(article.updatedAt) }}</time>
-              </template>
               · {{ minutes }} {{ plural(minutes, ['минута', 'минуты', 'минут']) }} чтения
             </p>
           </div>

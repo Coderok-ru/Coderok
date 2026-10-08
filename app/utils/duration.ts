@@ -51,11 +51,3 @@ export const sinceLabel = (start: string) => {
 /** '2024-09' → «с сентября 2024 — 2 года 1 месяц» */
 export const periodSince = (start: string, now: Date = new Date()) =>
   `${sinceLabel(start)} — ${durationSince(start, now)}`
-
-/** '2026-10-08' → «8 октября 2026» */
-export const dayLabel = (date: string) => {
-  const [year, month, day] = date.split('-').map(Number)
-  return new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })
-    .format(new Date(year!, month! - 1, day))
-    .replace(/\s?г\.$/, '')
-}
