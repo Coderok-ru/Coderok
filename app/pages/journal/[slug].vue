@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { articleBySlug, readingMinutes, sortedArticles, tocFor, wordCount } from '../../data/articles'
+import { articleBySlug, readingMinutes, relatedArticles, tocFor, wordCount } from '../../data/articles'
 import { services } from '../../data/services'
 import { company } from '../../data/company'
 
@@ -15,7 +15,7 @@ const url = absUrl(`/journal/${article.slug}`)
 const minutes = readingMinutes(article)
 const toc = tocFor(article)
 const relatedServices = services.filter(service => article.serviceSlugs.includes(service.slug))
-const otherArticles = sortedArticles.filter(a => a.slug !== article.slug).slice(0, 3)
+const otherArticles = relatedArticles(article)
 
 usePageSeo({
   title: article.meta.title,
@@ -178,7 +178,7 @@ useHead({
           <div class="col-lg-12">
             <div class="section-title text-center">
               <span class="subtitle">Журнал</span>
-              <h2 class="title">Ещё статьи</h2>
+              <h2 class="title">Читайте также</h2>
             </div>
           </div>
         </div>
