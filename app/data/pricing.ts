@@ -13,6 +13,7 @@ export const priceRows: PriceRow[] = [
   { id: 'mobile', title: 'Мобильное приложение под ключ', from: '500 000 ₽', term: 'от 2 месяцев' },
   { id: 'crm', title: 'CRM под бизнес-процесс', from: '300 000 ₽', term: 'от 1,5 месяцев' },
   { id: 'bot', title: 'Telegram-бот или Mini App', from: '80 000 ₽', term: 'от 2 недель' },
+  { id: 'ai-pilot', title: 'Пилот AI на ваших данных', from: '30 000 ₽', term: 'от 2 недель' },
   { id: 'support', title: 'Поддержка и доработки', from: '30 000 ₽/мес', term: 'по договорённости' },
   { id: 'hourly', title: 'Почасовая работа', from: '4 500 ₽/час', term: '—' },
 ]
