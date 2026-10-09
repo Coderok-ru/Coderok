@@ -1,0 +1,63 @@
+<svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ai-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+    <marker id="ai-arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="ai-arrow-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-good"/></marker>
+  </defs>
+
+  <!-- Зоны -->
+  <text x="0" y="16" class="d-label">Делает модель</text>
+  <text x="608" y="16" class="d-label">Решает человек</text>
+  <path d="M590 4V310" class="d-line d-dash"/>
+
+  <!-- 1. Каталог -->
+  <rect x="0" y="40" width="140" height="96" rx="10" class="d-box"/>
+  <text x="14" y="66" class="d-title">Каталог</text>
+  <text x="14" y="88">2 200 карточек</text>
+  <text x="14" y="108" class="d-muted">база платформы</text>
+  <text x="14" y="124" class="d-muted">PostgreSQL</text>
+
+  <path d="M141 88H191" class="d-line" marker-end="url(#ai-arrow)"/>
+  <text x="167" y="80" text-anchor="middle" class="d-small d-muted">данные</text>
+
+  <!-- 2. Модель -->
+  <rect x="195" y="40" width="140" height="96" rx="10" class="d-acc-box"/>
+  <text x="209" y="66" class="d-title">Модель</text>
+  <text x="209" y="88">ищет пробелы</text>
+  <text x="209" y="108" class="d-muted">что заполнено</text>
+  <text x="209" y="124" class="d-acc d-small">лимит расходов</text>
+
+  <path d="M336 88H386" class="d-line-acc" marker-end="url(#ai-arrow-acc)"/>
+  <text x="362" y="80" text-anchor="middle" class="d-small d-acc">находки</text>
+
+  <!-- 3. Список проблем -->
+  <rect x="390" y="40" width="140" height="96" rx="10" class="d-box"/>
+  <text x="404" y="66" class="d-title">Список</text>
+  <text x="404" y="88">черновик</text>
+  <text x="404" y="108" class="d-muted">позиция и чего</text>
+  <text x="404" y="124" class="d-muted">не хватает</text>
+
+  <path d="M531 88H604" class="d-line" marker-end="url(#ai-arrow)"/>
+  <text x="558" y="80" text-anchor="middle" class="d-small d-muted">передаёт</text>
+
+  <!-- 4. Человек -->
+  <rect x="608" y="40" width="152" height="96" rx="10" class="d-good-box"/>
+  <text x="622" y="66" class="d-title">Человек</text>
+  <text x="622" y="88">контент-команда</text>
+  <text x="622" y="108" class="d-muted">решает, что менять</text>
+  <text x="622" y="124" class="d-muted">и правит</text>
+
+  <path d="M684 137V216" class="d-line-good" marker-end="url(#ai-arrow-good)"/>
+  <text x="692" y="182" class="d-small d-good">публикует</text>
+
+  <!-- Витрина -->
+  <rect x="608" y="220" width="152" height="70" rx="10" class="d-box"/>
+  <text x="622" y="248" class="d-title">Витрина</text>
+  <text x="622" y="270" class="d-muted">правки на сайте</text>
+
+  <!-- Запрещённый путь -->
+  <path d="M265 137V255H572" class="d-line-bad d-dash"/>
+  <path d="M582 247L598 263M598 247L582 263" class="d-line-bad"/>
+  <text x="278" y="245" class="d-bad d-small">напрямую не публикует</text>
+  <text x="278" y="280" class="d-muted d-small">ошибка модели стоит минуты проверки</text>
+</svg>

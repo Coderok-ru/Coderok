@@ -22162,6 +22162,12 @@ input:checked + .slider:before {
     display: block;
 }
 
+/* Схемы и обложки журнала в двух версиях: ResponsiveImage выводит обе, видна та, что под тему */
+body:not(.white-version) .ck-img-light,
+.white-version .ck-img-dark {
+    display: none !important;
+}
+
 .ck-article h2 {
     font-size: 30px;
     line-height: 44px;
@@ -22637,6 +22643,67 @@ input:checked + .slider:before {
 .white-version .ck-figure figcaption {
     color: var(--color-body-white);
 }
+
+/*
+ * Схемы в статьях — inline SVG. Цвета задаются классами здесь, а не в самом SVG:
+ * одна и та же схема перекрашивается под тему без второй картинки.
+ * Классы текста: d-title, d-muted, d-small, d-label, d-acc, d-good, d-bad.
+ * Фигуры: d-box, d-acc-box, d-good-box, d-bad-box, d-fill-acc.
+ * Линии: d-line, d-line-acc, d-line-good, d-line-bad, d-dash; наконечники: d-head*.
+ */
+.ck-diagram__scroll {
+    overflow-x: auto;
+    border-radius: 10px;
+    padding: 24px;
+    background: var(--background-color-1);
+    box-shadow: var(--shadow-1);
+    color: var(--color-lightn);
+    --d-heading: var(--color-white);
+    --d-acc: #b77aff;
+    --d-good: #5fd17f;
+    --d-bad: #ff7a7a;
+}
+
+.white-version .ck-diagram__scroll {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+    color: var(--color-body-white);
+    --d-heading: var(--color-heading-wv);
+    --d-acc: #8a3ff0;
+    --d-good: #23964a;
+    --d-bad: #d63a3a;
+}
+
+.ck-diagram__scroll svg {
+    display: block;
+    width: 100%;
+    min-width: 600px;
+    height: auto;
+    font-family: var(--font-primary);
+}
+
+.ck-diagram__scroll svg text { fill: currentColor; font-size: 13px; }
+.ck-diagram__scroll svg .d-title { fill: var(--d-heading); font-size: 15px; font-weight: 600; }
+.ck-diagram__scroll svg .d-muted { fill-opacity: 0.65; font-size: 12px; }
+.ck-diagram__scroll svg .d-small { font-size: 11px; }
+.ck-diagram__scroll svg .d-label { font-size: 11px; letter-spacing: 0.8px; text-transform: uppercase; fill-opacity: 0.6; }
+.ck-diagram__scroll svg text.d-acc { fill: var(--d-acc); }
+.ck-diagram__scroll svg text.d-good { fill: var(--d-good); }
+.ck-diagram__scroll svg text.d-bad { fill: var(--d-bad); }
+.ck-diagram__scroll svg .d-box { fill: currentColor; fill-opacity: 0.05; stroke: currentColor; stroke-opacity: 0.18; }
+.ck-diagram__scroll svg .d-acc-box { fill: var(--d-acc); fill-opacity: 0.1; stroke: var(--d-acc); stroke-width: 1.5; }
+.ck-diagram__scroll svg .d-good-box { fill: var(--d-good); fill-opacity: 0.1; stroke: var(--d-good); stroke-opacity: 0.6; }
+.ck-diagram__scroll svg .d-bad-box { fill: var(--d-bad); fill-opacity: 0.1; stroke: var(--d-bad); stroke-opacity: 0.6; }
+.ck-diagram__scroll svg .d-fill-acc { fill: var(--d-acc); }
+.ck-diagram__scroll svg .d-line { fill: none; stroke: currentColor; stroke-opacity: 0.45; stroke-width: 1.5; }
+.ck-diagram__scroll svg .d-line-acc { fill: none; stroke: var(--d-acc); stroke-width: 2; }
+.ck-diagram__scroll svg .d-line-good { fill: none; stroke: var(--d-good); stroke-width: 2; }
+.ck-diagram__scroll svg .d-line-bad { fill: none; stroke: var(--d-bad); stroke-width: 2; }
+.ck-diagram__scroll svg .d-dash { stroke-dasharray: 5 5; }
+.ck-diagram__scroll svg .d-head { fill: currentColor; fill-opacity: 0.6; }
+.ck-diagram__scroll svg .d-head-acc { fill: var(--d-acc); }
+.ck-diagram__scroll svg .d-head-good { fill: var(--d-good); }
+.ck-diagram__scroll svg .d-head-bad { fill: var(--d-bad); }
 
 .ck-article .ck-faq {
     margin-top: 10px;

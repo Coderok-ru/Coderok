@@ -1,0 +1,64 @@
+<svg viewBox="0 0 760 430" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="mci-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+    <marker id="mci-arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+  </defs>
+
+  <!-- Над водой -->
+  <text x="0" y="14" class="d-label">Видит пользователь</text>
+  <rect x="230" y="26" width="300" height="58" rx="10" class="d-acc-box"/>
+  <text x="380" y="51" text-anchor="middle" class="d-title">Экраны приложения</text>
+  <text x="380" y="71" text-anchor="middle" class="d-muted">каталог · заказ · оплата · статус</text>
+
+  <!-- Ватерлиния -->
+  <path d="M0 110H760" class="d-line d-dash"/>
+  <text x="0" y="132" class="d-label">Не видно в макетах</text>
+
+  <!-- Экраны ходят в сервер -->
+  <path d="M380 84V176" class="d-line-acc" marker-end="url(#mci-arrow-acc)"/>
+  <text x="388" y="142" class="d-acc d-small">запросы API</text>
+
+  <!-- Админка -->
+  <rect x="0" y="178" width="200" height="70" rx="10" class="d-box"/>
+  <text x="16" y="204" class="d-title">Админка</text>
+  <text x="16" y="224" class="d-muted">сотрудники меняют</text>
+  <text x="16" y="240" class="d-muted">цены и тексты</text>
+  <path d="M200 213H278" class="d-line" marker-end="url(#mci-arrow)"/>
+  <text x="239" y="205" text-anchor="middle" class="d-small">правит</text>
+
+  <!-- Сервер -->
+  <rect x="280" y="178" width="200" height="70" rx="10" class="d-acc-box"/>
+  <text x="296" y="204" class="d-title">Сервер</text>
+  <text x="296" y="224" class="d-muted">заказы · цены · статусы</text>
+  <text x="296" y="240" class="d-muted">пользователи</text>
+
+  <!-- Интеграции -->
+  <path d="M480 213H558" class="d-line" marker-end="url(#mci-arrow)"/>
+  <text x="519" y="205" text-anchor="middle" class="d-small">вызывает</text>
+  <rect x="560" y="150" width="200" height="126" rx="10" class="d-box"/>
+  <text x="576" y="176" class="d-title">Интеграции</text>
+  <text x="576" y="198" class="d-muted">эквайринг — списать</text>
+  <text x="576" y="216" class="d-muted">карты — адрес, маршрут</text>
+  <text x="576" y="234" class="d-muted">push — уведомить</text>
+  <text x="576" y="252" class="d-muted">CRM, склад, 1С</text>
+
+  <!-- После релиза -->
+  <text x="0" y="322" class="d-label">После релиза</text>
+  <rect x="0" y="336" width="220" height="64" rx="10" class="d-box"/>
+  <text x="16" y="362" class="d-title">Тестирование</text>
+  <text x="16" y="382" class="d-muted">телефоны, версии ОС, сеть</text>
+
+  <path d="M220 368H268" class="d-line" marker-end="url(#mci-arrow)"/>
+  <text x="244" y="360" text-anchor="middle" class="d-small">сборка</text>
+
+  <rect x="270" y="336" width="220" height="64" rx="10" class="d-box"/>
+  <text x="286" y="362" class="d-title">Публикация</text>
+  <text x="286" y="382" class="d-muted">App Store · Google Play · RuStore</text>
+
+  <path d="M490 368H538" class="d-line" marker-end="url(#mci-arrow)"/>
+  <text x="514" y="360" text-anchor="middle" class="d-small">релиз</text>
+
+  <rect x="540" y="336" width="220" height="64" rx="10" class="d-box"/>
+  <text x="556" y="362" class="d-title">Поддержка</text>
+  <text x="556" y="382" class="d-muted">новые iOS и Android</text>
+</svg>

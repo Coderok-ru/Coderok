@@ -22,36 +22,52 @@ const props = withDefaults(defineProps<{
 })
 
 type Entry = { width: number, height: number, widths: number[] }
-const entry = computed<Entry | undefined>(
-  () => (manifest as Record<string, Entry>)[props.src],
-)
+type Variant = { base: string, entry: Entry, theme?: 'dark' | 'light' }
 
-const base = computed(() => props.src.replace(/\.(png|jpe?g|webp)$/i, ''))
+const variant = (src: string): Variant | undefined => {
+  const entry = (manifest as Record<string, Entry>)[src]
+  return entry && { base: src.replace(/\.(png|jpe?g|webp)$/i, ''), entry }
+}
 
-const srcset = computed(() =>
-  entry.value?.widths.map(w => `${base.value}-${w}.webp ${w}w`).join(', '),
-)
+/**
+ * Если рядом с картинкой лежит версия `-light` (схемы и обложки журнала),
+ * выводим обе: CSS показывает нужную по классу темы на body. Светлая всегда
+ * ленивая — браузер не грузит скрытую lazy-картинку, и тёмная тема не платит
+ * за лишний файл.
+ */
+const variants = computed<Variant[]>(() => {
+  const main = variant(props.src)
+  if (!main) return []
+  const light = variant(props.src.replace(/(\.\w+)$/, '-light$1'))
+  return light ? [{ ...main, theme: 'dark' }, { ...light, theme: 'light' }] : [main]
+})
+
+const srcset = (v: Variant) => v.entry.widths.map(w => `${v.base}-${w}.webp ${w}w`).join(', ')
 
 /** Для src берём средний размер: его получат браузеры без поддержки srcset */
-const fallback = computed(() => {
-  const widths = entry.value?.widths ?? []
+const fallback = (v: Variant) => {
+  const widths = v.entry.widths
   return widths.includes(960) ? 960 : widths[widths.length - 1]
-})
+}
 </script>
 
 <template>
-  <img
-    v-if="entry"
-    :src="`${base}-${fallback}.webp`"
-    :srcset="srcset"
-    :sizes="sizes"
-    :width="entry.width"
-    :height="entry.height"
-    :alt="alt"
-    :loading="eager ? 'eager' : 'lazy'"
-    :fetchpriority="eager ? 'high' : undefined"
-    decoding="async"
-  >
+  <template v-if="variants.length">
+    <img
+      v-for="v in variants"
+      :key="v.base"
+      :class="v.theme && `ck-img-${v.theme}`"
+      :src="`${v.base}-${fallback(v)}.webp`"
+      :srcset="srcset(v)"
+      :sizes="sizes"
+      :width="v.entry.width"
+      :height="v.entry.height"
+      :alt="alt"
+      :loading="eager && v.theme !== 'light' ? 'eager' : 'lazy'"
+      :fetchpriority="eager && v.theme !== 'light' ? 'high' : undefined"
+      decoding="async"
+    >
+  </template>
   <!-- Картинки без производных (новая, ещё не прогнанная через скрипт) -->
   <img v-else :src="src" :alt="alt" loading="lazy" decoding="async">
 </template>

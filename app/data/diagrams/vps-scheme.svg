@@ -1,0 +1,61 @@
+<svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="vps-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+  </defs>
+
+  <!-- Виртуальный хостинг -->
+  <text x="0" y="16" class="d-title">Виртуальный хостинг</text>
+  <text x="0" y="36" class="d-muted">сотни сайтов на одних ресурсах</text>
+  <rect x="0" y="54" width="360" height="300" rx="12" class="d-box"/>
+  <text x="20" y="80" class="d-label">Сервер провайдера</text>
+
+  <g>
+    <rect x="20" y="96" width="70" height="44" rx="8" class="d-bad-box"/>
+    <text x="55" y="116" text-anchor="middle" class="d-bad">сосед</text>
+    <text x="55" y="131" text-anchor="middle" class="d-muted">пик</text>
+    <rect x="102" y="96" width="70" height="44" rx="8" class="d-box"/>
+    <text x="137" y="123" text-anchor="middle" class="d-muted">сайт</text>
+    <rect x="184" y="96" width="70" height="44" rx="8" class="d-acc-box"/>
+    <text x="219" y="123" text-anchor="middle" class="d-acc">ваш сайт</text>
+    <rect x="266" y="96" width="74" height="44" rx="8" class="d-box"/>
+    <text x="303" y="123" text-anchor="middle" class="d-muted">ещё ×300</text>
+  </g>
+
+  <!-- все сайты тянут из одного пула -->
+  <path d="M137 140V172M303 140V172" class="d-line"/>
+  <path d="M55 141V170" class="d-line-bad" marker-end="url(#vps-arrow-bad)"/>
+  <path d="M219 171V143" class="d-line-bad d-dash" marker-end="url(#vps-arrow-bad)"/>
+  <text x="62" y="162" class="d-bad d-small">забирает</text>
+  <text x="226" y="162" class="d-bad d-small">остатки</text>
+  <rect x="20" y="172" width="320" height="76" rx="8" class="d-box"/>
+  <text x="36" y="196" class="d-title">Общий пул</text>
+  <text x="36" y="216" class="d-muted">процессор · память · IP-адрес</text>
+  <text x="36" y="234" class="d-muted">версии PHP выбирает провайдер</text>
+  <rect x="236" y="186" width="90" height="10" rx="5" class="d-bad-box"/>
+  <rect x="236" y="186" width="85" height="10" rx="5" class="d-head-bad"/>
+  <text x="326" y="214" text-anchor="end" class="d-bad">загрузка 95%</text>
+
+  <text x="20" y="338" class="d-bad">ваш сайт тормозит, хотя у вас ничего не менялось</text>
+
+  <!-- VPS -->
+  <text x="400" y="16" class="d-title">VPS</text>
+  <text x="400" y="36" class="d-muted">виртуальная машина с закреплёнными ресурсами</text>
+  <rect x="400" y="54" width="360" height="300" rx="12" class="d-box"/>
+  <text x="420" y="80" class="d-label">Физический сервер провайдера</text>
+
+  <rect x="420" y="96" width="155" height="56" rx="8" class="d-box"/>
+  <text x="436" y="120" class="d-muted">чужой VPS</text>
+  <text x="436" y="138" class="d-muted">2 ядра · 2 ГБ</text>
+  <rect x="587" y="96" width="155" height="56" rx="8" class="d-box"/>
+  <text x="603" y="120" class="d-muted">чужой VPS</text>
+  <text x="603" y="138" class="d-muted">4 ядра · 8 ГБ</text>
+
+  <rect x="420" y="166" width="322" height="122" rx="10" class="d-acc-box"/>
+  <text x="438" y="192" class="d-title">Ваш VPS</text>
+  <text x="438" y="214">2 ядра · 4 ГБ · NVMe · свой IP</text>
+  <text x="438" y="236" class="d-muted">root-доступ: любой стек, Docker,</text>
+  <text x="438" y="254" class="d-muted">очереди, боты, фоновые задачи</text>
+  <text x="438" y="276" class="d-good">ресурсы закреплены за вами</text>
+
+  <text x="420" y="338" class="d-good">нагрузка соседей на ваш сервер не влияет</text>
+</svg>

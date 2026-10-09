@@ -1,0 +1,58 @@
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="spec-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+    <marker id="spec-arrow-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-good"/></marker>
+  </defs>
+
+  <!-- Над водой: то, что заказчик видит в смете -->
+  <text x="0" y="14" class="d-label">Видно в смете</text>
+  <rect x="0" y="28" width="148" height="52" rx="10" class="d-acc-box"/>
+  <text x="74" y="59" text-anchor="middle" class="d-title">Экраны</text>
+  <rect x="166" y="28" width="148" height="52" rx="10" class="d-acc-box"/>
+  <text x="240" y="59" text-anchor="middle" class="d-title">Дизайн</text>
+
+  <!-- Линия воды -->
+  <path d="M0 104H480" class="d-line d-dash"/>
+  <text x="0" y="130" class="d-label">Под водой — обычно не названо</text>
+
+  <!-- Под водой: отдельные объёмы работы -->
+  <rect x="0" y="144" width="148" height="56" rx="10" class="d-box"/>
+  <text x="14" y="168" class="d-title">Роли</text>
+  <text x="14" y="187" class="d-muted">склад, бухгалтер</text>
+
+  <rect x="166" y="144" width="148" height="56" rx="10" class="d-box"/>
+  <text x="180" y="168" class="d-title">Админка</text>
+  <text x="180" y="187" class="d-muted">каталог, акции</text>
+
+  <rect x="332" y="144" width="148" height="56" rx="10" class="d-box"/>
+  <text x="346" y="168" class="d-title">Интеграции</text>
+  <text x="346" y="187" class="d-muted">склад, оплата, CRM</text>
+
+  <rect x="0" y="216" width="148" height="56" rx="10" class="d-box"/>
+  <text x="14" y="240" class="d-title">Перенос</text>
+  <text x="14" y="259" class="d-muted">товары, клиенты</text>
+
+  <rect x="166" y="216" width="148" height="56" rx="10" class="d-box"/>
+  <text x="180" y="240" class="d-title">Публикация</text>
+  <text x="180" y="259" class="d-muted">сервер, сторы</text>
+
+  <rect x="332" y="216" width="148" height="56" rx="10" class="d-box"/>
+  <text x="346" y="240" class="d-title">Правки</text>
+  <text x="346" y="259" class="d-muted">круги дизайна</text>
+
+  <!-- Каждый скрытый пункт идёт одним из двух путей -->
+  <path d="M486 144H498V272H486" class="d-line"/>
+  <path d="M498 208H514" class="d-line"/>
+  <path d="M514 208Q524 208 524 198V131Q524 121 534 121H543" class="d-line-bad d-dash" marker-end="url(#spec-arrow-bad)"/>
+  <path d="M514 208H543" class="d-line-good" marker-end="url(#spec-arrow-good)"/>
+
+  <rect x="546" y="84" width="214" height="74" rx="10" class="d-bad-box"/>
+  <text x="564" y="110" class="d-title">Без ТЗ</text>
+  <text x="564" y="132" class="d-bad">всплывает доплатой</text>
+  <text x="564" y="148" class="d-small d-muted">по ходу работы</text>
+
+  <rect x="546" y="171" width="214" height="74" rx="10" class="d-good-box"/>
+  <text x="564" y="197" class="d-title">С ТЗ</text>
+  <text x="564" y="219" class="d-good">входит в оценку</text>
+  <text x="564" y="235" class="d-small d-muted">до начала работ</text>
+</svg>

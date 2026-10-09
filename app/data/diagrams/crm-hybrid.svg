@@ -1,0 +1,49 @@
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="crm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+    <marker id="crm-arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+  </defs>
+
+  <!-- Коробка: продажи -->
+  <text x="0" y="16" class="d-title">amoCRM или Битрикс24</text>
+  <text x="0" y="36" class="d-muted">остаётся для продаж</text>
+  <rect x="0" y="54" width="260" height="250" rx="12" class="d-box"/>
+  <text x="20" y="80" class="d-label">Воронка</text>
+  <rect x="20" y="96" width="220" height="40" rx="8" class="d-box"/>
+  <text x="36" y="121">Лид</text>
+  <rect x="20" y="146" width="220" height="40" rx="8" class="d-box"/>
+  <text x="36" y="171">Сделка</text>
+  <rect x="20" y="196" width="220" height="40" rx="8" class="d-acc-box"/>
+  <text x="36" y="221" class="d-acc">Сделка выиграна</text>
+  <rect x="20" y="246" width="220" height="40" rx="8" class="d-box"/>
+  <text x="36" y="271">Карточка клиента</text>
+  <path d="M130 136V146M130 186V196" class="d-line"/>
+
+  <!-- Обмен по API -->
+  <text x="380" y="241" text-anchor="middle" class="d-label">по API</text>
+  <path d="M240 216H498" class="d-line-acc" marker-end="url(#crm-arrow-acc)"/>
+  <text x="380" y="206" text-anchor="middle" class="d-acc">становится заказом</text>
+  <path d="M500 266H242" class="d-line" marker-end="url(#crm-arrow)"/>
+  <text x="380" y="286" text-anchor="middle">статус и оплата</text>
+
+  <!-- Своя система: операционка -->
+  <text x="500" y="16" class="d-title">Своя система</text>
+  <text x="500" y="36" class="d-muted">всё, что после продажи</text>
+  <rect x="500" y="54" width="260" height="250" rx="12" class="d-acc-box"/>
+  <text x="520" y="80" class="d-label">Операционка</text>
+  <rect x="520" y="96" width="220" height="40" rx="8" class="d-box"/>
+  <text x="536" y="121">График и маршруты</text>
+  <rect x="520" y="146" width="220" height="40" rx="8" class="d-box"/>
+  <text x="536" y="171">Исполнители</text>
+  <rect x="520" y="196" width="220" height="40" rx="8" class="d-box"/>
+  <text x="536" y="221" class="d-title">Заказ</text>
+  <rect x="520" y="246" width="220" height="40" rx="8" class="d-box"/>
+  <text x="536" y="271">Отчёты</text>
+
+  <!-- Подключено напрямую -->
+  <path d="M630 304V328" class="d-line"/>
+  <text x="640" y="322" class="d-small d-muted">напрямую</text>
+  <rect x="300" y="328" width="460" height="56" rx="10" class="d-box"/>
+  <text x="320" y="352" class="d-label">Подключено к своей системе</text>
+  <text x="320" y="372">МойСклад · ЮKassa · Т-Банк · Telegram · приложения</text>
+</svg>

@@ -4,6 +4,12 @@ import type { ArticleBlock } from '../data/articles'
 defineProps<{
   blocks: ArticleBlock[]
 }>()
+
+/** Схемы лежат отдельными .svg и встраиваются в HTML при сборке — без запроса и без JS */
+const diagrams = import.meta.glob<string>('../data/diagrams/*.svg', { query: '?raw', import: 'default', eager: true })
+const escape = (text: string) => text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
+const diagram = (name: string, alt: string) => diagrams[`../data/diagrams/${name}.svg`]
+  ?.replace('<svg', `<svg role="img" aria-label="${escape(alt)}"`)
 </script>
 
 <template>
@@ -44,6 +50,11 @@ defineProps<{
       <div class="ck-cover">
         <ResponsiveImage :src="block.src" :alt="block.alt" sizes="(max-width: 991px) 100vw, 760px" />
       </div>
+      <figcaption v-if="block.caption">{{ block.caption }}</figcaption>
+    </figure>
+
+    <figure v-else-if="block.type === 'diagram'" class="ck-figure">
+      <div class="ck-diagram__scroll" v-html="diagram(block.name, block.alt)" />
       <figcaption v-if="block.caption">{{ block.caption }}</figcaption>
     </figure>
   </template>

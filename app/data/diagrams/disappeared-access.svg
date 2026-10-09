@@ -1,0 +1,71 @@
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="da-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+    <marker id="da-arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="da-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+  </defs>
+
+  <!-- ===== Слева: всё на разработчике ===== -->
+  <text x="0" y="16" class="d-label">Оформлено на разработчика</text>
+
+  <rect x="0" y="36" width="150" height="54" rx="10" class="d-bad-box"/>
+  <text x="14" y="59" class="d-title">Разработчик</text>
+  <text x="14" y="78" class="d-bad d-small">владелец доступов</text>
+
+  <rect x="210" y="36" width="150" height="54" rx="10" class="d-box"/>
+  <text x="224" y="59" class="d-title">Компания</text>
+  <text x="224" y="78" class="d-muted d-small">паролей нет</text>
+
+  <path d="M75 91V140" class="d-line-bad" marker-end="url(#da-arrow-bad)"/>
+  <text x="83" y="122" class="d-bad d-small">владеет</text>
+  <path d="M285 91V140" class="d-line d-dash"/>
+  <text x="293" y="122" class="d-muted d-small">просит</text>
+
+  <rect x="0" y="144" width="360" height="146" rx="10" class="d-box"/>
+  <text x="16" y="168" class="d-label">Доступы проекта</text>
+  <text x="16" y="194" class="d-muted">домен и DNS</text>
+  <text x="16" y="214" class="d-muted">сервер и хостинг</text>
+  <text x="16" y="234" class="d-muted">репозиторий кода</text>
+  <text x="16" y="254" class="d-muted">база и бэкапы</text>
+  <text x="16" y="274" class="d-muted">почта на домене</text>
+  <text x="186" y="194" class="d-muted">сторы и ключи подписи</text>
+  <text x="186" y="214" class="d-muted">платёжные системы</text>
+  <text x="186" y="234" class="d-muted">аналитика</text>
+  <text x="186" y="254" class="d-muted">API-ключи сервисов</text>
+
+  <text x="0" y="326" class="d-bad">пропал — проект не продлить и не выпустить</text>
+
+  <!-- ===== Справа: всё на компании ===== -->
+  <text x="400" y="16" class="d-label">Оформлено на компанию</text>
+
+  <rect x="400" y="36" width="150" height="54" rx="10" class="d-acc-box"/>
+  <text x="414" y="59" class="d-title">Компания</text>
+  <text x="414" y="78" class="d-acc d-small">владелец доступов</text>
+
+  <rect x="610" y="36" width="150" height="54" rx="10" class="d-box"/>
+  <text x="624" y="59" class="d-title">Разработчик</text>
+  <text x="624" y="78" class="d-muted d-small">свой логин, роль</text>
+
+  <path d="M551 63H606" class="d-line-acc" marker-end="url(#da-arrow-acc)"/>
+  <text x="579" y="55" text-anchor="middle" class="d-acc d-small">выдаёт</text>
+  <text x="579" y="79" text-anchor="middle" class="d-acc d-small">доступ</text>
+
+  <path d="M475 91V140" class="d-line-acc" marker-end="url(#da-arrow-acc)"/>
+  <text x="483" y="122" class="d-acc d-small">владеет</text>
+  <path d="M685 91V140" class="d-line d-dash" marker-end="url(#da-arrow)"/>
+  <text x="693" y="122" class="d-muted d-small">работает</text>
+
+  <rect x="400" y="144" width="360" height="146" rx="10" class="d-box"/>
+  <text x="416" y="168" class="d-label">Доступы проекта</text>
+  <text x="416" y="194" class="d-muted">домен и DNS</text>
+  <text x="416" y="214" class="d-muted">сервер и хостинг</text>
+  <text x="416" y="234" class="d-muted">репозиторий кода</text>
+  <text x="416" y="254" class="d-muted">база и бэкапы</text>
+  <text x="416" y="274" class="d-muted">почта на домене</text>
+  <text x="586" y="194" class="d-muted">сторы и ключи подписи</text>
+  <text x="586" y="214" class="d-muted">платёжные системы</text>
+  <text x="586" y="234" class="d-muted">аналитика</text>
+  <text x="586" y="254" class="d-muted">API-ключи сервисов</text>
+
+  <text x="400" y="326" class="d-good">сменили подрядчика — отозвали доступ, выдали новому</text>
+</svg>
