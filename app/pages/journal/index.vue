@@ -21,6 +21,8 @@ const topics = services
   .map(s => ({ slug: s.slug, title: topicTitles[s.slug] ?? s.navTitle, count: sortedArticles.filter(a => a.serviceSlugs.includes(s.slug)).length }))
   .filter(t => t.count > 0)
 
+const latestUpdate = sortedArticles.map(a => a.updatedAt).sort().at(-1)
+
 const route = useRoute()
 const router = useRouter()
 const topic = ref<string | null>(null)
@@ -44,7 +46,7 @@ usePageSeo({
   description: 'Сколько стоит приложение, своя CRM или коробка, бот или Mini App, где окупаются нейросети, что делать, если пропал разработчик. Статьи без воды.',
   path: '/journal',
   image: '/img/og/journal.jpg',
-  undated: true,
+  modified: latestUpdate,
   jsonLd: [
     breadcrumbLd([
       { name: 'Главная', path: '/' },

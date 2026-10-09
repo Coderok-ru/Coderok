@@ -21,8 +21,8 @@ interface PageSeoOptions {
   /** Картинка для соцсетей, 1200×630 JPEG */
   image?: string
   type?: 'website' | 'article'
-  /** Не датировать страницу: ни dateModified в разметке, ни метатегов с датой (журнал) */
-  undated?: boolean
+  /** Дата изменения именно этой страницы (статья журнала); по умолчанию CONTENT_UPDATED_AT */
+  modified?: string
   /** Дополнительная микроразметка страницы */
   jsonLd?: Record<string, unknown> | Record<string, unknown>[]
 }
@@ -43,7 +43,7 @@ export const usePageSeo = (options: PageSeoOptions) => {
     isPartOf: { '@id': `${SITE_URL}/#website` },
     about: { '@id': `${SITE_URL}/#organization` },
     primaryImageOfPage: image,
-    ...(options.undated ? {} : { dateModified: CONTENT_UPDATED_AT }),
+    dateModified: options.modified ?? CONTENT_UPDATED_AT,
   }
 
   const graph = [

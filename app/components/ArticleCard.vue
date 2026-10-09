@@ -18,7 +18,8 @@ const minutes = readingMinutes(props.item)
       <h3 class="ck-case-card__title">{{ item.cardTitle }}</h3>
       <p class="ck-case-card__desc">{{ item.excerpt }}</p>
       <p class="ck-article-meta">
-        {{ minutes }} {{ plural(minutes, ['минута', 'минуты', 'минут']) }} чтения
+        <time :datetime="item.publishedAt">{{ dateLabel(item.publishedAt) }}</time>
+        · {{ minutes }} {{ plural(minutes, ['минута', 'минуты', 'минут']) }} чтения
       </p>
     </div>
   </NuxtLink>

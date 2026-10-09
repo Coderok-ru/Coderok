@@ -23,7 +23,7 @@ usePageSeo({
   path: `/journal/${article.slug}`,
   image: article.ogImage,
   type: 'article',
-  undated: true,
+  modified: article.updatedAt,
   jsonLd: [
     breadcrumbLd([
       { name: 'Главная', path: '/' },
@@ -41,6 +41,8 @@ usePageSeo({
       inLanguage: 'ru-RU',
       articleSection: article.category,
       keywords: article.keywords.join(', '),
+      datePublished: article.publishedAt,
+      dateModified: article.updatedAt,
       wordCount: wordCount(article),
       timeRequired: `PT${minutes}M`,
       author: {
@@ -66,6 +68,8 @@ usePageSeo({
 
 useHead({
   meta: [
+    { property: 'article:published_time', content: article.publishedAt },
+    { property: 'article:modified_time', content: article.updatedAt },
     { property: 'article:author', content: company.founder },
     { property: 'article:section', content: article.category },
     ...article.keywords.map(tag => ({ property: 'article:tag', content: tag })),
@@ -91,6 +95,10 @@ useHead({
             <p class="ck-lead text-start">{{ article.excerpt }}</p>
             <p class="ck-meta-line">
               <NuxtLink to="/about">{{ company.founder }}</NuxtLink>, {{ company.founderRole.toLowerCase() }} Coderok
+              · <time :datetime="article.publishedAt">{{ dateLabel(article.publishedAt) }}</time>
+              <template v-if="article.updatedAt !== article.publishedAt">
+                · обновлено <time :datetime="article.updatedAt">{{ dateLabel(article.updatedAt) }}</time>
+              </template>
               · {{ minutes }} {{ plural(minutes, ['минута', 'минуты', 'минут']) }} чтения
             </p>
           </div>

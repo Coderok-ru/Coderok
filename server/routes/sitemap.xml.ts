@@ -9,8 +9,8 @@ interface SitemapEntry {
   path: string
   priority: string
   changefreq: string
-  /** Журнал не датируется — у его адресов lastmod нет */
-  undated?: boolean
+  /** Своя дата изменения страницы; без неё — CONTENT_UPDATED_AT */
+  lastmod?: string
 }
 
 const entries: SitemapEntry[] = [
@@ -26,12 +26,12 @@ const entries: SitemapEntry[] = [
     priority: '0.8',
     changefreq: 'monthly',
   })),
-  { path: '/journal', priority: '0.8', changefreq: 'weekly', undated: true },
+  { path: '/journal', priority: '0.8', changefreq: 'weekly', lastmod: articles.map(a => a.updatedAt).sort().at(-1) },
   ...articles.map(article => ({
     path: `/journal/${article.slug}`,
     priority: '0.7',
     changefreq: 'monthly',
-    undated: true,
+    lastmod: article.updatedAt,
   })),
   { path: '/about', priority: '0.6', changefreq: 'monthly' },
   { path: '/contacts', priority: '0.6', changefreq: 'monthly' },
@@ -46,7 +46,8 @@ export default defineEventHandler((event) => {
 
   const urls = entries.map(entry => `  <url>
     <loc>${SITE_URL}${entry.path === '/' ? '/' : `${entry.path}/`}</loc>
-${entry.undated ? '' : `    <lastmod>${date}</lastmod>\n`}    <changefreq>${entry.changefreq}</changefreq>
+    <lastmod>${entry.lastmod ?? date}</lastmod>
+    <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority}</priority>
   </url>`).join('\n')
 
