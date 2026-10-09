@@ -1,0 +1,74 @@
+<svg viewBox="0 0 760 256" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="geo-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+    <marker id="geo-arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="geo-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+  </defs>
+
+  <text x="0" y="14" class="d-label">Путь вопроса</text>
+
+  <!-- шаги -->
+  <rect x="0" y="30" width="128" height="72" rx="10" class="d-box"/>
+  <text x="14" y="56" class="d-title">Вопрос</text>
+  <text x="14" y="76" class="d-muted">«кто делает CRM</text>
+  <text x="14" y="92" class="d-muted">в Петербурге»</text>
+
+  <rect x="158" y="30" width="128" height="72" rx="10" class="d-box"/>
+  <text x="172" y="56" class="d-title">Поиск</text>
+  <text x="172" y="76" class="d-muted">индекс или</text>
+  <text x="172" y="92" class="d-muted">свой краулер</text>
+
+  <rect x="316" y="30" width="128" height="72" rx="10" class="d-box"/>
+  <text x="330" y="56" class="d-title">Чтение</text>
+  <text x="330" y="76" class="d-muted">загружает HTML</text>
+  <text x="330" y="92" class="d-muted">страницы</text>
+
+  <rect x="474" y="30" width="128" height="72" rx="10" class="d-box"/>
+  <text x="488" y="56" class="d-title">Факты</text>
+  <text x="488" y="76" class="d-muted">цены, сроки,</text>
+  <text x="488" y="92" class="d-muted">определения</text>
+
+  <rect x="632" y="30" width="128" height="72" rx="10" class="d-acc-box"/>
+  <text x="646" y="56" class="d-title">Ответ</text>
+  <text x="646" y="76" class="d-acc">2–3 компании</text>
+  <text x="646" y="92" class="d-acc">со ссылками</text>
+
+  <!-- переходы -->
+  <path d="M130 66H154" class="d-line" marker-end="url(#geo-arrow)"/>
+  <path d="M288 66H312" class="d-line" marker-end="url(#geo-arrow)"/>
+  <path d="M446 66H470" class="d-line" marker-end="url(#geo-arrow)"/>
+  <path d="M604 66H628" class="d-line-acc" marker-end="url(#geo-arrow-acc)"/>
+
+  <!-- где сайт выпадает -->
+  <text x="0" y="212" class="d-label">Где сайт</text>
+  <text x="0" y="230" class="d-label">выпадает</text>
+  <path d="M222 104V184" class="d-line-bad d-dash" marker-end="url(#geo-arrow-bad)"/>
+  <path d="M380 104V184" class="d-line-bad d-dash" marker-end="url(#geo-arrow-bad)"/>
+  <path d="M538 104V184" class="d-line-bad d-dash" marker-end="url(#geo-arrow-bad)"/>
+
+  <rect x="158" y="188" width="128" height="62" rx="10" class="d-bad-box"/>
+  <text x="172" y="212" class="d-bad">краулер закрыт</text>
+  <text x="172" y="230" class="d-muted">в robots.txt или</text>
+  <text x="172" y="244" class="d-muted">нет в индексе</text>
+
+  <rect x="316" y="188" width="128" height="62" rx="10" class="d-bad-box"/>
+  <text x="330" y="212" class="d-bad">текст в JS</text>
+  <text x="330" y="230" class="d-muted">в HTML пусто,</text>
+  <text x="330" y="244" class="d-muted">сервер не отвечает</text>
+
+  <rect x="474" y="188" width="128" height="62" rx="10" class="d-bad-box"/>
+  <text x="488" y="212" class="d-bad">нет фактов</text>
+  <text x="488" y="230" class="d-muted">общие слова,</text>
+  <text x="488" y="244" class="d-muted">нет цен и цифр</text>
+
+  <!-- где закрепляется -->
+  <rect x="632" y="188" width="128" height="62" rx="10" class="d-good-box"/>
+  <text x="646" y="212" class="d-good">в источниках</text>
+  <text x="646" y="230" class="d-muted">прошёл все</text>
+  <text x="646" y="244" class="d-muted">три шага</text>
+  <path d="M696 104V184" class="d-line-good" marker-end="url(#geo-arrow-good)"/>
+  <defs>
+    <marker id="geo-arrow-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-good"/></marker>
+  </defs>
+
+</svg>

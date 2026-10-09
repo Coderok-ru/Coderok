@@ -1,0 +1,86 @@
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="contractor-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="contractor-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+  </defs>
+
+  <!-- Четыре шага проверки -->
+  <rect x="0" y="0" width="166" height="64" rx="10" class="d-box"/>
+  <text x="16" y="24" class="d-label">Шаг 1</text>
+  <text x="16" y="48" class="d-title">До встречи</text>
+
+  <rect x="198" y="0" width="166" height="64" rx="10" class="d-box"/>
+  <text x="214" y="24" class="d-label">Шаг 2</text>
+  <text x="214" y="48" class="d-title">Встреча</text>
+
+  <rect x="396" y="0" width="166" height="64" rx="10" class="d-box"/>
+  <text x="412" y="24" class="d-label">Шаг 3</text>
+  <text x="412" y="48" class="d-title">Договор</text>
+
+  <rect x="594" y="0" width="166" height="64" rx="10" class="d-acc-box"/>
+  <text x="610" y="24" class="d-label">Шаг 4</text>
+  <text x="610" y="48" class="d-title">Первый этап</text>
+
+  <path d="M168 32H195" class="d-line-acc" marker-end="url(#contractor-arrow)"/>
+  <path d="M366 32H393" class="d-line-acc" marker-end="url(#contractor-arrow)"/>
+  <path d="M564 32H591" class="d-line-acc" marker-end="url(#contractor-arrow)"/>
+
+  <!-- Что проверяем на каждом шаге -->
+  <path d="M83 64V92M281 64V92M479 64V92M677 64V92" class="d-line"/>
+
+  <rect x="0" y="92" width="166" height="128" rx="10" class="d-box"/>
+  <text x="16" y="116" class="d-label">Проверяем</text>
+  <text x="16" y="142" class="d-muted">живые сайты</text>
+  <text x="16" y="162" class="d-muted">приложения в сторах</text>
+  <text x="16" y="182" class="d-muted">ИНН и ОГРН в ФНС</text>
+  <text x="16" y="202" class="d-muted">отзывы на площадках</text>
+
+  <rect x="198" y="92" width="166" height="128" rx="10" class="d-box"/>
+  <text x="214" y="116" class="d-label">Спрашиваем</text>
+  <text x="214" y="142" class="d-muted">кто делает руками</text>
+  <text x="214" y="162" class="d-muted">чьи код и аккаунты</text>
+  <text x="214" y="182" class="d-muted">как идёт приёмка</text>
+  <text x="214" y="202" class="d-muted">что после запуска</text>
+
+  <rect x="396" y="92" width="166" height="128" rx="10" class="d-box"/>
+  <text x="412" y="116" class="d-label">Фиксируем</text>
+  <text x="412" y="142" class="d-muted">права на код</text>
+  <text x="412" y="162" class="d-muted">доступы на вас</text>
+  <text x="412" y="182" class="d-muted">этапы и приёмку</text>
+  <text x="412" y="202" class="d-muted">гарантию</text>
+
+  <rect x="594" y="92" width="166" height="128" rx="10" class="d-acc-box"/>
+  <text x="610" y="116" class="d-label">Смотрим</text>
+  <text x="610" y="142" class="d-muted">результат в срок</text>
+  <text x="610" y="162" class="d-muted">код в вашем</text>
+  <text x="610" y="182" class="d-muted">репозитории</text>
+  <text x="610" y="202" class="d-muted">отчёт по этапу</text>
+
+  <!-- Где останавливаться -->
+  <path d="M83 220V268" class="d-line-bad d-dash" marker-end="url(#contractor-arrow-bad)"/>
+  <path d="M281 220V268" class="d-line-bad d-dash" marker-end="url(#contractor-arrow-bad)"/>
+  <path d="M479 220V268" class="d-line-bad d-dash" marker-end="url(#contractor-arrow-bad)"/>
+  <path d="M677 220V268" class="d-line-bad d-dash" marker-end="url(#contractor-arrow-bad)"/>
+  <text x="90" y="250" class="d-small d-bad">стоп, если</text>
+  <text x="288" y="250" class="d-small d-bad">стоп, если</text>
+  <text x="486" y="250" class="d-small d-bad">стоп, если</text>
+  <text x="684" y="250" class="d-small d-bad">стоп, если</text>
+
+  <rect x="0" y="272" width="166" height="60" rx="10" class="d-bad-box"/>
+  <text x="16" y="297" class="d-bad">нечего открыть</text>
+  <text x="16" y="317" class="d-small d-muted">только скриншоты</text>
+
+  <rect x="198" y="272" width="166" height="60" rx="10" class="d-bad-box"/>
+  <text x="214" y="297" class="d-bad">цена без вопросов</text>
+  <text x="214" y="317" class="d-small d-muted">«всё за неделю»</text>
+
+  <rect x="396" y="272" width="166" height="60" rx="10" class="d-bad-box"/>
+  <text x="412" y="297" class="d-bad">аккаунты на нём</text>
+  <text x="412" y="317" class="d-small d-muted">или 100 % вперёд</text>
+
+  <rect x="594" y="272" width="166" height="60" rx="10" class="d-bad-box"/>
+  <text x="610" y="297" class="d-bad">кода не видно</text>
+  <text x="610" y="317" class="d-small d-muted">срок «вот-вот»</text>
+
+  <text x="760" y="376" text-anchor="end" class="d-good">прошёл все шаги — платите за следующий этап</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="leads-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="leads-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+    <marker id="leads-arrow-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-good"/></marker>
+  </defs>
+  <text x="170" y="16" text-anchor="middle" class="d-label">Путь посетителя</text>
+  <text x="400" y="16" class="d-label">Где уходят</text>
+
+  <!-- шаг 1 -->
+  <rect x="10" y="30" width="320" height="48" rx="8" class="d-acc-box"/>
+  <text x="170" y="51" text-anchor="middle" class="d-title">1 · Нашёл</text>
+  <text x="170" y="68" text-anchor="middle" class="d-muted">поиск, нейросети, реклама</text>
+  <path d="M334 54H392" class="d-line-bad d-dash" marker-end="url(#leads-arrow-bad)"/>
+  <text x="361" y="47" text-anchor="middle" class="d-bad d-small">уходит</text>
+  <rect x="400" y="30" width="360" height="48" rx="8" class="d-bad-box"/>
+  <text x="416" y="59">нет в индексе поисковиков и в ответах нейросетей</text>
+  <path d="M170 79V92" class="d-line-acc" marker-end="url(#leads-arrow)"/>
+
+  <!-- шаг 2 -->
+  <rect x="22" y="94" width="296" height="48" rx="8" class="d-box"/>
+  <text x="170" y="115" text-anchor="middle" class="d-title">2 · Открыл</text>
+  <text x="170" y="132" text-anchor="middle" class="d-muted">скорость, мобильная версия</text>
+  <path d="M322 118H392" class="d-line-bad d-dash" marker-end="url(#leads-arrow-bad)"/>
+  <text x="355" y="111" text-anchor="middle" class="d-bad d-small">уходит</text>
+  <rect x="400" y="94" width="360" height="48" rx="8" class="d-bad-box"/>
+  <text x="416" y="123">страница грузится долго или ломается на телефоне</text>
+  <path d="M170 143V156" class="d-line-acc" marker-end="url(#leads-arrow)"/>
+
+  <!-- шаг 3 -->
+  <rect x="34" y="158" width="272" height="48" rx="8" class="d-box"/>
+  <text x="170" y="179" text-anchor="middle" class="d-title">3 · Понял</text>
+  <text x="170" y="196" text-anchor="middle" class="d-muted">первый экран, цены</text>
+  <path d="M310 182H392" class="d-line-bad d-dash" marker-end="url(#leads-arrow-bad)"/>
+  <text x="349" y="175" text-anchor="middle" class="d-bad d-small">уходит</text>
+  <rect x="400" y="158" width="360" height="48" rx="8" class="d-bad-box"/>
+  <text x="416" y="187">первый экран о компании, а не о клиенте; нет цен</text>
+  <path d="M170 207V220" class="d-line-acc" marker-end="url(#leads-arrow)"/>
+
+  <!-- шаг 4 -->
+  <rect x="46" y="222" width="248" height="48" rx="8" class="d-box"/>
+  <text x="170" y="243" text-anchor="middle" class="d-title">4 · Поверил</text>
+  <text x="170" y="260" text-anchor="middle" class="d-muted">кейсы, реквизиты</text>
+  <path d="M298 246H392" class="d-line-bad d-dash" marker-end="url(#leads-arrow-bad)"/>
+  <text x="343" y="239" text-anchor="middle" class="d-bad d-small">уходит</text>
+  <rect x="400" y="222" width="360" height="48" rx="8" class="d-bad-box"/>
+  <text x="416" y="251">нет кейсов с результатом и живых проектов</text>
+  <path d="M170 271V284" class="d-line-acc" marker-end="url(#leads-arrow)"/>
+
+  <!-- шаг 5 -->
+  <rect x="58" y="286" width="224" height="48" rx="8" class="d-box"/>
+  <text x="170" y="307" text-anchor="middle" class="d-title">5 · Связался</text>
+  <text x="170" y="324" text-anchor="middle" class="d-muted">мессенджер, телефон</text>
+  <path d="M286 310H392" class="d-line-bad d-dash" marker-end="url(#leads-arrow-bad)"/>
+  <text x="337" y="303" text-anchor="middle" class="d-bad d-small">уходит</text>
+  <rect x="400" y="286" width="360" height="48" rx="8" class="d-bad-box"/>
+  <text x="416" y="315">длинная форма, капча, один канал связи</text>
+  <path d="M170 335V348" class="d-line-acc" marker-end="url(#leads-arrow)"/>
+
+  <!-- шаг 6 -->
+  <rect x="70" y="350" width="200" height="48" rx="8" class="d-box"/>
+  <text x="170" y="371" text-anchor="middle" class="d-title">6 · Заявка дошла</text>
+  <text x="170" y="388" text-anchor="middle" class="d-muted">CRM, уведомления</text>
+  <path d="M274 374H392" class="d-line-bad d-dash" marker-end="url(#leads-arrow-bad)"/>
+  <text x="331" y="367" text-anchor="middle" class="d-bad d-small">уходит</text>
+  <rect x="400" y="350" width="360" height="48" rx="8" class="d-bad-box"/>
+  <text x="416" y="379">письмо ушло в спам, ответили через день</text>
+
+  <!-- итог -->
+  <path d="M170 399V420" class="d-line-good" marker-end="url(#leads-arrow-good)"/>
+  <rect x="60" y="422" width="220" height="48" rx="8" class="d-good-box"/>
+  <text x="170" y="443" text-anchor="middle" class="d-title">Заявка у менеджера</text>
+  <text x="170" y="460" text-anchor="middle" class="d-good d-small">дошли все шесть шагов</text>
+</svg>

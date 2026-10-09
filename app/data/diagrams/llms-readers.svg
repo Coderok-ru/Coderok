@@ -1,0 +1,65 @@
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="llms-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+    <marker id="llms-arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="llms-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+  </defs>
+
+  <text x="0" y="16" class="d-label">Кто читает</text>
+  <text x="480" y="16" class="d-label">Что лежит на сайте</text>
+
+  <!-- Читатели -->
+  <rect x="0" y="54" width="220" height="80" rx="10" class="d-box"/>
+  <text x="18" y="84" class="d-title">Поисковые роботы</text>
+  <text x="18" y="106" class="d-muted">Яндекс, Google</text>
+  <text x="18" y="122" class="d-muted">собирают индекс</text>
+
+  <rect x="0" y="178" width="220" height="80" rx="10" class="d-acc-box"/>
+  <text x="18" y="208" class="d-title">ИИ-ассистенты</text>
+  <text x="18" y="230" class="d-muted">Алиса, ChatGPT, Gemini</text>
+  <text x="18" y="246" class="d-muted">строят ответ клиенту</text>
+
+  <rect x="0" y="302" width="220" height="80" rx="10" class="d-box"/>
+  <text x="18" y="332" class="d-title">ИИ-агенты</text>
+  <text x="18" y="354" class="d-muted">плагины редакторов кода,</text>
+  <text x="18" y="370" class="d-muted">сервисы документации</text>
+
+  <!-- Файлы -->
+  <rect x="480" y="34" width="280" height="50" rx="10" class="d-box"/>
+  <text x="498" y="58" class="d-title">robots.txt</text>
+  <text x="498" y="75" class="d-muted">что можно обходить</text>
+
+  <rect x="480" y="100" width="280" height="50" rx="10" class="d-box"/>
+  <text x="498" y="124" class="d-title">sitemap.xml</text>
+  <text x="498" y="141" class="d-muted">список всех страниц</text>
+
+  <rect x="480" y="166" width="280" height="104" rx="10" class="d-acc-box"/>
+  <text x="498" y="192" class="d-title">HTML страниц</text>
+  <text x="498" y="214">текст, заголовки, таблицы</text>
+  <text x="498" y="234" class="d-muted">микроразметка Schema.org</text>
+  <text x="498" y="258" class="d-acc">отсюда берутся ответы</text>
+
+  <rect x="480" y="302" width="280" height="80" rx="10" class="d-box d-dash"/>
+  <text x="498" y="328" class="d-title">llms.txt</text>
+  <text x="498" y="348" class="d-muted">краткое описание сайта</text>
+  <text x="498" y="368" class="d-muted">предложение 2024 года</text>
+
+  <!-- Роботы -->
+  <path d="M220 74H360Q370 74 370 66V59H478" class="d-line" marker-end="url(#llms-arrow)"/>
+  <text x="380" y="52" class="d-small">проверяют</text>
+  <path d="M220 94H360Q370 94 370 104V125H478" class="d-line" marker-end="url(#llms-arrow)"/>
+  <text x="380" y="118" class="d-small">берут список</text>
+  <path d="M220 114H340Q350 114 350 124V188Q350 196 360 196H478" class="d-line" marker-end="url(#llms-arrow)"/>
+  <text x="380" y="190" class="d-small">индексируют</text>
+
+  <!-- Ассистенты -->
+  <path d="M220 228H478" class="d-line-acc" marker-end="url(#llms-arrow-acc)"/>
+  <text x="240" y="220" class="d-small d-acc">читают страницы</text>
+  <path d="M220 244H300Q310 244 310 254V318Q310 326 320 326H478" class="d-line-bad d-dash" marker-end="url(#llms-arrow-bad)"/>
+  <text x="320" y="300" class="d-small d-bad">используют ли —</text>
+  <text x="320" y="314" class="d-small d-bad">не подтверждено</text>
+
+  <!-- Агенты -->
+  <path d="M220 352H478" class="d-line" marker-end="url(#llms-arrow)"/>
+  <text x="240" y="344" class="d-small">запрашивают сами</text>
+</svg>
