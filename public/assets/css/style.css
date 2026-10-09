@@ -22162,6 +22162,16 @@ input:checked + .slider:before {
     display: block;
 }
 
+/* Фото команды на «О нас»: одинаковые рамки при любых пропорциях исходников */
+.ck-team-photo {
+    aspect-ratio: 4 / 3;
+}
+
+.ck-team-photo img {
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Схемы и обложки журнала в двух версиях: ResponsiveImage выводит обе, видна та, что под тему */
 body:not(.white-version) .ck-img-light,
 .white-version .ck-img-dark {

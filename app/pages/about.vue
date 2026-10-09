@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { company, yearsInDev, integrations, publishedApps } from '../data/company'
+import { company, yearsInDev, integrations, publishedApps, team } from '../data/company'
 import { whyUs, processSteps } from '../data/content'
 
 const { emailFor } = useContact()
@@ -57,7 +57,7 @@ usePageSeo({
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-5">
-            <div class="ck-cover">
+            <div class="ck-cover ck-team-photo">
               <ResponsiveImage :src="company.photo" :alt="company.founder" sizes="(max-width: 991px) 100vw, 460px" eager />
             </div>
           </div>
@@ -89,6 +89,27 @@ usePageSeo({
                   <span>НАПИСАТЬ НАМ</span>
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          v-for="member in team"
+          :key="member.name"
+          class="row align-items-center flex-lg-row-reverse mt--80 mt_md--60 mt_sm--60"
+        >
+          <div class="col-lg-5">
+            <div class="ck-cover ck-team-photo">
+              <ResponsiveImage :src="member.photo" :alt="member.name" sizes="(max-width: 991px) 100vw, 460px" />
+            </div>
+          </div>
+          <div class="col-lg-7 mt_md--40 mt_sm--40">
+            <div class="pe-lg-5">
+              <div class="section-title text-start">
+                <span class="subtitle">{{ member.role }}</span>
+                <h2 class="title">{{ member.name }}</h2>
+              </div>
+              <p v-for="line in member.text" :key="line" class="ck-lead text-start mt--20">{{ line }}</p>
             </div>
           </div>
         </div>
