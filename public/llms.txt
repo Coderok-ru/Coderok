@@ -36,7 +36,8 @@
 ### Интеграция AI — https://coderok.ru/services/ai/
 С чем приходят: хочется применить нейросети, но непонятно где, и страшно, что модель начнёт выдавать ерунду клиентам.
 Что делаем: встраиваем языковые модели туда, где ошибка стоит дёшево, а выигрыш очевиден: проверка данных, подготовка контента, разбор обращений, внутренние помощники. Решение принимает человек, машина снимает механическую работу.
-Стек: OpenAI, Claude, OpenRouter, Go, Python.
+Через Replicate подключаем открытые модели для генерации и обработки изображений, видео и речи.
+Стек: OpenAI, Claude, OpenRouter, Replicate, Go, Python.
 
 ### Telegram-боты и Mini Apps — https://coderok.ru/services/bots/
 С чем приходят: аудитория в мессенджере, а заказ приходится оформлять на сайте, и часть людей до него не доходит; заявки из бота менеджер переносит в CRM руками.
@@ -120,7 +121,7 @@ Slipstream Karting (сайт картинг-клуба, Laravel, Mapbox), Telegr
 
 - 11 лет в коммерческой разработке, с 2015 года.
 - 5 приложений в сторах: Mop'up (App Store, Google Play), Cleaner PRO (App Store, RuStore), Рецепты Ivinsight (App Store), FinFlow PRO (App Store, RuStore), AI Assistent (App Store).
-- 16 интеграций в проде: МойСклад, amoCRM, ЮKassa, Т-Банк, Yandex MapKit, Mapbox, Firebase, OneSignal, Telegram Bot API, MAX Bot API, OpenAI, Claude, OpenRouter, Meilisearch, Redis, GitLab CI/CD.
+- 17 интеграций в проде: МойСклад, amoCRM, ЮKassa, Т-Банк, Yandex MapKit, Mapbox, Firebase, OneSignal, Telegram Bot API, MAX Bot API, OpenAI, Claude, OpenRouter, Replicate, Meilisearch, Redis, GitLab CI/CD.
 
 ## Журнал — https://coderok.ru/journal/
 

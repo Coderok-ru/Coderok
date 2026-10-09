@@ -86,6 +86,7 @@ export const integrations = [
   'OpenAI',
   'Claude',
   'OpenRouter',
+  'Replicate',
   'Meilisearch',
   'Redis',
   'GitLab CI/CD',
