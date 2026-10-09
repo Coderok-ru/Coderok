@@ -1,0 +1,50 @@
+<svg viewBox="0 0 760 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="why-site-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+    <marker id="why-site-arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+  </defs>
+  <text x="95" y="16" text-anchor="middle" class="d-label">Где находят</text>
+  <text x="385" y="16" text-anchor="middle" class="d-label">Где проверяют</text>
+  <text x="670" y="16" text-anchor="middle" class="d-label">Решение</text>
+
+  <!-- откуда приходят -->
+  <rect x="0" y="30" width="190" height="40" rx="8" class="d-box"/>
+  <text x="95" y="55" text-anchor="middle">Яндекс Карты, 2ГИС</text>
+  <rect x="0" y="80" width="190" height="40" rx="8" class="d-box"/>
+  <text x="95" y="105" text-anchor="middle">Соцсети, Telegram</text>
+  <rect x="0" y="130" width="190" height="40" rx="8" class="d-box"/>
+  <text x="95" y="155" text-anchor="middle">Авито, Профи.ру</text>
+  <rect x="0" y="180" width="190" height="40" rx="8" class="d-box"/>
+  <text x="95" y="205" text-anchor="middle">Маркетплейсы</text>
+  <rect x="0" y="230" width="190" height="40" rx="8" class="d-box"/>
+  <text x="95" y="255" text-anchor="middle">Рекомендация, визитка</text>
+  <rect x="0" y="280" width="190" height="40" rx="8" class="d-box"/>
+  <text x="95" y="305" text-anchor="middle">Алиса, ChatGPT</text>
+
+  <path d="M192 50L256 100" class="d-line" marker-end="url(#why-site-arrow)"/>
+  <path d="M192 100L256 125" class="d-line" marker-end="url(#why-site-arrow)"/>
+  <path d="M192 150L256 160" class="d-line" marker-end="url(#why-site-arrow)"/>
+  <path d="M192 200L256 190" class="d-line" marker-end="url(#why-site-arrow)"/>
+  <path d="M192 250L256 225" class="d-line" marker-end="url(#why-site-arrow)"/>
+  <path d="M192 300L256 250" class="d-line" marker-end="url(#why-site-arrow)"/>
+
+  <!-- сайт -->
+  <rect x="260" y="80" width="250" height="190" rx="10" class="d-acc-box"/>
+  <text x="280" y="110" class="d-title">Ваш сайт</text>
+  <text x="280" y="142" class="d-good">✓</text><text x="300" y="142">цены и пакеты</text>
+  <text x="280" y="168" class="d-good">✓</text><text x="300" y="168">примеры работ</text>
+  <text x="280" y="194" class="d-good">✓</text><text x="300" y="194">отзывы и реквизиты</text>
+  <text x="280" y="220" class="d-good">✓</text><text x="300" y="220">кнопки мессенджеров</text>
+  <text x="280" y="252" class="d-muted">домен принадлежит вам</text>
+
+  <path d="M512 175H576" class="d-line-acc" marker-end="url(#why-site-arrow-acc)"/>
+
+  <!-- решение -->
+  <rect x="580" y="140" width="180" height="70" rx="10" class="d-good-box"/>
+  <text x="670" y="170" text-anchor="middle" class="d-title">Пишет вам</text>
+  <text x="670" y="192" text-anchor="middle" class="d-muted">без посредника</text>
+
+  <!-- без сайта -->
+  <rect x="260" y="290" width="500" height="44" rx="8" class="d-bad-box"/>
+  <text x="276" y="317" class="d-bad">Нет сайта:</text><text x="350" y="317">проверяют по чужим площадкам, рядом с конкурентами</text>
+</svg>

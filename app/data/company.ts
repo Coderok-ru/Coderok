@@ -12,7 +12,7 @@ export const FOUNDED_YEAR = 2015
  * Бампать руками при правке контента — не при каждом деплое, иначе поисковик
  * получает сигнал «всё изменилось» каждый раз и перестаёт ему верить.
  */
-export const CONTENT_UPDATED_AT = '2026-10-08'
+export const CONTENT_UPDATED_AT = '2026-10-09'
 
 /** Стаж считается от даты старта, а не хардкодится. */
 export const yearsInDev = new Date().getFullYear() - FOUNDED_YEAR
