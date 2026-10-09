@@ -1,0 +1,55 @@
+<svg viewBox="0 0 760 410" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ddos-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="ddos-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+  </defs>
+  <text x="220" y="16" text-anchor="middle" class="d-label">Слой защиты</text>
+  <text x="484" y="16" class="d-label">Что отсекает</text>
+
+  <!-- трафик -->
+  <rect x="0" y="30" width="440" height="48" rx="8" class="d-box"/>
+  <text x="220" y="51" text-anchor="middle" class="d-title">Трафик: люди и боты вперемешку</text>
+  <text x="220" y="68" text-anchor="middle" class="d-muted">сайт ещё не знает, кто есть кто</text>
+  <path d="M220 79V92" class="d-line-acc" marker-end="url(#ddos-arrow)"/>
+
+  <!-- 1 -->
+  <rect x="0" y="94" width="440" height="48" rx="8" class="d-acc-box"/>
+  <text x="220" y="115" text-anchor="middle" class="d-title">1 · Сетевой фильтр</text>
+  <text x="220" y="132" text-anchor="middle" class="d-muted">провайдер защиты, реальный IP сервера скрыт</text>
+  <path d="M444 118H476" class="d-line-bad d-dash" marker-end="url(#ddos-arrow-bad)"/>
+  <rect x="484" y="94" width="276" height="48" rx="8" class="d-bad-box"/>
+  <text x="500" y="123">флуд пакетами (L3–L4)</text>
+  <path d="M220 143V156" class="d-line-acc" marker-end="url(#ddos-arrow)"/>
+
+  <!-- 2 -->
+  <rect x="0" y="158" width="440" height="48" rx="8" class="d-acc-box"/>
+  <text x="220" y="179" text-anchor="middle" class="d-title">2 · Правила L7 и WAF</text>
+  <text x="220" y="196" text-anchor="middle" class="d-muted">лимиты, репутация IP, проверка браузера, капча</text>
+  <path d="M444 182H476" class="d-line-bad d-dash" marker-end="url(#ddos-arrow-bad)"/>
+  <rect x="484" y="158" width="276" height="48" rx="8" class="d-bad-box"/>
+  <text x="500" y="187">боты, не прошедшие проверку</text>
+  <path d="M220 207V220" class="d-line-acc" marker-end="url(#ddos-arrow)"/>
+
+  <!-- 3 -->
+  <rect x="0" y="222" width="440" height="48" rx="8" class="d-acc-box"/>
+  <text x="220" y="243" text-anchor="middle" class="d-title">3 · Кеш и CDN</text>
+  <text x="220" y="260" text-anchor="middle" class="d-muted">картинки, стили и неизменные страницы</text>
+  <path d="M444 246H476" class="d-line-bad d-dash" marker-end="url(#ddos-arrow-bad)"/>
+  <rect x="484" y="222" width="276" height="48" rx="8" class="d-bad-box"/>
+  <text x="500" y="251">повторные запросы к статике</text>
+  <path d="M220 271V284" class="d-line-acc" marker-end="url(#ddos-arrow)"/>
+
+  <!-- 4 -->
+  <rect x="0" y="286" width="440" height="48" rx="8" class="d-acc-box"/>
+  <text x="220" y="307" text-anchor="middle" class="d-title">4 · Приложение</text>
+  <text x="220" y="324" text-anchor="middle" class="d-muted">кеш тяжёлых запросов, лимиты, запасные сценарии</text>
+  <path d="M444 310H476" class="d-line-bad d-dash" marker-end="url(#ddos-arrow-bad)"/>
+  <rect x="484" y="286" width="276" height="48" rx="8" class="d-bad-box"/>
+  <text x="500" y="315">остаток: частый поиск и формы</text>
+  <path d="M220 335V348" class="d-line-acc" marker-end="url(#ddos-arrow)"/>
+
+  <!-- итог -->
+  <rect x="0" y="350" width="760" height="52" rx="8" class="d-good-box"/>
+  <text x="380" y="373" text-anchor="middle" class="d-title">Корзина, оплата, вход и API продолжают работать</text>
+  <text x="380" y="391" text-anchor="middle" class="d-muted">до сервера доходит трафик, похожий на настоящих посетителей</text>
+</svg>

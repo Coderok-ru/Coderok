@@ -1,0 +1,67 @@
+<svg viewBox="0 0 760 352" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ttm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+  </defs>
+  <text x="75" y="16" text-anchor="middle" class="d-label">Этап</text>
+  <text x="186" y="16" class="d-label">Где стоит</text>
+  <text x="486" y="16" class="d-label">Что ускоряет</text>
+  <!-- Идея -->
+  <rect x="0" y="30" width="150" height="44" rx="8" class="d-box"/>
+  <text x="75" y="49" text-anchor="middle" class="d-title">Идея</text>
+  <text x="75" y="65" text-anchor="middle" class="d-muted">требования</text>
+  <rect x="170" y="30" width="256" height="44" rx="8" class="d-bad-box"/>
+  <text x="186" y="57">задачу уточняют на ходу</text>
+  <path d="M432 52H464" class="d-line-acc" marker-end="url(#ttm-arrow)"/>
+  <rect x="470" y="30" width="290" height="44" rx="8" class="d-good-box"/>
+  <text x="486" y="57">короткое описание до старта</text>
+  <path d="M75 75V83" class="d-line"/>
+  <!-- Очередь -->
+  <rect x="0" y="84" width="150" height="44" rx="8" class="d-box"/>
+  <text x="75" y="103" text-anchor="middle" class="d-title">Очередь</text>
+  <text x="75" y="119" text-anchor="middle" class="d-muted">ожидание</text>
+  <rect x="170" y="84" width="256" height="44" rx="8" class="d-bad-box"/>
+  <text x="186" y="111">срочное вытесняет важное</text>
+  <path d="M432 106H464" class="d-line-acc" marker-end="url(#ttm-arrow)"/>
+  <rect x="470" y="84" width="290" height="44" rx="8" class="d-good-box"/>
+  <text x="486" y="111">общий список приоритетов</text>
+  <path d="M75 129V137" class="d-line"/>
+  <!-- Разработка -->
+  <rect x="0" y="138" width="150" height="44" rx="8" class="d-acc-box"/>
+  <text x="75" y="157" text-anchor="middle" class="d-title">Разработка</text>
+  <text x="75" y="173" text-anchor="middle" class="d-muted">код</text>
+  <rect x="170" y="138" width="256" height="44" rx="8" class="d-bad-box"/>
+  <text x="186" y="165">правка задевает всю систему</text>
+  <path d="M432 160H464" class="d-line-acc" marker-end="url(#ttm-arrow)"/>
+  <rect x="470" y="138" width="290" height="44" rx="8" class="d-good-box"/>
+  <text x="486" y="165">независимые части системы</text>
+  <path d="M75 183V191" class="d-line"/>
+  <!-- Проверка -->
+  <rect x="0" y="192" width="150" height="44" rx="8" class="d-box"/>
+  <text x="75" y="211" text-anchor="middle" class="d-title">Проверка</text>
+  <text x="75" y="227" text-anchor="middle" class="d-muted">тесты</text>
+  <rect x="170" y="192" width="256" height="44" rx="8" class="d-bad-box"/>
+  <text x="186" y="219">всё проверяют руками</text>
+  <path d="M432 214H464" class="d-line-acc" marker-end="url(#ttm-arrow)"/>
+  <rect x="470" y="192" width="290" height="44" rx="8" class="d-good-box"/>
+  <text x="486" y="219">автотесты на главное</text>
+  <path d="M75 237V245" class="d-line"/>
+  <!-- Выкатка -->
+  <rect x="0" y="246" width="150" height="44" rx="8" class="d-box"/>
+  <text x="75" y="265" text-anchor="middle" class="d-title">Выкатка</text>
+  <text x="75" y="281" text-anchor="middle" class="d-muted">релиз</text>
+  <rect x="170" y="246" width="256" height="44" rx="8" class="d-bad-box"/>
+  <text x="186" y="273">раз в месяц и ночью</text>
+  <path d="M432 268H464" class="d-line-acc" marker-end="url(#ttm-arrow)"/>
+  <rect x="470" y="246" width="290" height="44" rx="8" class="d-good-box"/>
+  <text x="486" y="273">выкатка одной командой</text>
+  <path d="M75 291V299" class="d-line"/>
+  <!-- После релиза -->
+  <rect x="0" y="300" width="150" height="44" rx="8" class="d-box"/>
+  <text x="75" y="319" text-anchor="middle" class="d-title">После релиза</text>
+  <text x="75" y="335" text-anchor="middle" class="d-muted">ошибки</text>
+  <rect x="170" y="300" width="256" height="44" rx="8" class="d-bad-box"/>
+  <text x="186" y="327">ошибки находят клиенты</text>
+  <path d="M432 322H464" class="d-line-acc" marker-end="url(#ttm-arrow)"/>
+  <rect x="470" y="300" width="290" height="44" rx="8" class="d-good-box"/>
+  <text x="486" y="327">мониторинг и быстрый откат</text>
+</svg>

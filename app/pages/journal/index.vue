@@ -1,5 +1,43 @@
 <script setup lang="ts">
 import { sortedArticles } from '../../data/articles'
+import { services } from '../../data/services'
+
+/**
+ * Фильтр по темам. Тема — услуга из services.ts: статья попадает во все темы
+ * из своих serviceSlugs. Выбор хранится в ?topic=, чтобы ссылкой на подборку
+ * можно было поделиться. На этапе генерации показываются все статьи, поэтому
+ * без JS список полный, а query читается только после монтирования.
+ */
+const topicTitles: Record<string, string> = {
+  web: 'Сайты',
+  mobile: 'Приложения',
+  crm: 'CRM',
+  ai: 'AI',
+  bots: 'Боты',
+  support: 'Поддержка',
+}
+
+const topics = services
+  .map(s => ({ slug: s.slug, title: topicTitles[s.slug] ?? s.navTitle, count: sortedArticles.filter(a => a.serviceSlugs.includes(s.slug)).length }))
+  .filter(t => t.count > 0)
+
+const route = useRoute()
+const router = useRouter()
+const topic = ref<string | null>(null)
+
+onMounted(() => {
+  const q = route.query.topic
+  if (typeof q === 'string' && topics.some(t => t.slug === q)) topic.value = q
+})
+
+const selectTopic = (slug: string | null) => {
+  topic.value = slug
+  router.replace({ query: slug ? { topic: slug } : {} })
+}
+
+const visibleArticles = computed(() =>
+  topic.value ? sortedArticles.filter(a => a.serviceSlugs.includes(topic.value!)) : sortedArticles,
+)
 
 usePageSeo({
   title: 'Журнал Coderok: разработка для бизнеса без воды',
@@ -57,9 +95,31 @@ usePageSeo({
 
     <div class="rn-section-gap">
       <div class="container">
+        <div class="ck-topics" role="group" aria-label="Темы статей">
+          <button
+            type="button"
+            class="ck-topic"
+            :class="{ 'is-active': !topic }"
+            :aria-pressed="!topic"
+            @click="selectTopic(null)"
+          >
+            Все <span class="ck-topic__count">{{ sortedArticles.length }}</span>
+          </button>
+          <button
+            v-for="t in topics"
+            :key="t.slug"
+            type="button"
+            class="ck-topic"
+            :class="{ 'is-active': topic === t.slug }"
+            :aria-pressed="topic === t.slug"
+            @click="selectTopic(t.slug)"
+          >
+            {{ t.title }} <span class="ck-topic__count">{{ t.count }}</span>
+          </button>
+        </div>
         <div class="row row--25">
           <div
-            v-for="article in sortedArticles"
+            v-for="article in visibleArticles"
             :key="article.slug"
             class="col-lg-4 col-md-6 col-12 mt--30"
           >

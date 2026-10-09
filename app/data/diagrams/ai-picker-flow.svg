@@ -1,0 +1,52 @@
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ai-picker-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="ai-picker-arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+  </defs>
+  <text x="0" y="16" class="d-label">Вопрос</text>
+  <text x="0" y="166" class="d-label">Ответ</text>
+
+  <!-- верхний ряд: вопрос покупателя -->
+  <rect x="0" y="30" width="220" height="80" rx="10" class="d-box"/>
+  <text x="110" y="62" text-anchor="middle" class="d-title">Покупатель</text>
+  <text x="110" y="84" text-anchor="middle" class="d-muted">«тихий, на четверых,</text>
+  <text x="110" y="100" text-anchor="middle" class="d-muted">в маленькую кухню»</text>
+
+  <rect x="270" y="30" width="220" height="80" rx="10" class="d-acc-box"/>
+  <text x="380" y="62" text-anchor="middle" class="d-title">Модель понимает</text>
+  <text x="380" y="84" text-anchor="middle" class="d-muted">2–4 уточняющих вопроса</text>
+  <text x="380" y="100" text-anchor="middle" class="d-muted">→ характеристики</text>
+
+  <rect x="540" y="30" width="220" height="80" rx="10" class="d-box"/>
+  <text x="650" y="62" text-anchor="middle" class="d-title">Поиск по каталогу</text>
+  <text x="650" y="84" text-anchor="middle" class="d-muted">шум ≤ 40 дБ, объём,</text>
+  <text x="650" y="100" text-anchor="middle" class="d-muted">ширина ≤ 60 см</text>
+
+  <path d="M222 70H266" class="d-line-acc" marker-end="url(#ai-picker-arrow)"/>
+  <path d="M492 70H536" class="d-line-acc" marker-end="url(#ai-picker-arrow)"/>
+  <path d="M650 112V176" class="d-line-acc" marker-end="url(#ai-picker-arrow)"/>
+
+  <!-- нижний ряд: ответ из данных -->
+  <rect x="540" y="180" width="220" height="80" rx="10" class="d-box"/>
+  <text x="650" y="212" text-anchor="middle" class="d-title">Каталог и учёт</text>
+  <text x="650" y="234" text-anchor="middle" class="d-muted">товары, цены, остатки</text>
+  <text x="650" y="250" text-anchor="middle" class="d-muted">— только факты</text>
+
+  <rect x="270" y="180" width="220" height="80" rx="10" class="d-acc-box"/>
+  <text x="380" y="212" text-anchor="middle" class="d-title">Модель объясняет</text>
+  <text x="380" y="234" text-anchor="middle" class="d-muted">почему эти варианты —</text>
+  <text x="380" y="250" text-anchor="middle" class="d-muted">по найденным данным</text>
+
+  <rect x="0" y="180" width="220" height="80" rx="10" class="d-good-box"/>
+  <text x="110" y="212" text-anchor="middle" class="d-title">2–3 товара</text>
+  <text x="110" y="234" text-anchor="middle" class="d-muted">в наличии, с ценой</text>
+  <text x="110" y="250" text-anchor="middle" class="d-muted">и объяснением</text>
+
+  <path d="M538 220H494" class="d-line-acc" marker-end="url(#ai-picker-arrow)"/>
+  <path d="M268 220H224" class="d-line-acc" marker-end="url(#ai-picker-arrow)"/>
+
+  <!-- ограничение -->
+  <rect x="0" y="290" width="760" height="44" rx="8" class="d-bad-box"/>
+  <text x="16" y="317" class="d-bad">Запрещено:</text>
+  <text x="96" y="317">назвать товар, цену или функцию, которых нет в выдаче каталога</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg viewBox="0 0 760 295" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="oms-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+    <marker id="oms-arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+  </defs>
+  <text x="80" y="16" text-anchor="middle" class="d-label">Каналы продаж</text>
+  <text x="380" y="16" text-anchor="middle" class="d-label">Один заказ</text>
+  <text x="680" y="16" text-anchor="middle" class="d-label">Что дальше</text>
+
+  <!-- каналы -->
+  <rect x="0" y="30" width="160" height="40" rx="8" class="d-box"/>
+  <text x="80" y="55" text-anchor="middle">Сайт, приложение</text>
+  <rect x="0" y="85" width="160" height="40" rx="8" class="d-box"/>
+  <text x="80" y="110" text-anchor="middle">Маркетплейсы</text>
+  <rect x="0" y="140" width="160" height="40" rx="8" class="d-box"/>
+  <text x="80" y="165" text-anchor="middle">Telegram-бот</text>
+  <rect x="0" y="195" width="160" height="40" rx="8" class="d-box"/>
+  <text x="80" y="220" text-anchor="middle">Звонок менеджеру</text>
+  <rect x="0" y="250" width="160" height="40" rx="8" class="d-box"/>
+  <text x="80" y="275" text-anchor="middle">Розничная точка</text>
+
+  <path d="M162 50L256 105" class="d-line" marker-end="url(#oms-arrow)"/>
+  <path d="M162 105L256 130" class="d-line" marker-end="url(#oms-arrow)"/>
+  <path d="M162 160L256 160" class="d-line" marker-end="url(#oms-arrow)"/>
+  <path d="M162 215L256 190" class="d-line" marker-end="url(#oms-arrow)"/>
+  <path d="M162 270L256 215" class="d-line" marker-end="url(#oms-arrow)"/>
+
+  <!-- OMS -->
+  <rect x="260" y="70" width="240" height="180" rx="10" class="d-acc-box"/>
+  <text x="380" y="100" text-anchor="middle" class="d-title">OMS</text>
+  <text x="380" y="118" text-anchor="middle" class="d-muted">заказ живёт одной записью</text>
+  <text x="280" y="150" class="d-acc">1</text><text x="298" y="150">резерв товара</text>
+  <text x="280" y="176" class="d-acc">2</text><text x="298" y="176">выбор склада и доставки</text>
+  <text x="280" y="202" class="d-acc">3</text><text x="298" y="202">оплата и возвраты</text>
+  <text x="280" y="228" class="d-acc">4</text><text x="298" y="228">статус для всех</text>
+
+  <path d="M504 105L596 50" class="d-line-acc" marker-start="url(#oms-arrow-acc)" marker-end="url(#oms-arrow-acc)"/>
+  <path d="M504 130L596 105" class="d-line-acc" marker-start="url(#oms-arrow-acc)" marker-end="url(#oms-arrow-acc)"/>
+  <path d="M504 160L596 160" class="d-line-acc" marker-start="url(#oms-arrow-acc)" marker-end="url(#oms-arrow-acc)"/>
+  <path d="M504 190L596 215" class="d-line-acc" marker-start="url(#oms-arrow-acc)" marker-end="url(#oms-arrow-acc)"/>
+  <path d="M504 215L596 270" class="d-line-acc" marker-end="url(#oms-arrow-acc)"/>
+
+  <!-- системы -->
+  <rect x="600" y="30" width="160" height="40" rx="8" class="d-box"/>
+  <text x="680" y="55" text-anchor="middle">Склад и учёт</text>
+  <rect x="600" y="85" width="160" height="40" rx="8" class="d-box"/>
+  <text x="680" y="110" text-anchor="middle">Службы доставки</text>
+  <rect x="600" y="140" width="160" height="40" rx="8" class="d-box"/>
+  <text x="680" y="165" text-anchor="middle">Эквайринг</text>
+  <rect x="600" y="195" width="160" height="40" rx="8" class="d-box"/>
+  <text x="680" y="220" text-anchor="middle">CRM</text>
+  <rect x="600" y="250" width="160" height="40" rx="8" class="d-good-box"/>
+  <text x="680" y="275" text-anchor="middle" class="d-good">Уведомление клиенту</text>
+
+</svg>

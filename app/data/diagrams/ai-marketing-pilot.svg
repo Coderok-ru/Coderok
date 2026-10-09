@@ -1,0 +1,50 @@
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ai-marketing-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="ai-marketing-arrow-good" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-good"/></marker>
+    <marker id="ai-marketing-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+  </defs>
+
+  <!-- подготовка -->
+  <text x="0" y="16" class="d-label">Подготовка</text>
+  <rect x="0" y="30" width="172" height="76" rx="10" class="d-box"/>
+  <text x="16" y="56" class="d-label">Шаг 1</text>
+  <text x="16" y="80" class="d-title">Узкое место</text>
+  <text x="16" y="97" class="d-muted">одна задача</text>
+
+  <rect x="196" y="30" width="172" height="76" rx="10" class="d-box"/>
+  <text x="212" y="56" class="d-label">Шаг 2</text>
+  <text x="212" y="80" class="d-title">Замер «до»</text>
+  <text x="212" y="97" class="d-muted">часы, конверсия</text>
+
+  <rect x="392" y="30" width="172" height="76" rx="10" class="d-box"/>
+  <text x="408" y="56" class="d-label">Шаг 3</text>
+  <text x="408" y="80" class="d-title">Данные</text>
+  <text x="408" y="97" class="d-muted">что можно отдать</text>
+
+  <rect x="588" y="30" width="172" height="76" rx="10" class="d-box"/>
+  <text x="604" y="56" class="d-label">Шаг 4</text>
+  <text x="604" y="80" class="d-title">Ответственный</text>
+  <text x="604" y="97" class="d-muted">проверяет результат</text>
+
+  <path d="M174 68H193" class="d-line-acc" marker-end="url(#ai-marketing-arrow)"/>
+  <path d="M370 68H389" class="d-line-acc" marker-end="url(#ai-marketing-arrow)"/>
+  <path d="M566 68H585" class="d-line-acc" marker-end="url(#ai-marketing-arrow)"/>
+  <path d="M674 108V130H380V150" class="d-line-acc" marker-end="url(#ai-marketing-arrow)"/>
+
+  <!-- пилот -->
+  <rect x="220" y="152" width="320" height="64" rx="10" class="d-acc-box"/>
+  <text x="380" y="179" text-anchor="middle" class="d-title">Шаг 5 · Пилот</text>
+  <text x="380" y="200" text-anchor="middle" class="d-muted">серия однотипных задач, сравнение с замером</text>
+
+  <path d="M300 218L190 246" class="d-line-good" marker-end="url(#ai-marketing-arrow-good)"/>
+  <path d="M460 218L570 246" class="d-line-bad d-dash" marker-end="url(#ai-marketing-arrow-bad)"/>
+
+  <rect x="20" y="248" width="300" height="48" rx="10" class="d-good-box"/>
+  <text x="36" y="277" class="d-good">Есть эффект:</text>
+  <text x="128" y="277">закрепить и встроить</text>
+
+  <rect x="440" y="248" width="300" height="48" rx="10" class="d-bad-box"/>
+  <text x="456" y="277" class="d-bad">Нет эффекта:</text>
+  <text x="552" y="277">остановиться</text>
+</svg>
