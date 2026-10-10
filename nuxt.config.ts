@@ -56,7 +56,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: [...staticRoutes, ...Object.keys(redirects), '/sitemap.xml'],
+      routes: [...staticRoutes, ...Object.keys(redirects), '/sitemap.xml', '/yandex-business.xml'],
     },
   },
   routeRules: Object.fromEntries(
