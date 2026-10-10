@@ -1,0 +1,55 @@
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="flr-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+    <marker id="flr-arrow-bad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-bad"/></marker>
+  </defs>
+
+  <!-- Регуляторы -->
+  <rect x="0" y="0" width="360" height="60" rx="10" class="d-bad-box"/>
+  <text x="18" y="26" class="d-bad">Роскомнадзор · 152-ФЗ</text>
+  <text x="18" y="46" class="d-muted">уведомление, политика, согласие, локализация</text>
+
+  <rect x="400" y="0" width="360" height="60" rx="10" class="d-bad-box"/>
+  <text x="418" y="26" class="d-bad">149-ФЗ · владелец сайта</text>
+  <text x="418" y="46" class="d-muted">способы входа, контакты владельца</text>
+
+  <!-- Штрафы -->
+  <path d="M180 62V128" class="d-line-bad" marker-end="url(#flr-arrow-bad)"/>
+  <text x="190" y="100" class="d-bad d-small">штраф</text>
+  <path d="M580 62V128" class="d-line-bad" marker-end="url(#flr-arrow-bad)"/>
+  <text x="590" y="100" class="d-bad d-small">штраф</text>
+
+  <!-- Оператор -->
+  <rect x="0" y="132" width="360" height="96" rx="12" class="d-acc-box"/>
+  <text x="18" y="160" class="d-title">Бизнес — оператор данных</text>
+  <text x="18" y="182" class="d-muted">компания или ИП, решает, зачем</text>
+  <text x="18" y="200" class="d-muted">собирать заявки; руководитель —</text>
+  <text x="18" y="218" class="d-muted">отдельно как должностное лицо</text>
+
+  <!-- Владелец сайта -->
+  <rect x="400" y="132" width="360" height="96" rx="12" class="d-acc-box"/>
+  <text x="418" y="160" class="d-title">Владелец сайта</text>
+  <text x="418" y="182" class="d-muted">по умолчанию — администратор домена,</text>
+  <text x="418" y="200" class="d-muted">если на сайте не указан другой</text>
+  <text x="418" y="218" class="d-good">домен на компании → это бизнес</text>
+
+  <!-- Подрядчики -->
+  <path d="M110 230V290" class="d-line" marker-start="url(#flr-arrow)"/>
+  <path d="M260 230V290" class="d-line" marker-start="url(#flr-arrow)"/>
+  <text x="0" y="266" class="d-muted d-small">по договору</text>
+  <text x="272" y="266" class="d-muted d-small">поручение</text>
+
+  <rect x="0" y="292" width="200" height="84" rx="10" class="d-box"/>
+  <text x="16" y="318" class="d-title">Студия</text>
+  <text x="16" y="340" class="d-muted">отвечает перед</text>
+  <text x="16" y="358" class="d-muted">заказчиком</text>
+
+  <rect x="214" y="292" width="146" height="84" rx="10" class="d-box"/>
+  <text x="230" y="318" class="d-title">Хостинг, CRM</text>
+  <text x="230" y="340" class="d-muted">отвечают перед</text>
+  <text x="230" y="358" class="d-muted">оператором</text>
+
+  <text x="400" y="318" class="d-muted">Штрафы получают бизнес и владелец</text>
+  <text x="400" y="338" class="d-muted">сайта. Подрядчики отвечают перед</text>
+  <text x="400" y="358" class="d-muted">заказчиком — то, что есть в договоре.</text>
+</svg>
