@@ -1,0 +1,56 @@
+<svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="fsg-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker>
+    <marker id="fsg-arrow-muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head"/></marker>
+  </defs>
+
+  <!-- Россия -->
+  <text x="0" y="16" class="d-title">Сервер в России</text>
+  <text x="0" y="36" class="d-muted">всё, что хранит данные клиентов</text>
+  <rect x="0" y="54" width="300" height="280" rx="12" class="d-box"/>
+
+  <rect x="20" y="74" width="260" height="48" rx="8" class="d-box"/>
+  <text x="36" y="103">Сайт · личный кабинет · CRM</text>
+
+  <rect x="20" y="136" width="260" height="62" rx="8" class="d-acc-box"/>
+  <text x="36" y="162" class="d-title">База данных</text>
+  <text x="36" y="182" class="d-muted">имена, телефоны, адреса, заказы</text>
+
+  <rect x="20" y="212" width="260" height="48" rx="8" class="d-box"/>
+  <text x="36" y="241">Очередь уведомлений с повторами</text>
+
+  <text x="20" y="312" class="d-good">данные клиентов не покидают Россию</text>
+
+  <!-- канал до шлюза -->
+  <path d="M282 236H404" class="d-line-acc" marker-end="url(#fsg-arrow)"/>
+  <text x="343" y="222" text-anchor="middle" class="d-acc d-small">HTTPS</text>
+  <text x="343" y="258" text-anchor="middle" class="d-muted d-small">№ заказа, сумма,</text>
+  <text x="343" y="273" text-anchor="middle" class="d-muted d-small">ссылка в CRM</text>
+
+  <!-- Шлюз -->
+  <text x="410" y="16" class="d-title">Шлюз за рубежом</text>
+  <text x="410" y="36" class="d-muted">без базы и без данных на диске</text>
+  <rect x="410" y="190" width="150" height="92" rx="10" class="d-acc-box"/>
+  <text x="485" y="222" text-anchor="middle" class="d-title">Шлюз</text>
+  <text x="485" y="243" text-anchor="middle" class="d-muted">пересылает</text>
+  <text x="485" y="261" text-anchor="middle" class="d-muted">запросы и ответы</text>
+
+  <!-- внешние сервисы -->
+  <rect x="600" y="74" width="160" height="56" rx="8" class="d-box"/>
+  <text x="616" y="98" class="d-title">Telegram</text>
+  <text x="616" y="117" class="d-muted">Bot API, вебхуки</text>
+
+  <rect x="600" y="152" width="160" height="56" rx="8" class="d-box"/>
+  <text x="616" y="176" class="d-title">Нейросети</text>
+  <text x="616" y="195" class="d-muted">OpenAI, Claude</text>
+
+  <rect x="600" y="230" width="160" height="56" rx="8" class="d-box"/>
+  <text x="616" y="254" class="d-title">Другие API</text>
+  <text x="616" y="273" class="d-muted">недоступные из РФ</text>
+
+  <path d="M562 206L598 110" class="d-line" marker-end="url(#fsg-arrow-muted)"/>
+  <path d="M562 222L598 184" class="d-line" marker-end="url(#fsg-arrow-muted)"/>
+  <path d="M562 250L598 258" class="d-line" marker-end="url(#fsg-arrow-muted)"/>
+
+  <text x="410" y="312" class="d-muted">доступ только с IP основного сервера</text>
+</svg>

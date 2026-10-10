@@ -27,6 +27,8 @@
   "/assets/images/journal/disappeared-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
   "/assets/images/journal/flutter-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
   "/assets/images/journal/flutter-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/foreign-server-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/foreign-server-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
   "/assets/images/journal/geo-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
   "/assets/images/journal/geo-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
   "/assets/images/journal/leads-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
