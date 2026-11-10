@@ -1,13 +1,28 @@
-name: Deploy Nuxt to Beget
+name: Deploy Nuxt to Timeweb Cloud
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: coderok-production
+  cancel-in-progress: false
+
+env:
+  DEPLOY_HOST: 5.42.109.208
+  DEPLOY_USER: coderok-deploy
+  DEPLOY_PATH: /var/www/coderok
+  DEPLOY_RELEASE: ${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout code
@@ -16,7 +31,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
@@ -26,17 +41,32 @@ jobs:
         run: npm run generate
 
       - name: Setup SSH
+        env:
+          TIMEWEB_SSH_KEY: ${{ secrets.TIMEWEB_SSH_KEY }}
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.BEGET_SSH_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H pulum.beget.tech >> ~/.ssh/known_hosts
+          test -n "$TIMEWEB_SSH_KEY"
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$TIMEWEB_SSH_KEY" > ~/.ssh/timeweb_deploy_key
+          chmod 600 ~/.ssh/timeweb_deploy_key
+          install -m 600 deploy/ssh_known_hosts ~/.ssh/known_hosts
 
-      - name: Deploy to Beget
+      - name: Upload release
         run: |
-          rsync -rltvz --omit-dir-times \
-            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
-            .output/public/ ${{ secrets.BEGET_USER }}:${{ secrets.BEGET_PATH }}
+          ssh_options=(-i "$HOME/.ssh/timeweb_deploy_key" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15)
+          # shellcheck disable=SC2029
+          ssh "${ssh_options[@]}" "$DEPLOY_USER@$DEPLOY_HOST" \
+            "mkdir -p '$DEPLOY_PATH/releases/$DEPLOY_RELEASE'"
+          rsync -rlz --delete --chmod=D755,F644 \
+            -e "ssh -i $HOME/.ssh/timeweb_deploy_key -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15" \
+            .output/public/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/releases/$DEPLOY_RELEASE/"
 
-      - name: Deployment complete
-        run: echo "✅ Nuxt site deployed to https://coderok.ru"
+      - name: Activate release
+        run: |
+          ssh -i ~/.ssh/timeweb_deploy_key \
+            -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=15 "$DEPLOY_USER@$DEPLOY_HOST" \
+            "bash -s -- '$DEPLOY_RELEASE'" < scripts/deploy-release.sh
+
+      - name: Remove SSH key
+        if: always()
+        run: rm -f ~/.ssh/timeweb_deploy_key
