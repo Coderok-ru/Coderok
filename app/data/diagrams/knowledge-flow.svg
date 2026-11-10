@@ -1,0 +1,20 @@
+<svg viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" aria-labelledby="knowledge-flow-title">
+  <title id="knowledge-flow-title">Ответ строится по доступным документам</title>
+  <defs><marker id="knowledge-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker></defs>
+  <text x="380" y="25" text-anchor="middle" class="d-title">Ответ строится по доступным документам</text>
+  <rect x="5" y="65" width="165" height="95" rx="10" class="d-box"/>
+  <text x="87" y="99" text-anchor="middle" class="d-title">Документы</text>
+  <text x="87" y="128" text-anchor="middle" class="d-muted">Актуальные версии</text>
+  <path d="M173 112H195" class="d-line-acc" marker-end="url(#knowledge-flow-arrow)"/>
+  <rect x="200" y="65" width="165" height="95" rx="10" class="d-box"/>
+  <text x="282" y="99" text-anchor="middle" class="d-title">Права</text>
+  <text x="282" y="128" text-anchor="middle" class="d-muted">Доступ сотрудника</text>
+  <path d="M368 112H390" class="d-line-acc" marker-end="url(#knowledge-flow-arrow)"/>
+  <rect x="395" y="65" width="165" height="95" rx="10" class="d-acc-box"/>
+  <text x="477" y="99" text-anchor="middle" class="d-title">Поиск</text>
+  <text x="477" y="128" text-anchor="middle" class="d-muted">Подходящие отрывки</text>
+  <path d="M563 112H585" class="d-line-acc" marker-end="url(#knowledge-flow-arrow)"/>
+  <rect x="590" y="65" width="165" height="95" rx="10" class="d-box"/>
+  <text x="672" y="99" text-anchor="middle" class="d-title">Ответ</text>
+  <text x="672" y="128" text-anchor="middle" class="d-muted">Источники и отказ</text>
+</svg>

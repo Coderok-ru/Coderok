@@ -1,0 +1,20 @@
+<svg viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" aria-labelledby="integration-flow-title">
+  <title id="integration-flow-title">Обмен данными между системами</title>
+  <defs><marker id="integration-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="d-head-acc"/></marker></defs>
+  <text x="380" y="25" text-anchor="middle" class="d-title">Обмен данными между системами</text>
+  <rect x="5" y="65" width="165" height="95" rx="10" class="d-box"/>
+  <text x="87" y="99" text-anchor="middle" class="d-title">Сайт</text>
+  <text x="87" y="128" text-anchor="middle" class="d-muted">Каталог и заказ</text>
+  <path d="M173 112H195" class="d-line-acc" marker-start="url(#integration-flow-arrow)" marker-end="url(#integration-flow-arrow)"/>
+  <rect x="200" y="65" width="165" height="95" rx="10" class="d-box"/>
+  <text x="282" y="99" text-anchor="middle" class="d-title">Обмен</text>
+  <text x="282" y="128" text-anchor="middle" class="d-muted">Очередь и журнал</text>
+  <path d="M368 112H390" class="d-line-acc" marker-start="url(#integration-flow-arrow)" marker-end="url(#integration-flow-arrow)"/>
+  <rect x="395" y="65" width="165" height="95" rx="10" class="d-acc-box"/>
+  <text x="477" y="99" text-anchor="middle" class="d-title">1С</text>
+  <text x="477" y="128" text-anchor="middle" class="d-muted">Цены и остатки</text>
+  <path d="M563 112H585" class="d-line-acc" marker-start="url(#integration-flow-arrow)" marker-end="url(#integration-flow-arrow)"/>
+  <rect x="590" y="65" width="165" height="95" rx="10" class="d-box"/>
+  <text x="672" y="99" text-anchor="middle" class="d-title">CRM</text>
+  <text x="672" y="128" text-anchor="middle" class="d-muted">Клиент и сделка</text>
+</svg>
