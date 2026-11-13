@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /**
- * Строка статьи с минимальной разметкой: [текст](/путь) и **выделение**.
+ * Строка статьи с минимальной разметкой: [текст](/путь), **выделение** и `код`.
  * Внутренние ссылки идут через NuxtLink (слэш на конце, без перезагрузки),
  * внешние открываются в новой вкладке.
  */
@@ -8,16 +8,17 @@ const props = defineProps<{
   text: string
 }>()
 
-type Segment = { text: string, href?: string, strong?: boolean }
+type Segment = { text: string, href?: string, strong?: boolean, code?: boolean }
 
 const segments = computed<Segment[]>(() => {
   const result: Segment[] = []
-  const pattern = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g
+  const pattern = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|`([^`]+)`/g
   let last = 0
   for (const match of props.text.matchAll(pattern)) {
     if (match.index! > last) result.push({ text: props.text.slice(last, match.index) })
     if (match[1]) result.push({ text: match[1], href: match[2] })
-    else result.push({ text: match[3]!, strong: true })
+    else if (match[3]) result.push({ text: match[3], strong: true })
+    else result.push({ text: match[4]!, code: true })
     last = match.index! + match[0].length
   }
   if (last < props.text.length) result.push({ text: props.text.slice(last) })
@@ -30,6 +31,7 @@ const segments = computed<Segment[]>(() => {
     <NuxtLink v-if="segment.href?.startsWith('/')" :to="segment.href">{{ segment.text }}</NuxtLink>
     <a v-else-if="segment.href" :href="segment.href" target="_blank" rel="noopener">{{ segment.text }}</a>
     <strong v-else-if="segment.strong">{{ segment.text }}</strong>
+    <code v-else-if="segment.code">{{ segment.text }}</code>
     <template v-else>{{ segment.text }}</template>
   </template>
 </template>

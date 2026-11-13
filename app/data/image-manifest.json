@@ -69,5 +69,21 @@
   "/assets/images/portfolio/recipes_admin.png": { "width": 2880, "height": 1638, "widths": [480,960,1600] },
   "/assets/images/portfolio/recipes.png": { "width": 2880, "height": 1638, "widths": [480,960,1600] },
   "/assets/images/portfolio/sleep.png": { "width": 2874, "height": 1628, "widths": [480,960,1600] },
-  "/assets/images/portfolio/zalog_chistoty.png": { "width": 1440, "height": 900, "widths": [480,960] }
+  "/assets/images/portfolio/zalog_chistoty.png": { "width": 1440, "height": 900, "widths": [480,960] },
+  "/assets/images/journal/app-store-publication-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/app-store-publication-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/business-chatbot-order-confirmation-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/business-chatbot-order-confirmation-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/business-process-automation-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/business-process-automation-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/corporate-website-specification-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/corporate-website-specification-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/crm-data-migration-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/crm-data-migration-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/online-store-partial-return-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/online-store-partial-return-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/website-project-cost-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/website-project-cost-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/website-support-order-reconciliation-cover-light.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] },
+  "/assets/images/journal/website-support-order-reconciliation-cover.png": { "width": 1600, "height": 1000, "widths": [480,960,1600] }
 }

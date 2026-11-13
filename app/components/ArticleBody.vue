@@ -17,6 +17,8 @@ const diagram = (name: string, alt: string) => diagrams[`../data/diagrams/${name
     <h2 v-if="block.type === 'h2'" :id="block.id">{{ block.text }}</h2>
     <h3 v-else-if="block.type === 'h3'">{{ block.text }}</h3>
     <p v-else-if="block.type === 'p'"><RichText :text="block.text" /></p>
+    <pre v-else-if="block.type === 'code'" class="ck-code"><code>{{ block.text }}</code></pre>
+    <blockquote v-else-if="block.type === 'quote'" class="ck-quote"><RichText :text="block.text" /></blockquote>
 
     <component
       :is="block.ordered ? 'ol' : 'ul'"
@@ -31,13 +33,13 @@ const diagram = (name: string, alt: string) => diagrams[`../data/diagrams/${name
       <div class="ck-table__scroll">
         <table>
           <thead>
-            <tr><th v-for="cell in block.head" :key="cell" scope="col">{{ cell }}</th></tr>
+            <tr><th v-for="(cell, c) in block.head" :key="c" scope="col"><RichText :text="cell" /></th></tr>
           </thead>
           <tbody>
-            <tr v-for="row in block.rows" :key="row[0]">
+            <tr v-for="(row, r) in block.rows" :key="r">
               <template v-for="(cell, c) in row" :key="c">
-                <th v-if="c === 0" scope="row">{{ cell }}</th>
-                <td v-else>{{ cell }}</td>
+                <th v-if="c === 0" scope="row"><RichText :text="cell" /></th>
+                <td v-else><RichText :text="cell" /></td>
               </template>
             </tr>
           </tbody>
