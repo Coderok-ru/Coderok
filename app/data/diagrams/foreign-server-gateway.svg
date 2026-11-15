@@ -6,7 +6,7 @@
 
   <!-- Россия -->
   <text x="0" y="16" class="d-title">Сервер в России</text>
-  <text x="0" y="36" class="d-muted">всё, что хранит данные клиентов</text>
+  <text x="0" y="36" class="d-muted">основная площадка и база заявок</text>
   <rect x="0" y="54" width="300" height="280" rx="12" class="d-box"/>
 
   <rect x="20" y="74" width="260" height="48" rx="8" class="d-box"/>
@@ -19,7 +19,7 @@
   <rect x="20" y="212" width="260" height="48" rx="8" class="d-box"/>
   <text x="36" y="241">Очередь уведомлений с повторами</text>
 
-  <text x="20" y="312" class="d-good">данные клиентов не покидают Россию</text>
+  <text x="20" y="312" class="d-good">имена и телефоны хранятся в базе</text>
 
   <!-- канал до шлюза -->
   <path d="M282 236H404" class="d-line-acc" marker-end="url(#fsg-arrow)"/>
@@ -46,7 +46,7 @@
 
   <rect x="600" y="230" width="160" height="56" rx="8" class="d-box"/>
   <text x="616" y="254" class="d-title">Другие API</text>
-  <text x="616" y="273" class="d-muted">недоступные из РФ</text>
+  <text x="616" y="273" class="d-muted">внешние интеграции</text>
 
   <path d="M562 206L598 110" class="d-line" marker-end="url(#fsg-arrow-muted)"/>
   <path d="M562 222L598 184" class="d-line" marker-end="url(#fsg-arrow-muted)"/>

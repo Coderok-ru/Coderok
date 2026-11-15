@@ -15,23 +15,23 @@
 
   <!-- Штрафы -->
   <path d="M180 62V128" class="d-line-bad" marker-end="url(#flr-arrow-bad)"/>
-  <text x="190" y="100" class="d-bad d-small">штраф</text>
+  <text x="190" y="100" class="d-bad d-small">ответственность</text>
   <path d="M580 62V128" class="d-line-bad" marker-end="url(#flr-arrow-bad)"/>
-  <text x="590" y="100" class="d-bad d-small">штраф</text>
+  <text x="590" y="100" class="d-bad d-small">ответственность</text>
 
   <!-- Оператор -->
   <rect x="0" y="132" width="360" height="96" rx="12" class="d-acc-box"/>
   <text x="18" y="160" class="d-title">Бизнес — оператор данных</text>
   <text x="18" y="182" class="d-muted">компания или ИП, решает, зачем</text>
-  <text x="18" y="200" class="d-muted">собирать заявки; руководитель —</text>
-  <text x="18" y="218" class="d-muted">отдельно как должностное лицо</text>
+  <text x="18" y="200" class="d-muted">собирать и обрабатывать заявки.</text>
+  <text x="18" y="218" class="d-muted">Роли руководителя и компании различаются.</text>
 
   <!-- Владелец сайта -->
   <rect x="400" y="132" width="360" height="96" rx="12" class="d-acc-box"/>
   <text x="418" y="160" class="d-title">Владелец сайта</text>
   <text x="418" y="182" class="d-muted">по умолчанию — администратор домена,</text>
-  <text x="418" y="200" class="d-muted">если на сайте не указан другой</text>
-  <text x="418" y="218" class="d-good">домен на компании → это бизнес</text>
+  <text x="418" y="200" class="d-muted">пока не установлено другое лицо</text>
+  <text x="418" y="218" class="d-good">сверьте реквизиты и доступ к домену</text>
 
   <!-- Подрядчики -->
   <path d="M110 230V290" class="d-line" marker-start="url(#flr-arrow)"/>
@@ -49,7 +49,7 @@
   <text x="230" y="340" class="d-muted">отвечают перед</text>
   <text x="230" y="358" class="d-muted">оператором</text>
 
-  <text x="400" y="318" class="d-muted">Штрафы получают бизнес и владелец</text>
-  <text x="400" y="338" class="d-muted">сайта. Подрядчики отвечают перед</text>
-  <text x="400" y="358" class="d-muted">заказчиком — то, что есть в договоре.</text>
+  <text x="400" y="318" class="d-muted">Обязанности зависят от роли.</text>
+  <text x="400" y="338" class="d-muted">Подрядчик работает по поручению</text>
+  <text x="400" y="358" class="d-muted">и отвечает за свою часть договора.</text>
 </svg>
